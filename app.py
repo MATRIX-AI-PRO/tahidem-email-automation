@@ -1441,40 +1441,78 @@ def main_app():
                 st.write(f"📧 {acc}: {remaining}/100 remaining")
         
         # CSV upload
-        st.markdown("### 📂 Upload Recipients")
-        uploaded_file = st.file_uploader(
-            "Upload CSV file (columns: email, name, company)", 
-            type=['csv'],
-            help="CSV should contain: email, name, company columns"
-        )
+        st.markdown("### 📝 Manual Email Entry (Alternative to CSV)")
         
-        if uploaded_file:
-            df = pd.read_csv(uploaded_file)
-            st.write("📋 **Uploaded Data Preview:**")
-            st.dataframe(df.head(10))
+        manual_option = st.checkbox("📧 Use Manual Email Entry Instead of CSV")
+        
+        if manual_option:
+            st.info("💡 **Format:** email1@domain.com, email2@domain.com, email3@domain.com")
+            st.info("💡 **Names:** John Smith, Jane Doe, Mike Johnson (same order as emails)")
+            st.info("💡 **Companies:** TechCorp, StartupInc, BigCompany (same order as emails)")
             
-            st.write(f"**Total Recipients:** {len(df)}")
+            col1, col2 = st.columns(2)
             
-            # Validation
-            required_columns = ['email', 'name', 'company']
-            missing_columns = [col for col in required_columns if col not in df.columns]
-            
-            if missing_columns:
-                st.error(f"❌ Missing columns: {', '.join(missing_columns)}")
-            else:
-                st.success("✅ CSV format is correct!")
+            with col1:
+                manual_emails = st.text_area(
+                    "📧 Email Addresses (comma separated)",
+                    placeholder="john@company1.com, jane@company2.com, mike@company3.com",
+                    height=100,
+                    help="Enter email addresses separated by commas"
+                )
                 
-                # Campaign start button
-                if st.button("🚀 START CAMPAIGN", type="primary", use_container_width=True):
+                manual_names = st.text_area(
+                    "👤 Names (comma separated)",
+                    placeholder="John Smith, Jane Doe, Mike Johnson",
+                    height=100,
+                    help="Enter names in the same order as emails"
+                )
+            
+            with col2:
+                manual_companies = st.text_area(
+                    "🏢 Companies (comma separated)",
+                    placeholder="TechCorp, StartupInc, BigCompany",
+                    height=100,
+                    help="Enter company names in the same order as emails"
+                )
+                
+                # Preview button
+                if st.button("👁️ Preview Manual Data"):
+                    if manual_emails:
+                        emails = [email.strip() for email in manual_emails.split(',') if email.strip()]
+                        names = [name.strip() for name in manual_names.split(',') if name.strip()] if manual_names else []
+                        companies = [company.strip() for company in manual_companies.split(',') if company.strip()] if manual_companies else []
+                        
+                        # Pad lists to match email count
+                        while len(names) < len(emails):
+                            names.append("Dear Professional")
+                        while len(companies) < len(emails):
+                            companies.append("Your Company")
+                        
+                        # Create preview dataframe
+                        preview_data = {
+                            'email': emails[:len(emails)],
+                            'name': names[:len(emails)],
+                            'company': companies[:len(emails)]
+                        }
+                        
+                        st.session_state.manual_df = pd.DataFrame(preview_data)
+                        st.success(f"✅ {len(emails)} recipients prepared!")
+            
+            # Show manual data preview
+            if hasattr(st.session_state, 'manual_df'):
+                st.markdown("### 📋 Manual Data Preview")
+                st.dataframe(st.session_state.manual_df)
+                st.write(f"**Total Recipients:** {len(st.session_state.manual_df)}")
+                
+                # Campaign start button for manual data
+                if st.button("🚀 START MANUAL CAMPAIGN", type="primary", use_container_width=True):
+                    df = st.session_state.manual_df
+                    
                     st.markdown("---")
                     st.header("📊 Campaign Progress")
                     
                     progress_bar = st.progress(0)
                     status_text = st.empty()
-                    
-                    # Results containers
-                    success_container = st.container()
-                    error_container = st.container()
                     
                     total_emails = len(df)
                     successful_sends = []
@@ -1550,7 +1588,7 @@ def main_app():
                         st.dataframe(failed_df)
                     
                     st.balloons()
-                    st.success("🎉 Campaign completed successfully!")
+                    st.success("🎉 Manual campaign completed successfully!")
     
     with tab2:
         st.header("✉️ Single Email Sender")
