@@ -22,7 +22,7 @@ st.set_page_config(
 ADMIN_PASSWORD_HASH = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8"  # "password"
 MASTER_PASSWORD_HASH = "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f"  # "secret123"
 
-# Email hesapları
+# Email hesapları (şifrelenmiş olarak saklanacak)
 EMAIL_ACCOUNTS = [
     {'email': 'partnerships@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'partnership', 'sent_today': 0},
     {'email': 'business@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'partnership', 'sent_today': 0},
@@ -152,7 +152,7 @@ DEFAULT_TEMPLATES = {
                 <p style="font-size: 14px; color: #7f8c8d;">growth@tahidem.com | https://tahidem.com/</p>
             </div>
         </div>
-        </body></html>
+        </body></body></html>
         """
     }
 }
@@ -162,17 +162,26 @@ def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
 def check_password():
-    """Şifre kontrolü - DÜZELTİLMİŞ VERSİYON"""
-    
+    """Şifre kontrolü"""
+    def password_entered():
+        """Girilen şifreyi kontrol et"""
+        entered_password = st.session_state["password"]
+        entered_hash = hash_password(entered_password)
+        
+        if entered_hash == ADMIN_PASSWORD_HASH:
+            st.session_state["password_correct"] = True
+            st.session_state["user_role"] = "admin"
+            del st.session_state["password"]  # Şifreyi bellekten sil
+        elif entered_hash == MASTER_PASSWORD_HASH:
+            st.session_state["password_correct"] = True
+            st.session_state["user_role"] = "master"
+            del st.session_state["password"]  # Şifreyi bellekten sil
+        else:
+            st.session_state["password_correct"] = False
+
     # İlk giriş kontrolü
     if "password_correct" not in st.session_state:
-        st.session_state.password_correct = False
-    
-    if "login_password" not in st.session_state:
-        st.session_state.login_password = ""
-    
-    # Login sayfası
-    if not st.session_state.password_correct:
+        # Login sayfası
         st.markdown("""
         <div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
             <div style="text-align: center; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background: white; max-width: 400px;">
@@ -185,31 +194,34 @@ def check_password():
         
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            # Password input
-            password_input = st.text_input(
+            st.text_input(
                 "🔑 Password", 
                 type="password", 
-                key="login_password",
+                on_change=password_entered, 
+                key="password",
                 placeholder="Enter your password..."
             )
             
-            # Login button
             if st.button("🚀 LOGIN", type="primary", use_container_width=True):
-                if password_input:
-                    entered_hash = hash_password(password_input)
-                    
-                    if entered_hash == ADMIN_PASSWORD_HASH:
-                        st.session_state.password_correct = True
-                        st.session_state.user_role = "admin"
-                        st.rerun()
-                    elif entered_hash == MASTER_PASSWORD_HASH:
-                        st.session_state.password_correct = True
-                        st.session_state.user_role = "master"
-                        st.rerun()
-                    else:
-                        st.error("❌ Incorrect password! Please try again.")
-                else:
-                    st.warning("⚠️ Please enter a password!")
+                password_entered()
+        
+        return False
+    
+    # Yanlış şifre
+    elif not st.session_state["password_correct"]:
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            st.error("❌ Incorrect password! Please try again.")
+            st.text_input(
+                "🔑 Password", 
+                type="password", 
+                on_change=password_entered, 
+                key="password",
+                placeholder="Enter your password..."
+            )
+            
+            if st.button("🚀 LOGIN", type="primary", use_container_width=True):
+                password_entered()
         
         return False
     
@@ -298,73 +310,29 @@ def main_app():
         if st.button("🚪 Logout", type="secondary"):
             for key in list(st.session_state.keys()):
                 del st.session_state[key]
-            st.rerun()
+            st.experimental_rerun()
     
     st.markdown("---")
     
-    # Ana sayfa basit versiyonu
-    st.header("📧 Email Campaign Dashboard")
-    
-    # Stats
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.metric("✅ Successful", st.session_state.email_stats['successful'])
-    with col2:
-        st.metric("❌ Failed", st.session_state.email_stats['failed'])
-    with col3:
+    # Sidebar - Stats
+    with st.sidebar:
+        st.header("📊 Campaign Statistics")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("✅ Successful", st.session_state.email_stats['successful'])
+        with col2:
+            st.metric("❌ Failed", st.session_state.email_stats['failed'])
+        
         total_sent = st.session_state.email_stats['successful'] + st.session_state.email_stats['failed']
-        st.metric("📧 Total Sent", total_sent)
-    with col4:
         success_rate = (st.session_state.email_stats['successful'] / max(total_sent, 1)) * 100
+        
+        st.metric("📧 Total Sent", total_sent)
         st.metric("📈 Success Rate", f"{success_rate:.1f}%")
-    
-    st.markdown("---")
-    
-    # Basit single email sender
-    st.header("✉️ Send Single Email")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        recipient_email = st.text_input("📧 Recipient Email")
-        recipient_name = st.text_input("👤 Recipient Name")
-        recipient_company = st.text_input("🏢 Company Name")
-    
-    with col2:
-        email_type = st.selectbox("📝 Email Type", ["partnership", "cold"])
-        sender_account = st.selectbox(
-            "📤 Sender Account",
-            [acc['email'] for acc in EMAIL_ACCOUNTS if acc['type'] == email_type]
-        )
-    
-    if st.button("🚀 Send Email", type="primary", use_container_width=True):
-        if recipient_email and recipient_name:
-            account = next(acc for acc in EMAIL_ACCOUNTS if acc['email'] == sender_account)
-            
-            subject, content = automation.format_template(
-                email_type, recipient_name, recipient_company or "Your Company"
-            )
-            
-            success, message = automation.send_single_email(account, recipient_email, subject, content)
-            
-            if success:
-                st.success(f"✅ Email sent successfully to {recipient_email}")
-                st.info(f"📧 Sent via: {sender_account}")
-            else:
-                st.error(f"❌ Error: {message}")
-        else:
-            st.warning("⚠️ Email and name fields are required!")
-    
-    # Account status
-    st.markdown("---")
-    st.header("📊 Account Status")
-    
-    cols = st.columns(3)
-    for i, acc in enumerate(EMAIL_ACCOUNTS):
-        with cols[i % 3]:
-            sent_today = st.session_state.email_stats['daily_counts'][acc['email']]
-            remaining = 100 - sent_today
-            
+        
+        st.markdown("### 📧 Account Status")
+        for acc in EMAIL_ACCOUNTS:
+            remaining = 100 - st.session_state.email_stats['daily_counts'][acc['email']]
             account_name = acc['email'].split('@')[0]
             
             if remaining > 70:
@@ -374,7 +342,419 @@ def main_app():
             else:
                 status_color = "🔴"
             
-            st.metric(f"{status_color} {account_name}", f"{remaining}/100")
+            st.write(f"{status_color} **{account_name}**: {remaining}/100")
+    
+    # Ana sayfa tabs
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "🚀 Bulk Campaign", 
+        "✉️ Single Email", 
+        "📝 Custom Templates", 
+        "👁️ Preview", 
+        "⚙️ Settings"
+    ])
+    
+    with tab1:
+        st.header("📨 Bulk Email Campaign")
+        
+        # Campaign ayarları
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            campaign_type = st.selectbox(
+                "Campaign Type",
+                ["partnership", "cold"],
+                help="Partnership: B2B partnerships, Cold: Lead generation"
+            )
+        
+        with col2:
+            delay_time = st.slider("Delay Between Emails (seconds)", 1, 15, 5)
+        
+        with col3:
+            use_custom_template = st.checkbox("Use Custom Template", help="Use your own template instead of default")
+        
+        # Custom template inputs (if selected)
+        if use_custom_template:
+            st.markdown("### 📝 Custom Template")
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                custom_subject = st.text_input(
+                    "Subject Line", 
+                    placeholder="Use {name} and {company} as placeholders",
+                    help="Example: Partnership Opportunity with {company}"
+                )
+            
+            with col2:
+                sender_name = st.text_input("Sender Name", value="Tahidem Team")
+            
+            custom_content = st.text_area(
+                "Email Content (HTML)", 
+                height=200,
+                placeholder="Write your HTML email template here. Use {name} and {company} as placeholders.",
+                help="You can use HTML tags for formatting. Variables: {name}, {company}"
+            )
+        
+        # CSV upload
+        st.markdown("### 📂 Upload Recipients")
+        uploaded_file = st.file_uploader(
+            "Upload CSV file (columns: email, name, company)", 
+            type=['csv'],
+            help="CSV should contain: email, name, company columns"
+        )
+        
+        if uploaded_file:
+            df = pd.read_csv(uploaded_file)
+            st.write("📋 **Uploaded Data Preview:**")
+            st.dataframe(df.head(10))
+            
+            st.write(f"**Total Recipients:** {len(df)}")
+            
+            # Validation
+            required_columns = ['email', 'name', 'company']
+            missing_columns = [col for col in required_columns if col not in df.columns]
+            
+            if missing_columns:
+                st.error(f"❌ Missing columns: {', '.join(missing_columns)}")
+            else:
+                st.success("✅ CSV format is correct!")
+                
+                # Campaign start button
+                if use_custom_template and (not custom_subject or not custom_content):
+                    st.warning("⚠️ Please fill in custom template fields!")
+                else:
+                    if st.button("🚀 START CAMPAIGN", type="primary", use_container_width=True):
+                        st.markdown("---")
+                        st.header("📊 Campaign Progress")
+                        
+                        progress_bar = st.progress(0)
+                        status_text = st.empty()
+                        
+                        # Results containers
+                        success_container = st.container()
+                        error_container = st.container()
+                        
+                        total_emails = len(df)
+                        successful_sends = []
+                        failed_sends = []
+                        
+                        for index, row in df.iterrows():
+                            # Available account bul
+                            account = automation.get_available_account(campaign_type)
+                            
+                            if not account:
+                                st.error(f"❌ No available accounts for {campaign_type} type!")
+                                break
+                            
+                            # Template hazırla
+                            if use_custom_template:
+                                subject, content = automation.format_template(
+                                    campaign_type, 
+                                    row.get('name', 'Dear Professional'),
+                                    row.get('company', 'Your Company'),
+                                    custom_subject,
+                                    custom_content
+                                )
+                            else:
+                                subject, content = automation.format_template(
+                                    campaign_type, 
+                                    row.get('name', 'Dear Professional'),
+                                    row.get('company', 'Your Company')
+                                )
+                            
+                            # Email gönder
+                            success, message = automation.send_single_email(
+                                account, row['email'], subject, content
+                            )
+                            
+                            # Progress güncelle
+                            progress = (index + 1) / total_emails
+                            progress_bar.progress(progress)
+                            
+                            status_emoji = "✅" if success else "❌"
+                            status_text.text(f"{status_emoji} {index + 1}/{total_emails} - {row['email']} via {account['email']}")
+                            
+                            # Results topla
+                            if success:
+                                successful_sends.append({
+                                    'email': row['email'],
+                                    'name': row.get('name', ''),
+                                    'company': row.get('company', ''),
+                                    'sender': account['email']
+                                })
+                            else:
+                                failed_sends.append({
+                                    'email': row['email'],
+                                    'error': message
+                                })
+                            
+                            # Rate limiting
+                            time.sleep(delay_time)
+                        
+                        # Final results
+                        st.markdown("---")
+                        st.header("🎯 Campaign Results")
+                        
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            st.metric("✅ Successful", len(successful_sends))
+                        with col2:
+                            st.metric("❌ Failed", len(failed_sends))
+                        with col3:
+                            success_rate = (len(successful_sends) / total_emails) * 100
+                            st.metric("📈 Success Rate", f"{success_rate:.1f}%")
+                        
+                        # Detailed results
+                        if successful_sends:
+                            st.success("✅ **Successful Sends:**")
+                            success_df = pd.DataFrame(successful_sends)
+                            st.dataframe(success_df)
+                        
+                        if failed_sends:
+                            st.error("❌ **Failed Sends:**")
+                            failed_df = pd.DataFrame(failed_sends)
+                            st.dataframe(failed_df)
+                        
+                        st.balloons()
+                        st.success("🎉 Campaign completed successfully!")
+    
+    with tab2:
+        st.header("✉️ Single Email Sender")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.subheader("📧 Recipient Details")
+            recipient_email = st.text_input("Recipient Email *")
+            recipient_name = st.text_input("Recipient Name *")
+            recipient_company = st.text_input("Company Name")
+        
+        with col2:
+            st.subheader("⚙️ Email Settings")
+            email_type = st.selectbox("Email Type", ["partnership", "cold"])
+            sender_account = st.selectbox(
+                "Sender Account",
+                [acc['email'] for acc in EMAIL_ACCOUNTS if acc['type'] == email_type]
+            )
+        
+        st.markdown("---")
+        
+        # Template seçimi
+        use_custom_single = st.checkbox("Use Custom Template for Single Email")
+        
+        if use_custom_single:
+            col1, col2 = st.columns(2)
+            with col1:
+                single_subject = st.text_input("Subject Line", placeholder="Use {name} and {company}")
+            with col2:
+                pass
+            
+            single_content = st.text_area(
+                "Email Content (HTML)", 
+                height=300,
+                placeholder="Write your HTML email template here..."
+            )
+        
+        if st.button("📤 Send Email", type="primary", use_container_width=True):
+            if recipient_email and recipient_name:
+                account = next(acc for acc in EMAIL_ACCOUNTS if acc['email'] == sender_account)
+                
+                if use_custom_single and single_subject and single_content:
+                    subject, content = automation.format_template(
+                        email_type, recipient_name, recipient_company or "Your Company",
+                        single_subject, single_content
+                    )
+                else:
+                    subject, content = automation.format_template(
+                        email_type, recipient_name, recipient_company or "Your Company"
+                    )
+                
+                success, message = automation.send_single_email(account, recipient_email, subject, content)
+                
+                if success:
+                    st.success(f"✅ Email sent successfully to {recipient_email}")
+                    st.info(f"📧 Sent via: {sender_account}")
+                else:
+                    st.error(f"❌ Error: {message}")
+            else:
+                st.warning("⚠️ Email and name fields are required!")
+    
+    with tab3:
+        st.header("📝 Custom Email Templates")
+        st.markdown("Create and manage your email templates with dynamic variables.")
+        
+        template_type = st.selectbox("Select Template Type", ["partnership", "cold"])
+        
+        st.markdown(f"### ✏️ Edit {template_type.title()} Template")
+        
+        # Current template
+        current_template = st.session_state.custom_templates[template_type]
+        
+        col1, col2 = st.columns([1, 2])
+        
+        with col1:
+            st.markdown("**📋 Available Variables:**")
+            st.code("{name} - Recipient name")
+            st.code("{company} - Company name")
+            
+            st.markdown("**💡 HTML Tips:**")
+            st.markdown("- Use `<strong>` for bold")
+            st.markdown("- Use `<p>` for paragraphs") 
+            st.markdown("- Use `<ul><li>` for lists")
+            st.markdown("- Use inline CSS for styling")
+        
+        with col2:
+            # Subject editing
+            new_subject = st.text_input(
+                "Subject Template", 
+                value=current_template['subject'],
+                help="Use {name} and {company} as placeholders"
+            )
+            
+            # Content editing
+            new_content = st.text_area(
+                "Email Content Template (HTML)", 
+                value=current_template['content'],
+                height=400,
+                help="Use {name} and {company} as placeholders"
+            )
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("💾 Save Template", type="primary"):
+                st.session_state.custom_templates[template_type] = {
+                    'subject': new_subject,
+                    'content': new_content
+                }
+                st.success(f"✅ {template_type.title()} template saved!")
+        
+        with col2:
+            if st.button("🔄 Reset to Default"):
+                st.session_state.custom_templates[template_type] = DEFAULT_TEMPLATES[template_type].copy()
+                st.success(f"✅ {template_type.title()} template reset to default!")
+                st.experimental_rerun()
+    
+    with tab4:
+        st.header("👁️ Template Preview")
+        
+        col1, col2 = st.columns([1, 2])
+        
+        with col1:
+            st.subheader("🧪 Test Data")
+            preview_type = st.selectbox("Template Type", ["partnership", "cold"])
+            test_name = st.text_input("Test Name", "John Smith")
+            test_company = st.text_input("Test Company", "TechCorp Inc.")
+            
+            if st.button("🔍 Generate Preview"):
+                subject, content = automation.format_template(
+                    preview_type, test_name, test_company
+                )
+                
+                st.session_state.preview_subject = subject
+                st.session_state.preview_content = content
+        
+        with col2:
+            st.subheader("📧 Email Preview")
+            
+            if hasattr(st.session_state, 'preview_subject'):
+                st.markdown("**Subject:**")
+                st.info(st.session_state.preview_subject)
+                
+                st.markdown("**Content:**")
+                st.components.v1.html(
+                    st.session_state.preview_content, 
+                    height=600, 
+                    scrolling=True
+                )
+            else:
+                st.info("👆 Generate a preview to see your email template")
+    
+    with tab5:
+        st.header("⚙️ System Settings")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.subheader("📧 Email Accounts")
+            
+            for acc in EMAIL_ACCOUNTS:
+                sent_today = st.session_state.email_stats['daily_counts'][acc['email']]
+                remaining = 100 - sent_today
+                
+                # Progress bar for each account
+                progress = sent_today / 100
+                
+                st.markdown(f"**{acc['email']}**")
+                st.progress(progress)
+                st.caption(f"Type: {acc['type']} | Sent: {sent_today}/100 | Remaining: {remaining}")
+                st.markdown("---")
+        
+        with col2:
+            st.subheader("🔧 System Controls")
+            
+            if st.button("🔄 Reset Daily Counters", type="secondary"):
+                for acc in EMAIL_ACCOUNTS:
+                    acc['sent_today'] = 0
+                    st.session_state.email_stats['daily_counts'][acc['email']] = 0
+                st.success("✅ Daily counters reset!")
+            
+            if st.button("📊 Reset All Statistics", type="secondary"):
+                st.session_state.email_stats = {
+                    'total_sent': 0,
+                    'successful': 0,
+                    'failed': 0,
+                    'daily_counts': {acc['email']: 0 for acc in EMAIL_ACCOUNTS}
+                }
+                st.success("✅ All statistics reset!")
+            
+            if st.button("📝 Reset Templates to Default", type="secondary"):
+                st.session_state.custom_templates = DEFAULT_TEMPLATES.copy()
+                st.success("✅ Templates reset to default!")
+            
+            # Master user için özel ayarlar
+            if st.session_state.get("user_role") == "master":
+                st.markdown("---")
+                st.subheader("🔴 Master Controls")
+                st.warning("⚠️ Master user exclusive features")
+                
+                if st.button("🗑️ Clear All Data", type="secondary"):
+                    # Tüm session state'i temizle
+                    keys_to_keep = ["password_correct", "user_role"]
+                    for key in list(st.session_state.keys()):
+                        if key not in keys_to_keep:
+                            del st.session_state[key]
+                    st.success("✅ All data cleared!")
+                    st.experimental_rerun()
+        
+        # System info
+        st.markdown("---")
+        st.subheader("ℹ️ System Information")
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Total Accounts", len(EMAIL_ACCOUNTS))
+        with col2:
+            partnership_accounts = len([acc for acc in EMAIL_ACCOUNTS if acc['type'] == 'partnership'])
+            st.metric("Partnership Accounts", partnership_accounts)
+        with col3:
+            cold_accounts = len([acc for acc in EMAIL_ACCOUNTS if acc['type'] == 'cold'])
+            st.metric("Cold Outreach Accounts", cold_accounts)
+        
+        st.info("💡 **Daily Limit:** 100 emails per account | **Total Daily Capacity:** 1400 emails")
+        
+        # Güvenlik bilgileri
+        st.markdown("---")
+        st.subheader("🔐 Security Information")
+        
+        user_role = st.session_state.get("user_role", "admin")
+        login_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.info(f"👤 **Current User:** {user_role.upper()}")
+            st.info(f"🕒 **Session Started:** {login_time}")
+        
+        with col2:
+            st.info("🔒 **Security Level:** High")
+            st.info("🛡️ **Data Encryption:** Active")
 
 # Ana uygulama başlatma
 def main():
