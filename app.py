@@ -96,8 +96,9 @@ DEFAULT_TEMPLATES = {
                     <h3 style="margin-top: 0; font-size: 22px;">💰 PAYMENT STRUCTURE</h3>
                     <div style="font-size: 18px; margin: 20px 0;">
                         <p style="margin: 10px 0;"><strong>Standard Brands:</strong> $1,000</p>
-                        <p style="margin: 10px 0;"><strong>Mid-scale ($200K+ monthly):</strong> $2,000-$5,000</p>
-                        <p style="margin: 10px 0;"><strong>Premium Brands ($500K+ monthly):</strong> $10,000+</p>
+                        <p style="margin: 10px 0;"><strong>Mid-scale ($200K+ monthly):</strong> $1,500-$3,500</p>
+                        <p style="margin: 10px 0;"><strong>Premium Brands ($500K+ monthly):</strong> $4,000-$7,500</p>
+                        <p style="margin: 10px 0;"><strong>Proven profitability and growth trajectory</p>
                     </div>
                 </div>
                 
