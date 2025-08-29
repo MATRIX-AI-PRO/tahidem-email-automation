@@ -126,7 +126,6 @@ DEFAULT_TEMPLATES = {
         
         <!-- Footer -->
         <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-            <p style="margin: 0; font-weight: bold; font-size: 16px;">Onur Nakis - Owner</p>
             <p style="margin: 5px 0; color: #667eea; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
             <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
             <p style="margin: 5px 0 0 0; opacity: 0.8;">partnerships@tahidem.com | https://tahidem.com/</p>
@@ -243,7 +242,6 @@ DEFAULT_TEMPLATES = {
         
         <!-- Footer -->
         <div style="background: #2c3e50; padding: 25px; text-align: center; color: white;">
-            <p style="margin: 0; font-weight: bold;">Onur Nakis - Owner</p>
             <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
             <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
             <p style="margin: 5px 0 0 0; opacity: 0.8;">team@tahidem.com | https://tahidem.com/</p>
