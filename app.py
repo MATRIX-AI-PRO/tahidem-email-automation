@@ -249,10 +249,10 @@ DEFAULT_TEMPLATES = {
     },
     
     # 🤝 BRAND PARTNERSHIP TEMPLATES (Marka Ortaklıkları)
-    
-    "brand_partnership_2": {
+
+"brand_partnership_2": {
     "name": "Exclusive Distribution Agreement",
-    "category": "brand_partnership",
+    "category": "brand_partnership", 
     "subject": "Exclusive Amazon Distribution Partnership - {company} Authorized Reseller Opportunity",
     "content": """
     <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
@@ -270,7 +270,7 @@ DEFAULT_TEMPLATES = {
             <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
             
             <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a wholesale partnership with <strong>{company}</strong> and becoming your exclusive authorized distributor on Amazon.
+            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a wholesale partnership with <strong>{company}</strong> and becoming your exclusive authorized distributor on Amazon with significant investment commitment.
             </p>
             
             <!-- Company Information -->
@@ -283,6 +283,14 @@ DEFAULT_TEMPLATES = {
                     <p style="margin: 8px 0;"><strong>Location:</strong> 30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
                     <p style="margin: 8px 0;"><strong>Contact:</strong> business@tahidem.com</p>
                 </div>
+            </div>
+            
+            <!-- Our Primary Partnership Goal -->
+            <div style="background: #2c3e50; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0; color: white;">
+                <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🎯 Our Primary Partnership Goal</h3>
+                <p style="color: #fff; margin: 15px 0; font-size: 16px;">
+                    <strong>Become your exclusive authorized distributor</strong> for ASINs you authorize us to sell, taking complete ownership of listing optimization, sales growth, and inventory management while maintaining continuous brand communication.
+                </p>
             </div>
             
             <!-- Partnership Request -->
@@ -305,9 +313,44 @@ DEFAULT_TEMPLATES = {
                 </div>
             </div>
             
+            <!-- Exclusive Distribution Services -->
+            <div style="background: linear-gradient(135deg, #27ae60 0%, #2ed573 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🏆 EXCLUSIVE DISTRIBUTOR SERVICES</h3>
+                
+                <div style="display: grid; gap: 15px; margin: 25px 0;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Exclusive ASIN Authorization</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Become sole authorized seller for ASINs you authorize us to sell</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📈 Complete Listing Development</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Advanced SEO optimization, A+ content creation, and search ranking strategies</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🎥 Professional Content Creation</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">High-quality product photography, infographics, and promotional videos</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">⭐ Strategic Review Growth</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Positive feedback enhancement and reputation management strategies</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Million Dollar Customer Network -->
+            <div style="background: #ff6b6b; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 22px;">💰 MILLION DOLLAR CUSTOMER NETWORK</h3>
+                <div style="margin: 20px 0;">
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Million-dollar customer network</strong> ensures guaranteed sales volume</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>3-6 month bulk inventory purchases</strong> based on 30-day Amazon sales data</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Zero inventory risk for your brand</strong> - we handle all stock management</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>No stock purchase problems</strong> - guaranteed inventory commitment</p>
+                </div>
+            </div>
+            
             <!-- Partnership Benefits -->
             <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 22px;">💰 WHAT THIS PARTNERSHIP OFFERS</h3>
+                <h3 style="margin-top: 0; font-size: 22px;">🎁 WHAT THIS PARTNERSHIP OFFERS</h3>
                 <div style="margin: 20px 0;">
                     <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Protect and enhance your brand's image</strong> on Amazon</p>
                     <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Maintain consistent pricing and representation</strong></p>
@@ -316,26 +359,26 @@ DEFAULT_TEMPLATES = {
                 </div>
             </div>
             
-            <!-- Exclusive Distribution Services -->
+            <!-- Distribution Partnership Process -->
             <div style="margin: 30px 0;">
-                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🏆 EXCLUSIVE DISTRIBUTOR SERVICES</h3>
+                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🔄 Exclusive Distribution Process:</h3>
                 
                 <div style="display: grid; gap: 15px; margin: 20px 0;">
                     <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
-                        <h4 style="color: #27ae60; margin: 0 0 8px 0;">🔐 Exclusive ASIN Authorization</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Become sole authorized seller for ASINs you authorize us to sell</p>
+                        <h4 style="color: #27ae60; margin: 0 0 8px 0;">1️⃣ Exclusive Distribution Authorization</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Secure exclusive rights to sell your authorized Amazon ASINs as sole distributor</p>
                     </div>
                     <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
-                        <h4 style="color: #3742fa; margin: 0 0 8px 0;">📈 Complete Listing Development</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Advanced SEO optimization, A+ content creation, and search ranking strategies</p>
+                        <h4 style="color: #3742fa; margin: 0 0 8px 0;">2️⃣ Complete ASIN Development & Growth</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">SEO optimization, visual content creation, and listing development with continuous brand communication</p>
                     </div>
                     <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
-                        <h4 style="color: #ff9f43; margin: 0 0 8px 0;">🎥 Professional Content Creation</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">High-quality product photography, infographics, and promotional videos</p>
+                        <h4 style="color: #ff9f43; margin: 0 0 8px 0;">3️⃣ Strategic Inventory Management</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">3-6 month bulk purchasing based on 30-day Amazon sales data analysis</p>
                     </div>
                     <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
-                        <h4 style="color: #ff6348; margin: 0 0 8px 0;">⭐ Strategic Review Growth</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Positive feedback enhancement and reputation management strategies</p>
+                        <h4 style="color: #ff6348; margin: 0 0 8px 0;">4️⃣ Comprehensive Reporting & Legal Compliance</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Weekly/monthly sales & advertising reports, full legal requirements tracking</p>
                     </div>
                 </div>
             </div>
@@ -345,14 +388,22 @@ DEFAULT_TEMPLATES = {
                 <h3 style="color: #667eea; margin-top: 0;">🎁 Exclusive Distribution Benefits:</h3>
                 <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
                     <li style="margin-bottom: 8px;"><strong>Exclusive authorized distributor status</strong> for ASINs you authorize us to sell</li>
-                    <li style="margin-bottom: 8px;"><strong>Complete ASIN development and optimization</strong> responsibility</li>
-                    <li style="margin-bottom: 8px;"><strong>Guaranteed bulk inventory purchases</strong> with significant investment</li>
-                    <li style="margin-bottom: 8px;"><strong>Professional content creation</strong> (images, videos, A+ content)</li>
+                    <li style="margin-bottom: 8px;"><strong>Complete ASIN development and optimization</strong> with continuous brand communication</li>
+                    <li style="margin-bottom: 8px;"><strong>Guaranteed bulk inventory purchases</strong> from million-dollar customer network</li>
+                    <li style="margin-bottom: 8px;"><strong>Professional content creation</strong> (images, videos, A+ content, infographics)</li>
                     <li style="margin-bottom: 8px;"><strong>Strategic positive review growth</strong> and reputation management</li>
-                    <li style="margin-bottom: 8px;"><strong>Weekly/monthly performance reporting</strong> and analytics</li>
+                    <li style="margin-bottom: 8px;"><strong>Weekly/monthly performance reporting</strong> and advertising analytics</li>
                     <li style="margin-bottom: 8px;"><strong>Full legal compliance tracking</strong> and brand protection</li>
-                    <li style="margin-bottom: 8px;"><strong>Continuous brand communication</strong> and strategic planning</li>
+                    <li style="margin-bottom: 8px;"><strong>3-6 month inventory commitment</strong> based on 30-day sales data</li>
                 </ul>
+            </div>
+            
+            <!-- Professional Priority Statement -->
+            <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 25px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 20px;">🎯 OUR PROFESSIONAL PRIORITY</h3>
+                <p style="margin: 15px 0; font-size: 16px;">
+                    <strong>Our priority is to become the sole authorized seller</strong> for Amazon ASINs you provide us. We want to be your brand's distributor for relevant ASINs in the most professional way possible.
+                </p>
             </div>
             
             <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
@@ -376,7 +427,6 @@ DEFAULT_TEMPLATES = {
     </body></html>
     """
 },
-
     
     # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
     "supplier_outreach_1": {
