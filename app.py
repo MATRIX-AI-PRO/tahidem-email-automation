@@ -48,205 +48,210 @@ SMTP_PORT = 465
 DEFAULT_TEMPLATES = {
     # 🎯 BRAND HUNTER TEMPLATES (Marka Arayıcıları)
     "brand_hunter_1": {
-        "name": "Amazon Brand Hunter - General Recruitment",
-        "category": "brand_hunter",
-        "subject": "Amazon Brand Partnership Opportunity - TAHIDEM LLC Collaboration",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
+    "name": "Amazon Brand Hunter - General Recruitment",
+    "category": "brand_hunter",
+    "subject": "Amazon Brand Partnership Opportunity - TAHIDEM LLC Collaboration",
+    "content": """
+    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+    <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center; color: white;">
+            <h1 style="margin: 0; font-size: 32px; font-weight: bold;">TAHIDEM LLC</h1>
+            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Amazon Partnership Specialists</p>
+            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 40px 30px;">
+            <h2 style="color: #2c3e50; font-size: 24px; margin-bottom: 20px;">Hello {name},</h2>
             
-            <!-- Header -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center; color: white;">
-                <h1 style="margin: 0; font-size: 32px; font-weight: bold;">TAHIDEM LLC</h1>
-                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Amazon Partnership Specialists</p>
+            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. We are establishing exclusive distribution partnerships with successful Amazon brands, and we want to work with experienced professionals in this field.
+            </p>
+            
+            <!-- Sought Profile Box -->
+            <div style="background: #f8f9fa; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0;">
+                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🎯 SOUGHT PROFILE:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                    <li style="margin-bottom: 10px;">✅ <strong>Amazon ecosystem experience</strong></li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Network with brand owners/managers</strong></li>
+                    <li style="margin-bottom: 10px;">✅ <strong>English communication skills</strong></li>
+                    <li style="margin-bottom: 10px;">✅ <strong>Sales/business development experience</strong></li>
+                </ul>
             </div>
             
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 24px; margin-bottom: 20px;">Hello {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                TAHIDEM LLC is establishing exclusive distribution partnerships with successful Amazon brands, and we want to work with experienced professionals in this field.
-                </p>
-                
-                <!-- Sought Profile Box -->
-                <div style="background: #f8f9fa; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0;">
-                    <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🎯 SOUGHT PROFILE:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 10px;">✅ <strong>Amazon ecosystem experience</strong></li>
-                        <li style="margin-bottom: 10px;">✅ <strong>Network with brand owners/managers</strong></li>
-                        <li style="margin-bottom: 10px;">✅ <strong>English communication skills</strong></li>
-                        <li style="margin-bottom: 10px;">✅ <strong>Sales/business development experience</strong></li>
-                    </ul>
-                </div>
-                
-                <!-- Job Description -->
-                <div style="background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px;">💼 JOB DESCRIPTION:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px;">
-                        <li style="margin-bottom: 10px;">• Identify brands selling on Amazon</li>
-                        <li style="margin-bottom: 10px;">• Establish communication with brand authorities</li>
-                        <li style="margin-bottom: 10px;">• Conduct preliminary meetings on behalf of TAHIDEM LLC</li>
-                        <li style="margin-bottom: 10px;">• Manage distribution agreement signing process</li>
-                    </ul>
-                </div>
-                
-                <!-- Payment Structure -->
-                <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                    <h3 style="margin-top: 0; font-size: 22px;">💰 PAYMENT STRUCTURE</h3>
-                    <div style="font-size: 18px; margin: 20px 0;">
-                        <p style="margin: 10px 0;"><strong>Standard Brands:</strong> $1,000</p>
-                        <p style="margin: 10px 0;"><strong>Mid-scale ($200K+ monthly):</strong> $1,500-$3,500</p>
-                        <p style="margin: 10px 0;"><strong>Premium Brands ($500K+ monthly):</strong> $4,000-$7,500</p>
-                        <p style="margin: 10px 0;"><strong>Proven profitability and growth trajectory</p>
-                    </div>
-                </div>
-                
-                <!-- AMAZON Target Criteria -->
-                <div style="border: 2px solid #e74c3c; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">🎯 AMAZON TARGET CRITERIA:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 8px;">• Monthly Amazon sales $50K+</li>
-                        <li style="margin-bottom: 8px;">• Active in US/Australia/Europe markets</li>
-                        <li style="margin-bottom: 8px;">• Trademarked products</li>
-                        <li style="margin-bottom: 8px;">• 3+ years active on Amazon</li>
-                    </ul>
-                </div>
-                
-                <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50;">
-                    <strong>Would you like to evaluate this opportunity?</strong>
-                </p>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="mailto:partnerships@tahidem.com" style="background: #e74c3c; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Apply Now</a>
+            <!-- Job Description -->
+            <div style="background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 20px;">💼 JOB DESCRIPTION:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li style="margin-bottom: 10px;">• Identify brands selling on Amazon</li>
+                    <li style="margin-bottom: 10px;">• Establish communication with brand authorities</li>
+                    <li style="margin-bottom: 10px;">• Conduct preliminary meetings on behalf of TAHIDEM LLC</li>
+                    <li style="margin-bottom: 10px;">• Manage distribution agreement signing process</li>
+                </ul>
+            </div>
+            
+            <!-- Payment Structure -->
+            <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 22px;">💰 PAYMENT STRUCTURE</h3>
+                <div style="font-size: 18px; margin: 20px 0;">
+                    <p style="margin: 10px 0;"><strong>Standard Brands:</strong> $1,000</p>
+                    <p style="margin: 10px 0;"><strong>Mid-scale ($200K+ monthly):</strong> $1,500-$3,500</p>
+                    <p style="margin: 10px 0;"><strong>Premium Brands ($500K+ monthly):</strong> $4,000-$7,500</p>
+                    <p style="margin: 10px 0;"><strong>Proven profitability and growth trajectory</strong></p>
                 </div>
             </div>
             
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 0; font-weight: bold; font-size: 16px;">TAHIDEM LLC</p>
-                <p style="margin: 5px 0 0 0; opacity: 0.8;">partnerships@tahidem.com | https://tahidem.com/</p>
+            <!-- AMAZON Target Criteria -->
+            <div style="border: 2px solid #e74c3c; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">🎯 AMAZON TARGET CRITERIA:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                    <li style="margin-bottom: 8px;">• Monthly Amazon sales $50K+</li>
+                    <li style="margin-bottom: 8px;">• Active in US/Australia/Europe markets</li>
+                    <li style="margin-bottom: 8px;">• Trademarked products</li>
+                    <li style="margin-bottom: 8px;">• 3+ years active on Amazon</li>
+                </ul>
+            </div>
+            
+            <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50;">
+                <strong>Would you like to evaluate this opportunity?</strong>
+            </p>
+            
+            <!-- CTA Button -->
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="mailto:partnerships@tahidem.com" style="background: #e74c3c; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Apply Now</a>
             </div>
         </div>
-        </body></html>
-        """
-    },
-    
-    "brand_hunter_2": {
-        "name": "Detailed Brand Hunter Position",
-        "category": "brand_hunter",
-        "subject": "Brand Hunter Position - TAHIDEM LLC - $10K+ Per Deal",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-            
-            <!-- Header -->
-            <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center; color: white;">
-                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎯 BRAND HUNTER POSITION</h1>
-                <p style="margin: 10px 0 0 0; font-size: 16px; opacity: 0.9;">TAHIDEM LLC - Exclusive Opportunity</p>
-            </div>
-            
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-                We want to work with you for the <strong>Brand Hunter position</strong> within TAHIDEM LLC.
-                </p>
-                
-                <!-- Job Tasks -->
-                <div style="margin: 30px 0;">
-                    <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">📋 JOB DESCRIPTION:</h3>
-                    
-                    <!-- Task 1 -->
-                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #3742fa;">
-                        <h4 style="color: #3742fa; margin: 0 0 10px 0;">1. BRAND IDENTIFICATION:</h4>
-                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                            <li>Identify brands making $50K+ monthly sales on Amazon</li>
-                            <li>Sales volume and potential analysis</li>
-                            <li>Competition status evaluation</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Task 2 -->
-                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #2ed573;">
-                        <h4 style="color: #2ed573; margin: 0 0 10px 0;">2. COMMUNICATION ESTABLISHMENT:</h4>
-                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                            <li>Direct communication with brand owners/CEOs</li>
-                            <li>Preliminary presentation representing TAHIDEM LLC</li>
-                            <li>Explain distribution partnership opportunity</li>
-                            <li>Plan meeting appointments</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Task 3 -->
-                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #ff6348;">
-                        <h4 style="color: #ff6348; margin: 0 0 10px 0;">3. PROCESS MANAGEMENT:</h4>
-                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                            <li>Bridge between brand and TAHIDEM LLC</li>
-                            <li>Preliminary negotiation of agreement terms</li>
-                            <li>Collection of required documents</li>
-                            <li>Follow-up of signing process</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Target Brands -->
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 18px;">🎯 TARGET BRANDS:</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Consumer Electronics</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Home & Kitchen</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Health & Personal Care</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Sports & Outdoors</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Baby Products</span>
-                    </div>
-                </div>
-                
-                <!-- Payment Details -->
-                <div style="background: #2ed573; padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">💰 PAYMENT DETAILS</h3>
-                    <div style="text-align: center; margin: 20px 0;">
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>Base Payment:</strong> $1,000 per deal</p>
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>$100K+ monthly sales:</strong> +$1,000 bonus</p>
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>$200K+ monthly sales:</strong> +$1,500 - $3,000 bonus</p>
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>$500K+ monthly sales:</strong> +$3,500 - $7,500 bonus</p>
-                    </div>
-                    <p style="text-align: center; margin: 15px 0 0 0; font-size: 14px; opacity: 0.9;">Payment processing during agreement signing</p>
+        
+        <!-- Footer -->
+        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+            <p style="margin: 0; font-weight: bold; font-size: 16px;">Onur Nakis - Owner</p>
+            <p style="margin: 5px 0; color: #667eea; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+            <p style="margin: 5px 0 0 0; opacity: 0.8;">partnerships@tahidem.com | https://tahidem.com/</p>
+        </div>
+    </div>
+    </body></html>
+    """
+},
 
-                </div>
+"brand_hunter_2": {
+    "name": "Detailed Brand Hunter Position",
+    "category": "brand_hunter",
+    "subject": "Brand Hunter Position - TAHIDEM LLC - $10K+ Per Deal",
+    "content": """
+    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+    <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center; color: white;">
+            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎯 BRAND HUNTER POSITION</h1>
+            <p style="margin: 10px 0 0 0; font-size: 16px; opacity: 0.9;">TAHIDEM LLC - Exclusive Opportunity</p>
+            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 40px 30px;">
+            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
+            
+            <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
+            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. We want to work with you for the <strong>Brand Hunter position</strong> within TAHIDEM LLC.
+            </p>
+            
+            <!-- Job Tasks -->
+            <div style="margin: 30px 0;">
+                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">📋 JOB DESCRIPTION:</h3>
                 
-                <!-- Working Conditions -->
-                <div style="border: 2px solid #3742fa; padding: 20px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #3742fa; margin-top: 0;">⚙️ WORKING CONDITIONS:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 8px;">• Completely remote work</li>
-                        <li style="margin-bottom: 8px;">• Flexible working hours</li>
-                        <li style="margin-bottom: 8px;">• Weekly progress report</li>
-                        <li style="margin-bottom: 8px;">• Monthly minimum 5 brand target</li>
+                <!-- Task 1 -->
+                <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #3742fa;">
+                    <h4 style="color: #3742fa; margin: 0 0 10px 0;">1. BRAND IDENTIFICATION:</h4>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                        <li>Identify brands making $50K+ monthly sales on Amazon</li>
+                        <li>Sales volume and potential analysis</li>
+                        <li>Competition status evaluation</li>
                     </ul>
                 </div>
                 
-                <p style="font-size: 16px; margin: 30px 0; text-align: center; color: #2c3e50;">
-                    If interested, could you share your CV and Amazon experience?
-                </p>
+                <!-- Task 2 -->
+                <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #2ed573;">
+                    <h4 style="color: #2ed573; margin: 0 0 10px 0;">2. COMMUNICATION ESTABLISHMENT:</h4>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                        <li>Direct communication with brand owners/CEOs</li>
+                        <li>Preliminary presentation representing TAHIDEM LLC</li>
+                        <li>Explain distribution partnership opportunity</li>
+                        <li>Plan meeting appointments</li>
+                    </ul>
+                </div>
                 
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="mailto:team@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Send Your CV</a>
+                <!-- Task 3 -->
+                <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #ff6348;">
+                    <h4 style="color: #ff6348; margin: 0 0 10px 0;">3. PROCESS MANAGEMENT:</h4>
+                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                        <li>Bridge between brand and TAHIDEM LLC</li>
+                        <li>Preliminary negotiation of agreement terms</li>
+                        <li>Collection of required documents</li>
+                        <li>Follow-up of signing process</li>
+                    </ul>
                 </div>
             </div>
             
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 25px; text-align: center; color: white;">
-                <p style="margin: 0; font-weight: bold;">TAHIDEM LLC HR Department</p>
-                <p style="margin: 5px 0 0 0; opacity: 0.8;">team@tahidem.com | https://tahidem.com/</p>
+            <!-- Target Brands -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 18px;">🎯 TARGET BRANDS:</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Consumer Electronics</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Home & Kitchen</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Health & Personal Care</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Sports & Outdoors</span>
+                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Baby Products</span>
+                </div>
+            </div>
+            
+            <!-- Payment Details -->
+            <div style="background: #2ed573; padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">💰 PAYMENT DETAILS</h3>
+                <div style="text-align: center; margin: 20px 0;">
+                    <p style="margin: 8px 0; font-size: 16px;"><strong>Base Payment:</strong> $1,000 per deal</p>
+                    <p style="margin: 8px 0; font-size: 16px;"><strong>$100K+ monthly sales:</strong> +$1,000 bonus</p>
+                    <p style="margin: 8px 0; font-size: 16px;"><strong>$200K+ monthly sales:</strong> +$1,500 - $3,000 bonus</p>
+                    <p style="margin: 8px 0; font-size: 16px;"><strong>$500K+ monthly sales:</strong> +$3,500 - $7,500 bonus</p>
+                </div>
+                <p style="text-align: center; margin: 15px 0 0 0; font-size: 14px; opacity: 0.9;">Payment processing during agreement signing</p>
+            </div>
+            
+            <!-- Working Conditions -->
+            <div style="border: 2px solid #3742fa; padding: 20px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #3742fa; margin-top: 0;">⚙️ WORKING CONDITIONS:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                    <li style="margin-bottom: 8px;">• Completely remote work</li>
+                    <li style="margin-bottom: 8px;">• Flexible working hours</li>
+                    <li style="margin-bottom: 8px;">• Weekly progress report</li>
+                    <li style="margin-bottom: 8px;">• Monthly minimum 5 brand target</li>
+                </ul>
+            </div>
+            
+            <p style="font-size: 16px; margin: 30px 0; text-align: center; color: #2c3e50;">
+                If interested, could you share your CV and Amazon experience?
+            </p>
+            
+            <!-- CTA Button -->
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="mailto:team@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Send Your CV</a>
             </div>
         </div>
-        </body></html>
-        """
-    },
+        
+        <!-- Footer -->
+        <div style="background: #2c3e50; padding: 25px; text-align: center; color: white;">
+            <p style="margin: 0; font-weight: bold;">Onur Nakis - Owner</p>
+            <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+            <p style="margin: 5px 0 0 0; opacity: 0.8;">team@tahidem.com | https://tahidem.com/</p>
+        </div>
+    </div>
+    </body></html>
+    """
+},
     
     # 🤝 BRAND PARTNERSHIP TEMPLATES (Marka Ortaklıkları)
 
