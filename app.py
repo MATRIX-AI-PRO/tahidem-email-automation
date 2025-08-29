@@ -102,7 +102,7 @@ DEFAULT_TEMPLATES = {
                     </div>
                 </div>
                 
-                <!-- Target Criteria -->
+                <!-- AMAZON Target Criteria -->
                 <div style="border: 2px solid #e74c3c; padding: 25px; border-radius: 10px; margin: 30px 0;">
                     <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">🎯 TARGET CRITERIA:</h3>
                     <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
