@@ -164,7 +164,6 @@ DEFAULT_TEMPLATES = {
                         <h4 style="color: #3742fa; margin: 0 0 10px 0;">1. BRAND IDENTIFICATION:</h4>
                         <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
                             <li>Identify brands making $50K+ monthly sales on Amazon</li>
-                            <li>Brand verification in USPTO trademark database</li>
                             <li>Sales volume and potential analysis</li>
                             <li>Competition status evaluation</li>
                         </ul>
