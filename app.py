@@ -428,7 +428,6 @@ DEFAULT_TEMPLATES = {
 },
     
     # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
-   # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
 
 "supplier_outreach_4": {
     "name": "Wholesale Distribution Partnership",
@@ -642,7 +641,8 @@ DEFAULT_TEMPLATES = {
     </div>
     </body></html>
     """
-},
+    }
+}
 
 
 def hash_password(password):
