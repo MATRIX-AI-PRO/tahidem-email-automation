@@ -270,71 +270,72 @@ DEFAULT_TEMPLATES = {
             <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
             
             <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-            We want to become <strong>{company}'s exclusive authorized distributor</strong> on Amazon, taking full responsibility for your ASIN development, optimization, and sales growth while providing guaranteed inventory commitment through our million-dollar customer network.
+            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a wholesale partnership with <strong>{company}</strong> and becoming your exclusive authorized distributor on Amazon.
             </p>
             
-            <!-- Our Primary Goal -->
+            <!-- Company Information -->
             <div style="background: #f8f9fa; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0;">
-                <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🎯 Our Primary Partnership Goal</h3>
-                <p style="color: #555; margin: 15px 0;">
-                    <strong>Become your exclusive authorized distributor</strong> for ASINs you authorize us to sell, taking complete ownership of listing optimization, sales growth, and inventory management while maintaining continuous brand communication.
+                <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🏢 About TAHIDEM LLC</h3>
+                <div style="color: #555; margin: 15px 0;">
+                    <p style="margin: 8px 0;"><strong>Company:</strong> TAHIDEM LLC</p>
+                    <p style="margin: 8px 0;"><strong>EIN:</strong> 35-2742119</p>
+                    <p style="margin: 8px 0;"><strong>Owner:</strong> Onur Nakis</p>
+                    <p style="margin: 8px 0;"><strong>Location:</strong> 30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+                    <p style="margin: 8px 0;"><strong>Contact:</strong> business@tahidem.com</p>
+                </div>
             </div>
             
-            <!-- Exclusive Distribution Services -->
+            <!-- Partnership Request -->
             <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🏆 EXCLUSIVE DISTRIBUTOR SERVICES</h3>
+                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🎯 PARTNERSHIP REQUEST</h3>
                 
                 <div style="display: grid; gap: 15px; margin: 25px 0;">
                     <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Exclusive ASIN Authorization</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Become sole authorized seller for your approved Amazon product listings</p>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🏪 Wholesale Account Approval</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">To purchase your products directly at wholesale prices with significant investment commitment</p>
                     </div>
                     <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📈 Complete Listing Development</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Advanced SEO optimization, A+ content creation, and search ranking strategies</p>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📋 Letter of Authorization (LOA)</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Confirming that TAHIDEM LLC is an authorized reseller of your brand on Amazon</p>
                     </div>
                     <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🎥 Professional Content Creation</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">High-quality product photography, infographics, and promotional videos</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">⭐ Strategic Review Growth</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Positive feedback enhancement and reputation management strategies</p>
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Brand Exclusivity</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Exclusive rights to sell your brand's products on Amazon with written consent requirement</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Guaranteed Inventory Commitment -->
+            <!-- Partnership Benefits -->
             <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 22px;">💰 GUARANTEED INVENTORY COMMITMENT</h3>
+                <h3 style="margin-top: 0; font-size: 22px;">💰 WHAT THIS PARTNERSHIP OFFERS</h3>
                 <div style="margin: 20px 0;">
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Million-dollar customer network</strong> ensures guaranteed sales</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>3-6 month bulk inventory purchases</strong> based on 30-day Amazon sales data</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Zero inventory risk for your brand</strong> - we handle all stock management</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Continuous brand communication</strong> for all authorized ASINs</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Protect and enhance your brand's image</strong> on Amazon</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Maintain consistent pricing and representation</strong></p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Drive long-term sales growth</strong> with strong investment in inventory</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Significant investment in stocking and promoting</strong> your products</p>
                 </div>
             </div>
             
-            <!-- Distribution Partnership Process -->
+            <!-- Exclusive Distribution Services -->
             <div style="margin: 30px 0;">
-                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🔄 Exclusive Distribution Process:</h3>
+                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🏆 EXCLUSIVE DISTRIBUTOR SERVICES</h3>
                 
                 <div style="display: grid; gap: 15px; margin: 20px 0;">
                     <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
-                        <h4 style="color: #27ae60; margin: 0 0 8px 0;">1️⃣ Exclusive Distribution Authorization</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Secure exclusive rights to sell your authorized Amazon ASINs as distributor</p>
+                        <h4 style="color: #27ae60; margin: 0 0 8px 0;">🔐 Exclusive ASIN Authorization</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Become sole authorized seller for ASINs you authorize us to sell</p>
                     </div>
                     <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
-                        <h4 style="color: #3742fa; margin: 0 0 8px 0;">2️⃣ Complete ASIN Optimization</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">SEO enhancement, visual content creation, and listing development for maximum performance</p>
+                        <h4 style="color: #3742fa; margin: 0 0 8px 0;">📈 Complete Listing Development</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Advanced SEO optimization, A+ content creation, and search ranking strategies</p>
                     </div>
                     <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
-                        <h4 style="color: #ff9f43; margin: 0 0 8px 0;">3️⃣ Strategic Inventory Management</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Bulk purchasing based on sales data analysis and market demand forecasting</p>
+                        <h4 style="color: #ff9f43; margin: 0 0 8px 0;">🎥 Professional Content Creation</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">High-quality product photography, infographics, and promotional videos</p>
                     </div>
                     <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
-                        <h4 style="color: #ff6348; margin: 0 0 8px 0;">4️⃣ Comprehensive Reporting & Communication</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Weekly sales reports, monthly advertising analytics, and continuous brand collaboration</p>
+                        <h4 style="color: #ff6348; margin: 0 0 8px 0;">⭐ Strategic Review Growth</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Positive feedback enhancement and reputation management strategies</p>
                     </div>
                 </div>
             </div>
@@ -345,7 +346,7 @@ DEFAULT_TEMPLATES = {
                 <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
                     <li style="margin-bottom: 8px;"><strong>Exclusive authorized distributor status</strong> for ASINs you authorize us to sell</li>
                     <li style="margin-bottom: 8px;"><strong>Complete ASIN development and optimization</strong> responsibility</li>
-                    <li style="margin-bottom: 8px;"><strong>Guaranteed bulk inventory purchases</strong> from our customer network</li>
+                    <li style="margin-bottom: 8px;"><strong>Guaranteed bulk inventory purchases</strong> with significant investment</li>
                     <li style="margin-bottom: 8px;"><strong>Professional content creation</strong> (images, videos, A+ content)</li>
                     <li style="margin-bottom: 8px;"><strong>Strategic positive review growth</strong> and reputation management</li>
                     <li style="margin-bottom: 8px;"><strong>Weekly/monthly performance reporting</strong> and analytics</li>
@@ -355,7 +356,7 @@ DEFAULT_TEMPLATES = {
             </div>
             
             <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
-                Ready to partner with an exclusive distributor who guarantees growth?
+                Ready to proceed immediately with exclusive distribution partnership?
             </p>
             
             <!-- CTA Button -->
@@ -366,14 +367,16 @@ DEFAULT_TEMPLATES = {
         
         <!-- Footer -->
         <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-            <p style="margin: 0; font-weight: bold; font-size: 16px;">Exclusive Distribution Team</p>
-            <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC</p>
+            <p style="margin: 0; font-weight: bold; font-size: 16px;">Onur Nakis - Sales Manager</p>
+            <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
             <p style="margin: 5px 0 0 0; opacity: 0.8;">business@tahidem.com | https://tahidem.com/</p>
         </div>
     </div>
     </body></html>
     """
 },
+
     
     # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
     "supplier_outreach_1": {
