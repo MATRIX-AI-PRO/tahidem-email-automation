@@ -428,492 +428,223 @@ DEFAULT_TEMPLATES = {
 },
     
     # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
-    "supplier_outreach_1": {
-        "name": "Supplier Partnership Inquiry",
-        "category": "supplier_outreach",
-        "subject": "Supply Chain Partnership Opportunity - TAHIDEM LLC",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
+   # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
+
+"supplier_outreach_4": {
+    "name": "Wholesale Distribution Partnership",
+    "category": "supplier_outreach",
+    "subject": "Wholesale Distribution Partnership - {company} x TAHIDEM LLC - Million Dollar Opportunity",
+    "content": """
+    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+    <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 40px 30px; text-align: center; color: white; position: relative;">
+            <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">WHOLESALE DISTRIBUTOR</div>
+            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🏢 WHOLESALE DISTRIBUTION PARTNERSHIP</h1>
+            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">TAHIDEM LLC - Million Dollar Opportunity</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 40px 30px;">
+            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
             
-            <!-- Header -->
-            <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 40px 30px; text-align: center; color: white;">
-                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🏢 SUPPLIER PARTNERSHIP</h1>
-                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">TAHIDEM LLC Supply Chain Network</p>
-            </div>
+            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a <strong>wholesale distribution partnership</strong> with <strong>{company}</strong> to scale your business through our million-dollar customer network.
+            </p>
             
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                I hope this message finds you well. I'm reaching out from TAHIDEM LLC regarding a potential supply chain partnership with <strong>{company}</strong>.
-                </p>
-                
-                <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-                We're actively expanding our supplier network and believe your company's capabilities align perfectly with our growing market demands.
-                </p>
-                
-                <!-- About TAHIDEM -->
-                <div style="background: #f8f9fa; border-left: 5px solid #4facfe; padding: 25px; margin: 30px 0;">
-                    <h3 style="color: #4facfe; margin-top: 0; font-size: 20px;">🚀 About TAHIDEM LLC</h3>
-                    <p style="color: #555; margin: 15px 0;">
-                        We're a rapidly growing e-commerce distribution company specializing in Amazon marketplace operations across multiple international markets. Our network spans the US, Europe, Australia, and Canada.
-                    </p>
-                </div>
-                
-                <!-- Our Requirements -->
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px;">📋 What We're Looking For:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px;">
-                        <li style="margin-bottom: 12px;">🏭 <strong>Manufacturing Capacity:</strong> Ability to scale production based on demand</li>
-                        <li style="margin-bottom: 12px;">✅ <strong>Quality Standards:</strong> ISO certifications and quality control systems</li>
-                        <li style="margin-bottom: 12px;">🌍 <strong>Global Shipping:</strong> Experience with international logistics</li>
-                        <li style="margin-bottom: 12px;">📊 <strong>Flexibility:</strong> Adaptable to market trends and seasonal demands</li>
-                    </ul>
-                </div>
-                
-                <!-- Partnership Benefits -->
-                <div style="margin: 30px 0;">
-                    <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🤝 Partnership Benefits:</h3>
-                    
-                    <div style="display: grid; gap: 15px; margin: 20px 0;">
-                        <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
-                            <h4 style="color: #27ae60; margin: 0 0 8px 0;">💰 Guaranteed Volume Orders</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Minimum monthly orders of $100K+ with growth potential</p>
-                        </div>
-                        <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
-                            <h4 style="color: #3742fa; margin: 0 0 8px 0;">⚡ Fast Payment Terms</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">30-day payment terms with option for early payment discounts</p>
-                        </div>
-                        <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
-                            <h4 style="color: #ff9f43; margin: 0 0 8px 0;">📈 Long-term Partnership</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Multi-year contracts with annual volume increases</p>
-                        </div>
-                        <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
-                            <h4 style="color: #ff6348; margin: 0 0 8px 0;">🛠️ Product Development Support</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Collaborative product development and market insights</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Volume Projections -->
-                <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                    <h3 style="margin-top: 0; font-size: 22px;">📊 VOLUME PROJECTIONS</h3>
-                    <div style="display: flex; gap: 20px; margin: 25px 0; flex-wrap: wrap; justify-content: center;">
-                        <div style="text-align: center; flex: 1; min-width: 120px;">
-                            <h4 style="margin: 0; font-size: 28px; font-weight: bold;">$2M+</h4>
-                            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Year 1 Target</p>
-                        </div>
-                        <div style="text-align: center; flex: 1; min-width: 120px;">
-                            <h4 style="margin: 0; font-size: 28px; font-weight: bold;">$5M+</h4>
-                            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Year 2 Target</p>
-                        </div>
-                        <div style="text-align: center; flex: 1; min-width: 120px;">
-                            <h4 style="margin: 0; font-size: 28px; font-weight: bold;">$10M+</h4>
-                            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">Year 3 Target</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product Categories -->
-                <div style="border: 2px solid #4facfe; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #4facfe; margin-top: 0;">🎯 Priority Product Categories:</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
-                        <span style="background: #4facfe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Consumer Electronics</span>
-                        <span style="background: #4facfe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Home & Garden</span>
-                        <span style="background: #4facfe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Health & Beauty</span>
-                        <span style="background: #4facfe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Sports & Fitness</span>
-                        <span style="background: #4facfe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Baby Products</span>
-                        <span style="background: #4facfe; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Pet Supplies</span>
-                    </div>
-                </div>
-                
-                <!-- Next Steps -->
-                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #2c3e50; margin-top: 0;">📋 Next Steps:</h3>
-                    <ol style="margin: 15px 0; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 8px;">Initial capability assessment call</li>
-                        <li style="margin-bottom: 8px;">Product catalog and pricing review</li>
-                        <li style="margin-bottom: 8px;">Quality standards verification</li>
-                        <li style="margin-bottom: 8px;">Partnership agreement negotiation</li>
-                    </ol>
-                </div>
-                
-                <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
-                    Interested in exploring this partnership opportunity?
-                </p>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="mailto:deals@tahidem.com" style="background: #4facfe; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Schedule a Call</a>
+            <!-- Company Information -->
+            <div style="background: #f8f9fa; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0;">
+                <h3 style="color: #667eea; margin-top: 0; font-size: 20px;">🏢 About TAHIDEM LLC</h3>
+                <div style="color: #555; margin: 15px 0;">
+                    <p style="margin: 8px 0;"><strong>Company:</strong> TAHIDEM LLC</p>
+                    <p style="margin: 8px 0;"><strong>EIN:</strong> 35-2742119</p>
+                    <p style="margin: 8px 0;"><strong>Owner:</strong> Onur Nakis</p>
+                    <p style="margin: 8px 0;"><strong>Location:</strong> 30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+                    <p style="margin: 8px 0;"><strong>Contact:</strong> business@tahidem.com</p>
+                    <p style="margin: 8px 0;"><strong>Specialization:</strong> Amazon & E-commerce Distribution</p>
                 </div>
             </div>
             
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 0; font-weight: bold; font-size: 16px;">Supply Chain Team</p>
-                <p style="margin: 5px 0; color: #4facfe; font-weight: bold;">TAHIDEM LLC</p>
-                <p style="margin: 5px 0 0 0; opacity: 0.8;">deals@tahidem.com | https://tahidem.com/</p>
+            <!-- Our Primary Distribution Goal -->
+            <div style="background: #2c3e50; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0; color: white;">
+                <h3 style="color: #667eea; margin-top: 0; font-size: 20px;">🎯 Our Primary Distribution Goal</h3>
+                <p style="color: #fff; margin: 15px 0; font-size: 16px;">
+                    <strong>Become your exclusive wholesale distributor</strong> for Amazon and global e-commerce platforms, taking complete ownership of inventory management, sales growth, and market expansion while maintaining continuous brand communication.
+                </p>
+            </div>
+            
+            <!-- Partnership Request -->
+            <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🎯 WHOLESALE PARTNERSHIP REQUEST</h3>
+                
+                <div style="display: grid; gap: 15px; margin: 25px 0;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🏪 Wholesale Account Authorization</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Direct wholesale purchasing with significant volume commitments and competitive pricing</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📋 Distribution Agreement</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Formal distributor status for Amazon and global e-commerce platforms</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Exclusive Distribution Rights</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Exclusive or preferred distributor status for specific regions or product lines</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Million Dollar Customer Network -->
+            <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 22px;">💰 MILLION DOLLAR CUSTOMER NETWORK</h3>
+                <div style="margin: 20px 0;">
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>$50M+ annual sales volume</strong> across 200+ brand partnerships</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Active in 15+ countries</strong> with localized operations</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>3-6 month bulk inventory purchases</strong> based on sales data analysis</p>
+                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Zero inventory risk</strong> - guaranteed volume commitments</p>
+                </div>
+            </div>
+            
+            <!-- Wholesale Distribution Services -->
+            <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🏆 WHOLESALE DISTRIBUTION SERVICES</h3>
+                
+                <div style="display: grid; gap: 15px; margin: 25px 0;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📦 Bulk Inventory Management</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Large-scale inventory purchasing and strategic stock management</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🌍 Global Market Expansion</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Multi-country distribution across Amazon US, EU, Australia, and Canada</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📈 Sales Growth Optimization</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Advanced listing optimization, SEO, and advertising strategies</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">💼 Brand Protection & Compliance</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Legal compliance tracking and brand reputation management</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Financial Projections -->
+            <div style="background: #ff6b6b; padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">📊 FINANCIAL PROJECTIONS</h3>
+                <div style="display: grid; gap: 20px; margin: 25px 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
+                        <h4 style="margin: 0; font-size: 24px;">Q1</h4>
+                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$500K</p>
+                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Initial Orders</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
+                        <h4 style="margin: 0; font-size: 24px;">Q2</h4>
+                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$1.2M</p>
+                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Scale Up</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
+                        <h4 style="margin: 0; font-size: 24px;">Q3</h4>
+                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$2.5M</p>
+                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Peak Season</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
+                        <h4 style="margin: 0; font-size: 24px;">Q4</h4>
+                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$3.8M</p>
+                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Holiday Rush</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin: 20px 0 0 0; font-size: 16px; font-weight: bold;">
+                    Total Year 1 Projection: $8M+
+                </p>
+            </div>
+            
+            <!-- Distribution Partnership Process -->
+            <div style="margin: 30px 0;">
+                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🔄 Wholesale Distribution Process:</h3>
+                
+                <div style="display: grid; gap: 15px; margin: 20px 0;">
+                    <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
+                        <h4 style="color: #27ae60; margin: 0 0 8px 0;">1️⃣ Wholesale Agreement Establishment</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Secure wholesale pricing and distribution rights with volume commitments</p>
+                    </div>
+                    <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
+                        <h4 style="color: #3742fa; margin: 0 0 8px 0;">2️⃣ Market Analysis & Strategy</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Comprehensive market research and sales strategy development</p>
+                    </div>
+                    <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
+                        <h4 style="color: #ff9f43; margin: 0 0 8px 0;">3️⃣ Bulk Inventory Investment</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Large-scale inventory purchasing based on demand forecasting</p>
+                    </div>
+                    <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
+                        <h4 style="color: #ff6348; margin: 0 0 8px 0;">4️⃣ Global Distribution & Reporting</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Multi-platform distribution with comprehensive performance reporting</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Partnership Benefits -->
+            <div style="border: 2px solid #4facfe; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #4facfe; margin-top: 0;">🎁 Wholesale Distribution Benefits:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                    <li style="margin-bottom: 8px;"><strong>Guaranteed bulk inventory purchases</strong> from million-dollar customer network</li>
+                    <li style="margin-bottom: 8px;"><strong>Multi-platform distribution</strong> across Amazon US, EU, Australia, Canada</li>
+                    <li style="margin-bottom: 8px;"><strong>Professional listing optimization</strong> and content creation services</li>
+                    <li style="margin-bottom: 8px;"><strong>Advanced advertising strategies</strong> and market penetration</li>
+                    <li style="margin-bottom: 8px;"><strong>Weekly/monthly sales reporting</strong> and performance analytics</li>
+                    <li style="margin-bottom: 8px;"><strong>Fast payment terms</strong> (15-30 days) with early payment discounts</li>
+                    <li style="margin-bottom: 8px;"><strong>Brand protection and compliance</strong> tracking across all platforms</li>
+                    <li style="margin-bottom: 8px;"><strong>Long-term partnership</strong> with annual volume growth commitments</li>
+                </ul>
+            </div>
+            
+            <!-- Success Metrics -->
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #2c3e50; margin-top: 0;">📊 Our Success Metrics:</h3>
+                <div style="display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; justify-content: center;">
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: #3742fa; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">98%</div>
+                        <p style="margin: 0; color: #555; font-size: 14px;">On-time Delivery</p>
+                    </div>
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: #27ae60; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">15</div>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Day Payment Terms</p>
+                    </div>
+                    <div style="background: #ff6348; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">24/7</div>
+                    <p style="margin: 0; color: #555; font-size: 14px;">Support Available</p>
+                </div>
+            </div>
+            
+            <!-- Professional Priority Statement -->
+            <div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 25px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 20px;">🎯 OUR PROFESSIONAL PRIORITY</h3>
+                <p style="margin: 15px 0; font-size: 16px;">
+                    <strong>Our priority is to become your trusted wholesale distributor</strong> for global e-commerce platforms, scaling your business through our proven distribution network and million-dollar customer base.
+                </p>
+            </div>
+            
+            <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
+                Ready to scale your business with our wholesale distribution network?
+            </p>
+            
+            <!-- CTA Button -->
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="mailto:connect@tahidem.com" style="background: #667eea; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Wholesale Partnership</a>
             </div>
         </div>
-        </body></html>
-        """
-    },
-    
-    "supplier_outreach_2": {
-        "name": "Wholesale Distribution Partnership",
-        "category": "supplier_outreach",
-        "subject": "Wholesale Distribution Partnership - {company} x TAHIDEM LLC",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-            
-            <!-- Header -->
-            <div style="background: linear-gradient(45deg, #fa709a, #fee140); padding: 40px 30px; text-align: center; color: white;">
-                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🛒 WHOLESALE PARTNERSHIP</h1>
-                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">TAHIDEM LLC Distribution Network</p>
-            </div>
-            
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                I'm writing to explore a <strong>wholesale distribution partnership</strong> between TAHIDEM LLC and <strong>{company}</strong>.
-                </p>
-                
-                <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-                We've identified your company as a potential strategic partner for our expanding e-commerce distribution operations.
-                </p>
-                
-                <!-- Market Opportunity -->
-                <div style="background: #f8f9fa; border-left: 5px solid #fa709a; padding: 25px; margin: 30px 0;">
-                    <h3 style="color: #fa709a; margin-top: 0; font-size: 20px;">🎯 Market Opportunity</h3>
-                    <p style="color: #555; margin: 15px 0;">
-                        The global e-commerce market is projected to reach <strong>$8.1 trillion by 2026</strong>. Amazon alone processes over <strong>$500 billion</strong> in annual sales. We want to help you capture your share of this massive opportunity.
-                    </p>
-                </div>
-                
-                <!-- Why Partner With Us -->
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px;">🚀 Why Partner With TAHIDEM LLC?</h3>
-                    <div style="margin: 20px 0;">
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin: 10px 0;">
-                            <h4 style="margin: 0 0 8px 0; font-size: 16px;">📊 Proven Track Record</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">$50M+ in managed sales across 200+ brand partnerships</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin: 10px 0;">
-                            <h4 style="margin: 0 0 8px 0; font-size: 16px;">🌍 Global Reach</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Active in 15+ countries with localized operations</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin: 10px 0;">
-                            <h4 style="margin: 0 0 8px 0; font-size: 16px;">⚡ Fast Growth</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">300% year-over-year growth with aggressive expansion plans</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Partnership Structure -->
-                <div style="margin: 30px 0;">
-                    <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🤝 Partnership Structure:</h3>
-                    
-                    <div style="display: grid; gap: 15px; margin: 20px 0;">
-                        <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
-                            <h4 style="color: #27ae60; margin: 0 0 8px 0;">💼 Exclusive Distribution Rights</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Become our preferred supplier for specific product categories</p>
-                        </div>
-                        <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
-                            <h4 style="color: #3742fa; margin: 0 0 8px 0;">📈 Volume Commitments</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Guaranteed minimum order quantities with growth projections</p>
-                        </div>
-                        <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
-                            <h4 style="color: #ff9f43; margin: 0 0 8px 0;">💰 Competitive Pricing</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Wholesale pricing with volume discounts and early payment terms</p>
-                        </div>
-                        <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
-                            <h4 style="color: #ff6348; margin: 0 0 8px 0;">🎯 Marketing Support</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Co-marketing opportunities and brand promotion</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Financial Projections -->
-                <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">💰 FINANCIAL PROJECTIONS</h3>
-                    <div style="display: grid; gap: 20px; margin: 25px 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                            <h4 style="margin: 0; font-size: 24px;">Q1</h4>
-                            <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$500K</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Initial Orders</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                            <h4 style="margin: 0; font-size: 24px;">Q2</h4>
-                            <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$1.2M</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Scale Up</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                            <h4 style="margin: 0; font-size: 24px;">Q3</h4>
-                            <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$2.5M</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Peak Season</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                            <h4 style="margin: 0; font-size: 24px;">Q4</h4>
-                            <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$3.8M</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Holiday Rush</p>
-                        </div>
-                    </div>
-                    <p style="text-align: center; margin: 20px 0 0 0; font-size: 16px; font-weight: bold;">
-                        Total Year 1 Projection: $8M+
-                    </p>
-                </div>
-                
-                <!-- Success Metrics -->
-                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #2c3e50; margin-top: 0;">📊 Our Success Metrics:</h3>
-                    <div style="display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; justify-content: center;">
-                        <div style="text-align: center; flex: 1; min-width: 120px;">
-                            <div style="background: #3742fa; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">98%</div>
-                            <p style="margin: 0; color: #555; font-size: 14px;">On-time Delivery</p>
-                        </div>
-                        <div style="text-align: center; flex: 1; min-width: 120px;">
-                            <div style="background: #27ae60; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">15</div>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Day Payment Terms</p>
-                        </div>
-                        <div style="text-align: center; flex: 1; min-width: 120px;">
-                            <div style="background: #ff6348; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">24/7</div>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Support Available</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Requirements -->
-                <div style="border: 2px solid #fa709a; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #fa709a; margin-top: 0;">✅ Partnership Requirements:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 8px;">Minimum 5 years in business with proven track record</li>
-                        <li style="margin-bottom: 8px;">Quality certifications (ISO, CE, FCC, etc.)</li>
-                        <li style="margin-bottom: 8px;">Capacity to fulfill $500K+ monthly orders</li>
-                        <li style="margin-bottom: 8px;">English-speaking business development team</li>
-                        <li style="margin-bottom: 8px;">Competitive wholesale pricing structure</li>
-                    </ul>
-                </div>
-                
-                <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
-                    Ready to scale your business with us?
-                </p>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="mailto:marketing@tahidem.com" style="background: linear-gradient(45deg, #fa709a, #fee140); color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Partnership</a>
-                </div>
-            </div>
-            
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 0; font-weight: bold; font-size: 16px;">Wholesale Partnerships Team</p>
-                <p style="margin: 5px 0; color: #fa709a; font-weight: bold;">TAHIDEM LLC</p>
-                <p style="margin: 5px 0 0 0; opacity: 0.8;">marketing@tahidem.com | https://tahidem.com/</p>
-            </div>
+        
+        <!-- Footer -->
+        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+            <p style="margin: 0; font-weight: bold; font-size: 16px;">Onur Nakis - Wholesale Distribution Manager</p>
+            <p style="margin: 5px 0; color: #667eea; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+            <p style="margin: 5px 0 0 0; opacity: 0.8;">connect@tahidem.com | https://tahidem.com/</p>
         </div>
-        </body></html>
-        """
-    },
-    
-    "supplier_outreach_3": {
-        "name": "Private Label Manufacturing Partnership",
-        "category": "supplier_outreach",
-        "subject": "Private Label Manufacturing Partnership - TAHIDEM LLC",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-            
-            <!-- Header -->
-            <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 40px 30px; text-align: center; color: #2c3e50;">
-                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🏭 PRIVATE LABEL PARTNERSHIP</h1>
-                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.8;">TAHIDEM LLC Manufacturing Network</p>
-            </div>
-            
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                I'm reaching out to explore a <strong>private label manufacturing partnership</strong> between TAHIDEM LLC and <strong>{company}</strong>.
-                </p>
-                
-                <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-                We're looking for reliable manufacturing partners to produce high-quality products under our private label brands for the global e-commerce market.
-                </p>
-                
-                <!-- Private Label Opportunity -->
-                <div style="background: #f8f9fa; border-left: 5px solid #a8edea; padding: 25px; margin: 30px 0;">
-                    <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🎯 Private Label Opportunity</h3>
-                    <p style="color: #555; margin: 15px 0;">
-                        The private label market is experiencing explosive growth, with <strong>Amazon's private label sales exceeding $25 billion annually</strong>. We want to partner with you to capture this opportunity through innovative product development and manufacturing excellence.
-                    </p>
-                </div>
-                
-                <!-- Our Private Label Brands -->
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🏷️ Our Private Label Portfolio</h3>
-                    <div style="display: grid; gap: 15px; margin: 25px 0;">
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                            <h4 style="margin: 0 0 8px 0; font-size: 16px;">🏠 HomeTech Solutions</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Smart home devices and automation products</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                            <h4 style="margin: 0 0 8px 0; font-size: 16px;">💪 FitLife Pro</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Fitness equipment and wellness products</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                            <h4 style="margin: 0 0 8px 0; font-size: 16px;">🌿 EcoLiving Essentials</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Sustainable household and personal care products</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                            <h4 style="margin: 0 0 8px 0; font-size: 16px;">🐾 PetCare Plus</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Premium pet accessories and care products</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Manufacturing Requirements -->
-                <div style="margin: 30px 0;">
-                    <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🔧 Manufacturing Requirements:</h3>
-                    
-                    <div style="display: grid; gap: 15px; margin: 20px 0;">
-                        <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
-                            <h4 style="color: #27ae60; margin: 0 0 8px 0;">✅ Quality Standards</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">ISO 9001, CE, FCC, RoHS certifications required</p>
-                        </div>
-                        <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
-                            <h4 style="color: #3742fa; margin: 0 0 8px 0;">🏭 Production Capacity</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Minimum 10,000 units per month scalability</p>
-                        </div>
-                        <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
-                            <h4 style="color: #ff9f43; margin: 0 0 8px 0;">🎨 Customization</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">Custom packaging, branding, and product modifications</p>
-                        </div>
-                        <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
-                            <h4 style="color: #ff6348; margin: 0 0 8px 0;">⚡ Lead Times</h4>
-                            <p style="margin: 0; color: #555; font-size: 14px;">30-45 day production cycles with rush order capabilities</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Partnership Benefits -->
-                <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🤝 Partnership Benefits</h3>
-                    <div style="display: grid; gap: 20px; margin: 25px 0; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                            <h4 style="margin: 0; font-size: 18px;">💰 Guaranteed Orders</h4>
-                            <p style="margin: 10px 0; font-size: 24px; font-weight: bold;">$3M+</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Annual Volume</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                            <h4 style="margin: 0; font-size: 18px;">📈 Growth Potential</h4>
-                            <p style="margin: 10px 0; font-size: 24px; font-weight: bold;">500%</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">3-Year Growth</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                            <h4 style="margin: 0; font-size: 18px;">🎯 Market Access</h4>
-                            <p style="margin: 10px 0; font-size: 24px; font-weight: bold;">15+</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Countries</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product Development Process -->
-                <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #2c3e50; margin-top: 0;">🔄 Product Development Process:</h3>
-                    <div style="margin: 20px 0;">
-                        <div style="display: flex; align-items: center; margin: 15px 0;">
-                            <div style="background: #a8edea; color: #2c3e50; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold;">1</div>
-                            <p style="margin: 0; color: #555;"><strong>Market Research:</strong> Identify trending products and customer needs</p>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 15px 0;">
-                            <div style="background: #a8edea; color: #2c3e50; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold;">2</div>
-                            <p style="margin: 0; color: #555;"><strong>Design & Prototyping:</strong> Collaborative product design and testing</p>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 15px 0;">
-                            <div style="background: #a8edea; color: #2c3e50; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold;">3</div>
-                            <p style="margin: 0; color: #555;"><strong>Quality Testing:</strong> Rigorous quality control and certification</p>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 15px 0;">
-                            <div style="background: #a8edea; color: #2c3e50; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold;">4</div>
-                            <p style="margin: 0; color: #555;"><strong>Mass Production:</strong> Scale manufacturing and global distribution</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Success Story -->
-                <div style="border: 2px solid #fed6e3; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #e91e63; margin-top: 0;">🏆 Success Story:</h3>
-                    <div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h4 style="margin: 0 0 10px 0; color: #2c3e50;">Smart Home Device Partnership</h4>
-                        <p style="margin: 10px 0; color: #555;">
-                            Our partnership with a Chinese manufacturer resulted in a smart home device that became a <strong>top 10 bestseller</strong> on Amazon within 6 months.
-                        </p>
-                        <div style="display: flex; gap: 20px; margin: 15px 0; flex-wrap: wrap;">
-                            <div style="text-align: center; flex: 1; min-width: 100px;">
-                                <p style="margin: 0; font-size: 20px; font-weight: bold; color: #27ae60;">$5M</p>
-                                <p style="margin: 0; font-size: 12px; color: #555;">Revenue Generated</p>
-                            </div>
-                            <div style="text-align: center; flex: 1; min-width: 100px;">
-                                <p style="margin: 0; font-size: 20px; font-weight: bold; color: #3742fa;">50K+</p>
-                                <p style="margin: 0; font-size: 12px; color: #555;">Units Sold</p>
-                            </div>
-                            <div style="text-align: center; flex: 1; min-width: 100px;">
-                                <p style="margin: 0; font-size: 20px; font-weight: bold; color: #ff6348;">4.8★</p>
-                                <p style="margin: 0; font-size: 12px; color: #555;">Customer Rating</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Investment & Timeline -->
-                <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: #2c3e50;">
-                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">💼 Investment & Timeline</h3>
-                    <div style="display: flex; gap: 20px; margin: 25px 0; flex-wrap: wrap; justify-content: center;">
-                        <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 8px; text-align: center; flex: 1; min-width: 150px;">
-                            <h4 style="margin: 0; font-size: 18px;">Initial Investment</h4>
-                            <p style="margin: 10px 0; font-size: 24px; font-weight: bold;">$50K</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Tooling & Setup</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 8px; text-align: center; flex: 1; min-width: 150px;">
-                            <h4 style="margin: 0; font-size: 18px;">Development Time</h4>
-                            <p style="margin: 10px 0; font-size: 24px; font-weight: bold;">60-90</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Days</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 8px; text-align: center; flex: 1; min-width: 150px;">
-                            <h4 style="margin: 0; font-size: 18px;">Break-even</h4>
-                            <p style="margin: 10px 0; font-size: 24px; font-weight: bold;">6-8</p>
-                            <p style="margin: 0; font-size: 12px; opacity: 0.8;">Months</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
-                    Ready to build the next bestselling product together?
-                </p>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="mailto:connect@tahidem.com" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #2c3e50; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Start Partnership Discussion</a>
-                </div>
-            </div>
-            
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 0; font-weight: bold; font-size: 16px;">Private Label Development Team</p>
-                <p style="margin: 5px 0; color: #a8edea; font-weight: bold;">TAHIDEM LLC</p>
-                <p style="margin: 5px 0 0 0; opacity: 0.8;">connect@tahidem.com | https://tahidem.com/</p>
-            </div>
-        </div>
-        </body></html>
-        """
-    }
-}
+    </div>
+    </body></html>
+    """
+},
+
 
 def hash_password(password):
     """Şifreyi hash'le"""
