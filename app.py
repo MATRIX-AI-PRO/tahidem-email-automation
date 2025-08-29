@@ -277,8 +277,7 @@ DEFAULT_TEMPLATES = {
             <div style="background: #f8f9fa; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0;">
                 <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🎯 Our Primary Partnership Goal</h3>
                 <p style="color: #555; margin: 15px 0;">
-                    <strong>Become your exclusive authorized distributor</strong> for all your Amazon ASINs, taking complete ownership of listing optimization, sales growth, and inventory management while maintaining continuous brand communication.
-                </p>
+                    <strong>Become your exclusive authorized distributor</strong> for ASINs you authorize us to sell, taking complete ownership of listing optimization, sales growth, and inventory management while maintaining continuous brand communication.
             </div>
             
             <!-- Exclusive Distribution Services -->
@@ -288,7 +287,7 @@ DEFAULT_TEMPLATES = {
                 <div style="display: grid; gap: 15px; margin: 25px 0;">
                     <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
                         <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Exclusive ASIN Authorization</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Become sole authorized seller for all your Amazon product listings</p>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Become sole authorized seller for your approved Amazon product listings</p>
                     </div>
                     <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
                         <h4 style="margin: 0 0 10px 0; font-size: 16px;">📈 Complete Listing Development</h4>
