@@ -248,117 +248,6 @@ DEFAULT_TEMPLATES = {
         """
     },
     
-    "brand_hunter_3": {
-        "name": "Senior Brand Development Specialist",
-        "category": "brand_hunter",
-        "subject": "Senior Brand Development Specialist - High-Return Project",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-            
-            <!-- Header -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
-                <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">PREMIUM OPPORTUNITY</div>
-                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🏆 SENIOR POSITION</h1>
-                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Brand Development Specialist</p>
-            </div>
-            
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                I reviewed your LinkedIn profile and was impressed by your experience in the Amazon/e-commerce field.
-                </p>
-                
-                <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-                As TAHIDEM LLC, we want to work with you for the <strong>Senior Brand Development Specialist</strong> position.
-                </p>
-                
-                <!-- Project Detail -->
-                <div style="background: #f8f9fa; border-left: 5px solid #e74c3c; padding: 25px; margin: 30px 0;">
-                    <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">📊 PROJECT DETAIL:</h3>
-                    <p style="color: #555; margin: 15px 0;">
-                        We establish exclusive distribution partnerships with high-volume brands on Amazon. We have signed successful agreements with brands like <strong>Lubluelu</strong>.
-                    </p>
-                </div>
-                
-                <!-- Expectations -->
-                <div style="background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px;">🎯 EXPECTATIONS FROM YOU:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px;">
-                        <li style="margin-bottom: 12px;">🎯 Target premium brands with $100K+ monthly sales</li>
-                        <li style="margin-bottom: 12px;">🎯 Establish direct communication with C-level executives</li>
-                        <li style="margin-bottom: 12px;">🎯 Manage complex agreement processes</li>
-                        <li style="margin-bottom: 12px;">🎯 Develop long-term strategic partnerships</li>
-                    </ul>
-                </div>
-                
-                <!-- Special Payment Package -->
-                <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                    <h3 style="margin-top: 0; font-size: 22px;">💎 SPECIAL PAYMENT PACKAGE</h3>
-                    <div style="margin: 25px 0;">
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin: 10px 0;">
-                            <p style="margin: 0; font-size: 18px;"><strong>Premium Brands:</strong> $15,000+ per deal</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin: 10px 0;">
-                            <p style="margin: 0; font-size: 18px;"><strong>Enterprise Level:</strong> $25,000+ per deal</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin: 10px 0;">
-                            <p style="margin: 0; font-size: 18px;"><strong>Exclusive Partnerships:</strong> $50,000+ per deal</p>
-                        </div>
-                    </div>
-                    <p style="margin: 15px 0 0 0; font-size: 14px; opacity: 0.9;">+ Performance bonuses and long-term incentives</p>
-                </div>
-                
-                <!-- Success Metrics -->
-                <div style="display: flex; gap: 15px; margin: 30px 0; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 150px; background: #3742fa; color: white; padding: 20px; border-radius: 8px; text-align: center;">
-                        <h4 style="margin: 0; font-size: 24px;">$2M+</h4>
-                        <p style="margin: 5px 0 0 0; font-size: 14px;">Total Deals Closed</p>
-                    </div>
-                    <div style="flex: 1; min-width: 150px; background: #2ed573; color: white; padding: 20px; border-radius: 8px; text-align: center;">
-                        <h4 style="margin: 0; font-size: 24px;">50+</h4>
-                        <p style="margin: 5px 0 0 0; font-size: 14px;">Partner Brands</p>
-                    </div>
-                    <div style="flex: 1; min-width: 150px; background: #ff6348; color: white; padding: 20px; border-radius: 8px; text-align: center;">
-                        <h4 style="margin: 0; font-size: 24px;">95%</h4>
-                        <p style="margin: 5px 0 0 0; font-size: 14px;">Success Rate</p>
-                    </div>
-                </div>
-                
-                <!-- Qualification Requirements -->
-                <div style="border: 2px solid #667eea; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #667eea; margin-top: 0;">✅ QUALIFICATION REQUIREMENTS:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 10px;">• 5+ years Amazon/e-commerce experience</li>
-                        <li style="margin-bottom: 10px;">• Proven track record in B2B sales</li>
-                        <li style="margin-bottom: 10px;">• Network with premium brand executives</li>
-                        <li style="margin-bottom: 10px;">• Fluent English communication</li>
-                        <li style="margin-bottom: 10px;">• Strategic thinking and negotiation skills</li>
-                    </ul>
-                </div>
-                
-                <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
-                    Ready to join our elite team?
-                </p>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="mailto:hello@tahidem.com" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Apply for Senior Position</a>
-                </div>
-            </div>
-            
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-                                <p style="margin: 0; font-weight: bold; font-size: 16px;">TAHIDEM LLC - Senior Recruitment</p>
-                <p style="margin: 5px 0 0 0; opacity: 0.8;">hello@tahidem.com | https://tahidem.com/</p>
-            </div>
-        </div>
-        </body></html>
-        """
-    },
-    
     # 🤝 BRAND PARTNERSHIP TEMPLATES (Marka Ortaklıkları)
     "brand_partnership_1": {
         "name": "Strategic Partnership Opportunity",
@@ -628,7 +517,6 @@ DEFAULT_TEMPLATES = {
                 <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0; border-left: 5px solid #27ae60;">
                     <h3 style="color: #27ae60; margin-top: 0; font-size: 18px;">📈 SUCCESS CASE STUDY</h3>
                     <div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h4 style="margin: 0 0 10px 0; color: #2c3e50;">Lubluelu Robot Vacuum</h4>
                         <div style="display: flex; gap: 20px; margin: 15px 0; flex-wrap: wrap;">
                             <div style="text-align: center; flex: 1; min-width: 100px;">
                                 <p style="margin: 0; font-size: 24px; font-weight: bold; color: #27ae60;">400%</p>
