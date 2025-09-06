@@ -689,7 +689,7 @@ DEFAULT_TEMPLATES = {
                 <h3 style="margin-top: 0; font-size: 24px;">🧡 This Weekend Only!</h3>
                 <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
                     <h2 style="margin: 0; font-size: 36px; font-weight: bold;">60% OFF</h2>
-                    <p style="margin: 10px 0; font-size: 18px;">COUPON CODE: <strong>'DISCOUNTPRIME'</strong></p>
+                    <p style="margin: 10px 0; font-size: 18px;">COUPON CODE: <strong>'DISCOUNT'</strong></p>
                     <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">on all our custom 3D portrait keychains</p>
                 </div>
                 <p style="margin: 15px 0; font-size: 16px;">
