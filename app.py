@@ -28,23 +28,24 @@ EMAIL_ACCOUNTS = [
     {'email': 'business@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0},
     {'email': 'collaborations@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0},
     {'email': 'deals@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0},
-    {'email': 'marketing@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0},
+    {'email': 'marketing@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'etsy_customer', 'sent_today': 0},
     {'email': 'partnership@tahidem.com', 'password': 'GM8+h!M>An5', 'type': 'brand_partnership', 'sent_today': 0},
     {'email': 'amazonpartnership@tahidem.com', 'password': '5V7SOWq:V&zQ', 'type': 'brand_partnership', 'sent_today': 0},
     {'email': 'partnershipamazon@tahidem.com', 'password': 'u&17]ukQ', 'type': 'brand_partnership', 'sent_today': 0},
     {'email': 'exclusivebrand@tahidem.com', 'password': '5M?$Kz^m', 'type': 'brand_partnership', 'sent_today': 0},
     {'email': 'outreach@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_hunter', 'sent_today': 0},
     {'email': 'team@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_hunter', 'sent_today': 0},
-    {'email': 'hello@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_hunter', 'sent_today': 0},
+    {'email': 'hello@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'etsy_customer', 'sent_today': 0},
     {'email': 'connect@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0},
-    {'email': 'growth@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0}
+    {'email': 'growth@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0},
+    {'email': 'soulminecraft@tahidem.com', 'password': 'lxB6LJ/u=L0', 'type': 'etsy_customer', 'sent_today': 0}
 ]
 
 # SMTP ayarları
 SMTP_SERVER = 'smtp.hostinger.com'
 SMTP_PORT = 465
 
-# 🎯 YENİ TEMPLATE SİSTEMİ - 9 FARKLI TEMPLATE
+# 🎯 YENİ TEMPLATE SİSTEMİ - 11 FARKLI TEMPLATE
 DEFAULT_TEMPLATES = {
     # 🎯 BRAND HUNTER TEMPLATES (Marka Arayıcıları)
     "brand_hunter_1": {
@@ -347,7 +348,7 @@ DEFAULT_TEMPLATES = {
                     <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Million-dollar customer network</strong> ensures guaranteed sales volume</p>
                     <p style="margin: 8px 0; font-size: 16px;">✅ <strong>3-6 month bulk inventory purchases</strong> based on 30-day Amazon sales data</p>
                     <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Zero inventory risk for your brand</strong> - we handle all stock management</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>No stock purchase problems</strong> - guaranteed inventory commitment</p>
+                                        <p style="margin: 8px 0; font-size: 16px;">✅ <strong>No stock purchase problems</strong> - guaranteed inventory commitment</p>
                 </div>
             </div>
             
@@ -612,8 +613,10 @@ DEFAULT_TEMPLATES = {
                         <div style="background: #27ae60; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">15</div>
                         <p style="margin: 0; color: #555; font-size: 14px;">Day Payment Terms</p>
                     </div>
-                    <div style="background: #ff6348; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">24/7</div>
-                    <p style="margin: 0; color: #555; font-size: 14px;">Support Available</p>
+                    <div style="text-align: center; flex: 1; min-width: 120px;">
+                        <div style="background: #ff6348; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">24/7</div>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Support Available</p>
+                    </div>
                 </div>
             </div>
             
@@ -644,7 +647,295 @@ DEFAULT_TEMPLATES = {
     </div>
     </body></html>
     """
-    }
+},
+
+    # 🛍️ ETSY CUSTOMER TEMPLATES (Etsy Müşteri Şablonları)
+    
+"etsy_customer_1": {
+    "name": "SoulMineCraft Weekend Special Offer",
+    "category": "etsy_customer",
+    "subject": "🧡 This Weekend Only - 60% OFF Your Custom 3D Portrait Keychain - SoulMineCraft",
+    "content": """
+    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+    <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #ff7b54 0%, #ff6b35 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
+            <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">WEEKEND SPECIAL</div>
+            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎨 SoulMineCraft</h1>
+            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Custom 3D Portrait Keychains</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 40px 30px;">
+            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello from SoulMineCraft! 🧡</h2>
+            
+            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                <strong>This weekend is all about your story... :))</strong>
+            </p>
+            
+            <!-- Story Section -->
+            <div style="background: #f8f9fa; border-left: 5px solid #ff7b54; padding: 25px; margin: 30px 0; text-align: center;">
+                                <p style="color: #2c3e50; margin: 10px 0; font-size: 18px; font-style: italic;">
+                    This is more than just a keychain…<br>
+                    It's your story.<br>
+                    A memory you hold.<br>
+                    A moment frozen in time.
+                </p>
+            </div>
+            
+            <!-- Weekend Offer -->
+            <div style="background: linear-gradient(135deg, #ff7b54 0%, #ff6b35 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 24px;">🧡 This Weekend Only!</h3>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h2 style="margin: 0; font-size: 36px; font-weight: bold;">60% OFF</h2>
+                    <p style="margin: 10px 0; font-size: 18px;">COUPON CODE: <strong>'DISCOUNTPRIME'</strong></p>
+                    <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">on all our custom 3D portrait keychains</p>
+                </div>
+                <p style="margin: 15px 0; font-size: 16px;">
+                    Send us a photo, and we'll turn it into a miniature 3D memory you can carry everywhere.
+                </p>
+            </div>
+            
+            <!-- What's Included -->
+            <div style="background: #e8f5e8; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #27ae60; margin-top: 0; font-size: 20px;">🎁 What's Included:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                    <li style="margin-bottom: 10px;">✔ <strong>60% OFF</strong> (automatically applied at checkout)</li>
+                    <li style="margin-bottom: 10px;">✔ <strong>Valid only this weekend</strong> – Friday through Sunday</li>
+                    <li style="margin-bottom: 10px;">✔ <strong>Handmade with love</strong>, durable quality</li>
+                    <li style="margin-bottom: 10px;">✔ <strong>Personalized design</strong> from your own photo</li>
+                </ul>
+            </div>
+            
+            <!-- Shop Links -->
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🛒 Order Now:</h3>
+                <p style="margin: 15px 0; color: #555;">Want to see more? Browse the full collection here:</p>
+                
+                <div style="margin: 20px 0;">
+                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4306449848" style="color: #ff7b54; text-decoration: none;">Featured Collection</a></strong></p>
+                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4307158353" style="color: #ff7b54; text-decoration: none;">Premium Designs</a></strong></p>
+                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #ff7b54; text-decoration: none;">Full SoulMineCraft Shop</a></strong></p>
+                </div>
+            </div>
+            
+            <!-- Perfect Time -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 20px;">📌 Perfect Timing</h3>
+                <p style="margin: 15px 0; font-size: 16px;">
+                    Whether it's for yourself or a gift for someone special…<br>
+                    <strong>Now is the perfect time to turn memories into art.</strong>
+                </p>
+            </div>
+            
+            <!-- Thank You Message -->
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-size: 18px; color: #2c3e50; margin: 15px 0;">
+                    Thank you for being part of the SoulMineCraft family.
+                </p>
+                <p style="font-size: 18px; color: #ff7b54; font-weight: bold; margin: 15px 0;">
+                    Let's create something meaningful together.
+                </p>
+                <p style="font-size: 24px; margin: 20px 0;">❤️</p>
+            </div>
+            
+            <!-- CTA Button -->
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #ff7b54; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Shop Now - 60% OFF</a>
+            </div>
+            
+            <!-- Social Proof -->
+            <div style="background: #fff3e0; padding: 20px; border-radius: 10px; margin: 30px 0; text-align: center;">
+                <p style="color: #e65100; margin: 10px 0; font-size: 16px; font-weight: bold;">
+                    Every piece we craft is made with care and emotion — and loved by 1,000+ happy customers.
+                </p>
+                <p style="color: #ff7b54; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                    Be one of them this weekend. Don't miss out!
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+            <p style="margin: 5px 0; color: #ff7b54; font-weight: bold;">SoulMineCraft Team</p>
+            <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
+            <p style="margin: 5px 0; opacity: 0.8;">🌐 Instagram @SoulMineCraft | WP: +905435540046</p>
+            <p style="margin: 10px 0 0 0; opacity: 0.8;">
+                <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #ff7b54; text-decoration: none;">Visit Our Etsy Shop</a>
+            </p>
+        </div>
+    </div>
+    </body></html>
+    """
+},
+
+"etsy_customer_2": {
+    "name": "SoulMineCraft Memory Collection - Alternative Offer",
+    "category": "etsy_customer",
+    "subject": "✨ Turn Your Precious Moments Into Art - Exclusive SoulMineCraft Collection",
+    "content": """
+    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+    <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
+            <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">EXCLUSIVE COLLECTION</div>
+            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">✨ SoulMineCraft</h1>
+            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Where Memories Become Art</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div style="padding: 40px 30px;">
+            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
+            
+            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                Every moment tells a story. Every memory deserves to be treasured. At <strong>SoulMineCraft</strong>, we believe your most precious moments should be more than just photos on your phone.
+            </p>
+            
+            <!-- Story Section -->
+            <div style="background: #f0f8ff; border-left: 5px solid #88d8c0; padding: 25px; margin: 30px 0;">
+                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">💫 Your Story, Your Art</h3>
+                <p style="color: #555; margin: 15px 0; font-size: 16px; font-style: italic;">
+                    "A photograph captures a moment in time, but a 3D portrait keychain captures the soul of that moment. 
+                    It's something you can hold, touch, and carry with you wherever life takes you."
+                </p>
+            </div>
+            
+            <!-- Special Collection -->
+            <div style="background: linear-gradient(135deg, #88d8c0 0%, #a8e6cf 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white; text-align: center;">
+                <h3 style="margin-top: 0; font-size: 24px;">🎨 Exclusive Memory Collection</h3>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h2 style="margin: 0; font-size: 32px; font-weight: bold;">SPECIAL PRICING</h2>
+                    <p style="margin: 10px 0; font-size: 18px;">Limited Time Offer</p>
+                    <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Custom 3D Portrait Keychains</p>
+                </div>
+                <p style="margin: 15px 0; font-size: 16px;">
+                    Transform your favorite photo into a stunning 3D miniature masterpiece that tells your unique story.
+                </p>
+            </div>
+            
+            <!-- Why Choose SoulMineCraft -->
+            <div style="margin: 30px 0;">
+                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🌟 Why Choose SoulMineCraft?</h3>
+                
+                <div style="display: grid; gap: 15px; margin: 20px 0;">
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #88d8c0;">
+                        <h4 style="color: #88d8c0; margin: 0 0 10px 0;">✨ Handcrafted Excellence</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Each piece is carefully crafted by skilled artisans with attention to every detail</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #a8e6cf;">
+                        <h4 style="color: #a8e6cf; margin: 0 0 10px 0;">💎 Premium Quality Materials</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">Durable, long-lasting materials that preserve your memories for years to come</p>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #7fcdcd;">
+                        <h4 style="color: #7fcdcd; margin: 0 0 10px 0;">🎯 Perfect Personalization</h4>
+                        <p style="margin: 0; color: #555; font-size: 14px;">From your photo to your hands - completely customized to capture your moment</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Showcase -->
+            <div style="background: #fff5f5; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">🎁 Perfect For:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+                    <div style="text-align: center; padding: 15px;">
+                        <div style="font-size: 32px; margin-bottom: 10px;">💕</div>
+                        <h4 style="margin: 0; color: #2c3e50;">Couples</h4>
+                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Anniversary gifts</p>
+                    </div>
+                    <div style="text-align: center; padding: 15px;">
+                        <div style="font-size: 32px; margin-bottom: 10px;">👨‍👩‍👧‍👦</div>
+                        <h4 style="margin: 0; color: #2c3e50;">Families</h4>
+                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Family portraits</p>
+                    </div>
+                    <div style="text-align: center; padding: 15px;">
+                        <div style="font-size: 32px; margin-bottom: 10px;">🐕</div>
+                        <h4 style="margin: 0; color: #2c3e50;">Pet Lovers</h4>
+                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Furry friends</p>
+                    </div>
+                    <div style="text-align: center; padding: 15px;">
+                        <div style="font-size: 32px; margin-bottom: 10px;">🎓</div>
+                        <h4 style="margin: 0; color: #2c3e50;">Milestones</h4>
+                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Special achievements</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shop Links -->
+            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🛒 Explore Our Collection:</h3>
+                <p style="margin: 15px 0; color: #555;">Discover the perfect way to preserve your memories:</p>
+                
+                <div style="margin: 20px 0;">
+                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4306449848" style="color: #88d8c0; text-decoration: none;">Classic Portrait Collection</a></strong></p>
+                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4307158353" style="color: #88d8c0; text-decoration: none;">Premium Art Series</a></strong></p>
+                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #88d8c0; text-decoration: none;">Complete SoulMineCraft Gallery</a></strong></p>
+                </div>
+            </div>
+            
+            <!-- Process -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
+                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">📋 Simple 3-Step Process</h3>
+                <div style="display: grid; gap: 20px; margin: 25px 0;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 8px 0;">1️⃣ Send Your Photo</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Upload your favorite high-quality photo</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 8px 0;">2️⃣ We Create Magic</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Our artisans craft your personalized 3D keychain</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 8px 0;">3️⃣ Treasure Forever</h4>
+                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Receive your unique memory to carry everywhere</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thank You Message -->
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-size: 18px; color: #2c3e50; margin: 15px 0;">
+                    Thank you for trusting SoulMineCraft with your precious memories.
+                </p>
+                <p style="font-size: 18px; color: #88d8c0; font-weight: bold; margin: 15px 0;">
+                    Let's turn your moments into timeless art together.
+                </p>
+                <p style="font-size: 24px; margin: 20px 0;">✨</p>
+            </div>
+            
+            <!-- CTA Button -->
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #88d8c0; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Create Your Memory</a>
+            </div>
+            
+            <!-- Social Proof -->
+            <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; margin: 30px 0; text-align: center;">
+                <p style="color: #2c3e50; margin: 10px 0; font-size: 16px; font-weight: bold;">
+                    "The attention to detail is incredible! My keychain looks exactly like my photo but in amazing 3D!" 
+                </p>
+                <p style="color: #88d8c0; margin: 10px 0; font-size: 14px;">
+                    - Sarah M., Happy Customer
+                </p>
+                <p style="color: #667eea; margin: 15px 0; font-size: 16px; font-weight: bold;">
+                    Join 1,000+ satisfied customers who carry their memories with them.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+            <p style="margin: 5px 0; color: #88d8c0; font-weight: bold;">SoulMineCraft Team</p>
+            <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
+            <p style="margin: 5px 0; opacity: 0.8;">🌐 Instagram @SoulMineCraft | WP: +905435540046</p>
+            <p style="margin: 10px 0 0 0; opacity: 0.8;">
+                <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #88d8c0; text-decoration: none;">Visit Our Etsy Shop</a>
+            </p>
+        </div>
+    </div>
+    </body></html>
+    """
+}
 }
 
 
@@ -785,7 +1076,7 @@ def main_app():
     col1, col2, col3 = st.columns([3, 1, 1])
     with col1:
         st.title("🚀 Tahidem Professional Email Automation")
-        st.markdown("**Advanced Email Campaign Management System - 9 Professional Templates**")
+        st.markdown("**Advanced Email Campaign Management System - 11 Professional Templates**")
     
     with col2:
         user_role = st.session_state.get("user_role", "admin")
@@ -850,7 +1141,8 @@ def main_app():
             template_categories = {
                 "Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
                 "Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
-                "Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach']
+                "Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
+                "Etsy Customer": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer']
             }
             
             selected_category = st.selectbox("📂 Template Category", list(template_categories.keys()))
@@ -1034,6 +1326,124 @@ def main_app():
                     
                     st.balloons()
                     st.success("🎉 Manual campaign completed successfully!")
+        
+        else:
+            # CSV Upload Section
+            st.markdown("### 📁 CSV File Upload")
+            uploaded_file = st.file_uploader(
+                "Choose CSV file",
+                type=['csv'],
+                help="CSV should contain columns: email, name, company"
+            )
+            
+            if uploaded_file is not None:
+                try:
+                    df = pd.read_csv(uploaded_file)
+                    st.success(f"✅ CSV loaded successfully! {len(df)} recipients found.")
+                    
+                    # Show preview
+                    st.markdown("### 📋 CSV Data Preview")
+                    st.dataframe(df.head())
+                    
+                    # Validate columns
+                    required_columns = ['email']
+                    missing_columns = [col for col in required_columns if col not in df.columns]
+                    
+                    if missing_columns:
+                        st.error(f"❌ Missing required columns: {missing_columns}")
+                    else:
+                        # Fill missing columns
+                        if 'name' not in df.columns:
+                            df['name'] = 'Dear Professional'
+                        if 'company' not in df.columns:
+                            df['company'] = 'Your Company'
+                        
+                        # Campaign start button for CSV
+                        if st.button("🚀 START CSV CAMPAIGN", type="primary", use_container_width=True):
+                            st.markdown("---")
+                            st.header("📊 Campaign Progress")
+                            
+                            progress_bar = st.progress(0)
+                            status_text = st.empty()
+                            
+                            total_emails = len(df)
+                            successful_sends = []
+                            failed_sends = []
+                            
+                            for index, row in df.iterrows():
+                                # Available account bul
+                                account = automation.get_available_account(template_category_type)
+                                
+                                if not account:
+                                    st.error(f"❌ No available accounts for {template_category_type} type!")
+                                    break
+                                
+                                # Template hazırla
+                                subject, content = automation.format_template(
+                                    selected_template_key, 
+                                    row.get('name', 'Dear Professional'),
+                                    row.get('company', 'Your Company')
+                                )
+                                
+                                # Email gönder
+                                success, message = automation.send_single_email(
+                                    account, row['email'], subject, content
+                                )
+                                
+                                # Progress güncelle
+                                progress = (index + 1) / total_emails
+                                progress_bar.progress(progress)
+                                
+                                status_emoji = "✅" if success else "❌"
+                                status_text.text(f"{status_emoji} {index + 1}/{total_emails} - {row['email']} via {account['email']}")
+                                
+                                # Results topla
+                                if success:
+                                    successful_sends.append({
+                                        'email': row['email'],
+                                        'name': row.get('name', ''),
+                                        'company': row.get('company', ''),
+                                        'sender': account['email'],
+                                        'template': template_info['name']
+                                    })
+                                else:
+                                    failed_sends.append({
+                                        'email': row['email'],
+                                        'error': message
+                                    })
+                                
+                                # Rate limiting
+                                time.sleep(delay_time)
+                            
+                            # Final results
+                            st.markdown("---")
+                            st.header("🎯 Campaign Results")
+                            
+                            col1, col2, col3 = st.columns(3)
+                            with col1:
+                                st.metric("✅ Successful", len(successful_sends))
+                            with col2:
+                                st.metric("❌ Failed", len(failed_sends))
+                            with col3:
+                                success_rate = (len(successful_sends) / total_emails) * 100
+                                st.metric("📈 Success Rate", f"{success_rate:.1f}%")
+                            
+                            # Detailed results
+                            if successful_sends:
+                                st.success("✅ **Successful Sends:**")
+                                success_df = pd.DataFrame(successful_sends)
+                                st.dataframe(success_df)
+                            
+                            if failed_sends:
+                                st.error("❌ **Failed Sends:**")
+                                failed_df = pd.DataFrame(failed_sends)
+                                st.dataframe(failed_df)
+                            
+                            st.balloons()
+                            st.success("🎉 CSV campaign completed successfully!")
+                
+                except Exception as e:
+                    st.error(f"❌ Error reading CSV: {str(e)}")
     
     with tab2:
         st.header("✉️ Single Email Sender")
@@ -1053,7 +1463,8 @@ def main_app():
             template_categories = {
                 "Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
                 "Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
-                "Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach']
+                "Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
+                "Etsy Customer": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer']
             }
             
             single_category = st.selectbox("📂 Category", list(template_categories.keys()), key="single_category")
@@ -1101,13 +1512,14 @@ def main_app():
     
     with tab3:
         st.header("📝 Template Manager")
-        st.markdown("Manage your 9 professional email templates across 3 categories.")
+        st.markdown("Manage your 11 professional email templates across 4 categories.")
         
         # Template kategorileri
         template_categories = {
             "🎯 Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
             "🤝 Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
-            "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach']
+            "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
+            "🛍️ Etsy Customer": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer']
         }
         
         # Category tabs
@@ -1307,10 +1719,11 @@ def main_app():
         template_categories = {
             "Brand Hunter": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter']),
             "Brand Partnership": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership']),
-            "Supplier Outreach": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'])
+            "Supplier Outreach": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach']),
+            "Etsy Customer": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer'])
         }
         
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
             st.metric("Total Templates", len(DEFAULT_TEMPLATES))
         with col2:
@@ -1319,12 +1732,14 @@ def main_app():
             st.metric("Brand Partnership", template_categories["Brand Partnership"])
         with col4:
             st.metric("Supplier Outreach", template_categories["Supplier Outreach"])
+        with col5:
+            st.metric("Etsy Customer", template_categories["Etsy Customer"])
         
         # System info
         st.markdown("---")
         st.subheader("ℹ️ System Information")
         
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3, col4 = st.columns(4)
         with col1:
             st.metric("Total Accounts", len(EMAIL_ACCOUNTS))
         with col2:
@@ -1333,9 +1748,12 @@ def main_app():
         with col3:
             hunter_accounts = len([acc for acc in EMAIL_ACCOUNTS if acc['type'] == 'brand_hunter'])
             st.metric("Hunter Accounts", hunter_accounts)
+        with col4:
+            etsy_accounts = len([acc for acc in EMAIL_ACCOUNTS if acc['type'] == 'etsy_customer'])
+            st.metric("Etsy Accounts", etsy_accounts)
         
-        st.info("💡 **Daily Limit:** 100 emails per account | **Total Daily Capacity:** 1400 emails")
-        st.info("🎯 **Template System:** 9 professional templates across 3 categories")
+        st.info("💡 **Daily Limit:** 100 emails per account | **Total Daily Capacity:** 1500 emails")
+        st.info("🎯 **Template System:** 11 professional templates across 4 categories")
         
         # Güvenlik bilgileri
         st.markdown("---")
@@ -1361,3 +1779,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
