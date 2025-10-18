@@ -1035,7 +1035,8 @@ class EmailAutomation:
             server.quit()
             
             # Stats güncelle
-                        st.session_state.email_stats['daily_counts'][sender_account['email']] += 1
+            st.session_state.email_stats['successful'] += 1
+            st.session_state.email_stats['daily_counts'][sender_account['email']] += 1
             sender_account['sent_today'] += 1
             
             return True, "Success"
