@@ -203,151 +203,267 @@ DEFAULT_TEMPLATES = {
         "category": "pionde_halloween",
         "subject": "⚠️ LAST CHANCE! Halloween Sale Ending Soon - 40% OFF at Pionde! 🎃",
         "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #1a1a1a;">
-        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+        
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Chance - Halloween Sale</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #f5f5f5;">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #1a1a1a;">
+    <tr>
+        <td align="center" style="padding: 20px 0;">
             
-            <!-- Urgent Header -->
-            <div style="background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
-                <div style="position: absolute; top: 10px; right: 20px; background: #ffff00; color: #dc143c; padding: 8px 20px; border-radius: 25px; font-size: 14px; font-weight: bold; animation: pulse 1.5s infinite;">
-                    ⚠️ URGENT
-                </div>
-                <h1 style="margin: 0; font-size: 38px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">⏰ LAST CHANCE ⏰</h1>
-                <p style="margin: 15px 0; font-size: 24px; opacity: 0.95;">Halloween Sale Ending TONIGHT!</p>
-                <div style="margin: 25px 0; padding: 20px; background: rgba(255,255,255,0.15); border-radius: 12px; display: inline-block;">
-                    <p style="margin: 0; font-size: 52px; font-weight: bold; letter-spacing: 3px;">40% OFF</p>
-                    <p style="margin: 10px 0 0 0; font-size: 18px;">Ends at MIDNIGHT!</p>
-                </div>
-            </div>
+            <table width="650" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; max-width: 650px;">
+                
+                <!-- Urgent Header -->
+                <tr>
+                    <td style="background: #dc143c; padding: 40px 30px; text-align: center; color: white; position: relative;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="center">
+                                    <div style="background: #ffff00; color: #dc143c; padding: 8px 20px; border-radius: 25px; font-size: 14px; font-weight: bold; display: inline-block; margin-bottom: 15px;">
+                                        ⚠️ URGENT
+                                    </div>
+                                    <h1 style="margin: 0; font-size: 38px; font-weight: bold; color: white;">⏰ LAST CHANCE ⏰</h1>
+                                    <p style="margin: 15px 0; font-size: 24px; color: white;">Halloween Sale Ending TONIGHT!</p>
+                                    <div style="margin: 25px 0; padding: 20px; background: rgba(255,255,255,0.15); border-radius: 12px; display: inline-block;">
+                                        <p style="margin: 0; font-size: 52px; font-weight: bold; letter-spacing: 3px; color: white;">40% OFF</p>
+                                        <p style="margin: 10px 0 0 0; font-size: 18px; color: white;">Ends at MIDNIGHT!</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                <!-- Main Content -->
+                <tr>
+                    <td style="padding: 40px 30px; background: #fff;">
+                        
+                        <h2 style="color: #dc143c; font-size: 30px; margin-bottom: 20px; text-align: center;">🚨 Don't Miss Out! 🚨</h2>
+                        
+                        <p style="font-size: 19px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                            <strong>This is your FINAL WARNING!</strong><br>
+                            Our biggest Halloween sale of the year ends <strong style="color: #dc143c;">TONIGHT at MIDNIGHT!</strong> 🎃
+                        </p>
+                        
+                        <!-- First CTA Button -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
+                            <tr>
+                                <td align="center">
+                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #dc143c; color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
+                                        🎃 SHOP NOW 🎃
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Countdown Timer -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ff4500; padding: 35px; border-radius: 15px; margin: 30px 0;">
+                            <tr>
+                                <td align="center">
+                                    <h3 style="margin-top: 0; font-size: 28px; color: white;">⏰ TIME IS RUNNING OUT! ⏰</h3>
+                                    
+                                    <table width="100%" cellpadding="10" cellspacing="10" border="0" style="margin: 25px 0;">
+                                        <tr>
+                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                                                <div style="font-size: 36px; font-weight: bold; color: white;">12</div>
+                                                <div style="font-size: 14px; color: white;">HOURS</div>
+                                            </td>
+                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                                                <div style="font-size: 36px; font-weight: bold; color: white;">30</div>
+                                                <div style="font-size: 14px; color: white;">MINUTES</div>
+                                            </td>
+                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                                                <div style="font-size: 36px; font-weight: bold; color: white;">45</div>
+                                                <div style="font-size: 14px; color: white;">SECONDS</div>
+                                            </td>
+                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                                                <div style="font-size: 36px; font-weight: bold; color: white;">🎃</div>
+                                                <div style="font-size: 14px; color: white;">LEFT!</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <div style="background: #fff; color: #ff4500; padding: 18px 35px; border-radius: 10px; display: inline-block; font-size: 30px; font-weight: bold; letter-spacing: 3px; margin-top: 20px;">
+                                        HALLOWEEN40
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- What You're Missing -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px solid #dc143c;">
+                            <tr>
+                                <td>
+                                    <h3 style="color: #dc143c; margin-top: 0; font-size: 24px; text-align: center;">😱 What You're About to MISS! 😱</h3>
+                                    
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 25px 0;">
+                                        <tr>
+                                            <td style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #dc143c;">
+                                                <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">💰 40% OFF Everything</h4>
+                                                <p style="margin: 0; color: #555; font-size: 15px;">Our BIGGEST discount ever - won't see this again until next year!</p>
+                                            </td>
+                                        </tr>
+                                        <tr><td style="height: 15px;"></td></tr>
+                                        <tr>
+                                            <td style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff4500;">
+                                                <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🚚 FREE Shipping</h4>
+                                                <p style="margin: 0; color: #555; font-size: 15px;">Free delivery on orders over $50 - save even more!</p>
+                                            </td>
+                                        </tr>
+                                        <tr><td style="height: 15px;"></td></tr>
+                                        <tr>
+                                            <td style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35;">
+                                                <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🎁 Exclusive Items</h4>
+                                                <p style="margin: 0; color: #555; font-size: 15px;">Limited edition Halloween items - once they're gone, they're GONE!</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Second CTA Button -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
+                            <tr>
+                                <td align="center">
+                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #ff4500; color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
+                                        👻 GRAB YOUR DISCOUNT NOW 👻
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Customer Testimonials -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
+                            <tr>
+                                <td>
+                                    <h3 style="color: #ff4500; margin-top: 0; font-size: 22px; text-align: center;">💬 What Our Customers Are Saying 💬</h3>
+                                    
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 20px 0;">
+                                        <tr>
+                                            <td style="background: white; padding: 20px; border-radius: 10px;">
+                                                <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Just ordered! Can't believe these prices! 🎃"</p>
+                                                <p style="margin: 0; color: #ff4500; font-weight: bold;">- Jessica T.</p>
+                                            </td>
+                                        </tr>
+                                        <tr><td style="height: 15px;"></td></tr>
+                                        <tr>
+                                            <td style="background: white; padding: 20px; border-radius: 10px;">
+                                                <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Best Halloween shopping experience ever! 👻"</p>
+                                                <p style="margin: 0; color: #ff4500; font-weight: bold;">- Michael R.</p>
+                                            </td>
+                                        </tr>
+                                        <tr><td style="height: 15px;"></td></tr>
+                                        <tr>
+                                            <td style="background: white; padding: 20px; border-radius: 10px;">
+                                                <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"40% off is INSANE! Already placed 3 orders! 🕷️"</p>
+                                                <p style="margin: 0; color: #ff4500; font-weight: bold;">- Amanda K.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Final Warning -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #1a1a1a; padding: 35px; border-radius: 12px; margin: 30px 0; border: 4px solid #dc143c;">
+                            <tr>
+                                <td align="center">
+                                    <h3 style="margin-top: 0; font-size: 32px; color: #ff6b35;">🚨 FINAL WARNING! 🚨</h3>
+                                    <p style="margin: 20px 0; font-size: 20px; line-height: 1.8; color: white;">
+                                        After <strong style="color: #dc143c;">MIDNIGHT TONIGHT</strong>, prices return to normal!<br>
+                                        This is your <strong style="color: #ff6b35;">LAST CHANCE</strong> to save 40%!<br>
+                                        <strong style="font-size: 24px; color: #ff4500;">Don't have regrets tomorrow!</strong>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Main CTA Button -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 40px 0;">
+                            <tr>
+                                <td align="center">
+                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #dc143c; color: white; padding: 22px 55px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 22px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
+                                        🎃 SHOP NOW BEFORE IT'S TOO LATE! 🎃
+                                    </a>
+                                    <p style="margin: 20px 0; font-size: 16px; color: #dc143c; font-weight: bold;">
+                                        ⏰ Sale ends at MIDNIGHT - Don't miss out!
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Stock Warning -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #fff5e6; padding: 25px; border-radius: 12px; margin: 30px 0; border: 2px dashed #ff4500;">
+                            <tr>
+                                <td align="center">
+                                    <p style="color: #dc143c; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                                        ⚠️ STOCK WARNING: Many items are selling out FAST!
+                                    </p>
+                                    <p style="color: #666; margin: 10px 0; font-size: 16px;">
+                                        Over 500 orders placed in the last 24 hours!<br>
+                                        Don't wait - secure your favorites NOW!
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Final CTA Button -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
+                            <tr>
+                                <td align="center">
+                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #ff6b35; color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
+                                        🕷️ CLAIM YOUR 40% OFF NOW 🕷️
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Thank You -->
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
+                            <tr>
+                                <td align="center">
+                                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
+                                        This is your <strong style="color: #dc143c;">LAST CHANCE</strong> to save BIG!
+                                    </p>
+                                    <p style="font-size: 22px; color: #ff4500; font-weight: bold; margin: 15px 0;">
+                                        See you at checkout! 🎃👻
+                                    </p>
+                                    <p style="font-size: 32px; margin: 20px 0;">⏰🎃🚨</p>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+                
+                <!-- Footer -->
+                <tr>
+                    <td style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
+                        <p style="margin: 5px 0; color: #dc143c; font-weight: bold; font-size: 18px;">🎃 PIONDE - Last Chance for Halloween Savings! 🎃</p>
+                        <p style="margin: 15px 0; font-size: 16px; color: #ff6b35;">
+                            Use code <strong>HALLOWEEN40</strong> - Ends TONIGHT at MIDNIGHT!
+                        </p>
+                        <p style="margin: 20px 0; font-size: 12px; color: #999;">
+                            You're receiving this email because you're a valued customer of PIONDE.
+                        </p>
+                    </td>
+                </tr>
+                
+            </table>
             
-            <!-- Main Content -->
-            <div style="padding: 40px 30px; background: #fff;">
-                <h2 style="color: #dc143c; font-size: 30px; margin-bottom: 20px; text-align: center;">🚨 Don't Miss Out, {name}! 🚨</h2>
-                
-                <p style="font-size: 19px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
-                    <strong>This is your FINAL WARNING!</strong><br>
-                    Our biggest Halloween sale of the year ends <strong style="color: #dc143c;">TONIGHT at MIDNIGHT!</strong> 🎃
-                </p>
-                
-                <!-- Countdown Timer Visual -->
-                <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); padding: 35px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(220,20,60,0.4);">
-                    <h3 style="margin-top: 0; font-size: 28px;">⏰ TIME IS RUNNING OUT! ⏰</h3>
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 25px 0;">
-                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                            <div style="font-size: 36px; font-weight: bold;">12</div>
-                            <div style="font-size: 14px; opacity: 0.9;">HOURS</div>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                            <div style="font-size: 36px; font-weight: bold;">30</div>
-                            <div style="font-size: 14px; opacity: 0.9;">MINUTES</div>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                            <div style="font-size: 36px; font-weight: bold;">45</div>
-                            <div style="font-size: 14px; opacity: 0.9;">SECONDS</div>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                            <div style="font-size: 36px; font-weight: bold;">🎃</div>
-                            <div style="font-size: 14px; opacity: 0.9;">LEFT!</div>
-                        </div>
-                    </div>
-                    <div style="background: #fff; color: #ff4500; padding: 18px 35px; border-radius: 10px; display: inline-block; font-size: 30px; font-weight: bold; letter-spacing: 3px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); margin-top: 20px;">
-                        HALLOWEEN40
-                    </div>
-                </div>
-                
-                <!-- What You're Missing -->
-                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px solid #dc143c;">
-                    <h3 style="color: #dc143c; margin-top: 0; font-size: 24px; text-align: center;">😱 What You're About to MISS! 😱</h3>
-                    <div style="display: grid; gap: 20px; margin: 25px 0;">
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #dc143c; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">💰 40% OFF Everything</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Our BIGGEST discount ever - won't see this again until next year!</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff4500; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🚚 FREE Shipping</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Free delivery on orders over $50 - save even more!</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🎁 Exclusive Items</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Limited edition Halloween items - once they're gone, they're GONE!</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Customer Testimonials -->
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
-                    <h3 style="color: #ff4500; margin-top: 0; font-size: 22px; text-align: center;">💬 What Our Customers Are Saying 💬</h3>
-                    <div style="display: grid; gap: 15px; margin: 20px 0;">
-                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Just ordered! Can't believe these prices! 🎃"</p>
-                            <p style="margin: 0; color: #ff4500; font-weight: bold;">- Jessica T.</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Best Halloween shopping experience ever! 👻"</p>
-                            <p style="margin: 0; color: #ff4500; font-weight: bold;">- Michael R.</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"40% off is INSANE! Already placed 3 orders! 🕷️"</p>
-                            <p style="margin: 0; color: #ff4500; font-weight: bold;">- Amanda K.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Final Warning -->
-                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 35px; border-radius: 12px; margin: 30px 0; color: white; text-align: center; border: 4px solid #dc143c;">
-                    <h3 style="margin-top: 0; font-size: 32px; color: #ff6b35;">🚨 FINAL WARNING! 🚨</h3>
-                    <p style="margin: 20px 0; font-size: 20px; line-height: 1.8;">
-                        After <strong style="color: #dc143c;">MIDNIGHT TONIGHT</strong>, prices return to normal!<br>
-                        This is your <strong style="color: #ff6b35;">LAST CHANCE</strong> to save 40%!<br>
-                        <strong style="font-size: 24px; color: #ff4500;">Don't have regrets tomorrow!</strong>
-                    </p>
-                </div>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="https://www.etsy.com/shop/Pionde" style="background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%); color: white; padding: 22px 55px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 22px; display: inline-block; box-shadow: 0 10px 30px rgba(220,20,60,0.5); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px; animation: pulse 2s infinite;">
-                        🎃 SHOP NOW BEFORE IT'S TOO LATE! 🎃
-                    </a>
-                    <p style="margin: 20px 0; font-size: 16px; color: #dc143c; font-weight: bold;">
-                        ⏰ Sale ends at MIDNIGHT - Don't miss out!
-                    </p>
-                </div>
-                
-                <!-- Stock Warning -->
-                <div style="background: #fff5e6; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; border: 2px dashed #ff4500;">
-                    <p style="color: #dc143c; margin: 10px 0; font-size: 18px; font-weight: bold;">
-                        ⚠️ STOCK WARNING: Many items are selling out FAST!
-                    </p>
-                    <p style="color: #666; margin: 10px 0; font-size: 16px;">
-                        Over 500 orders placed in the last 24 hours!<br>
-                        Don't wait - secure your favorites NOW!
-                    </p>
-                </div>
-                
-                <!-- Thank You -->
-                <div style="text-align: center; margin: 30px 0;">
-                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
-                        This is your <strong style="color: #dc143c;">LAST CHANCE</strong> to save BIG!
-                    </p>
-                    <p style="font-size: 22px; color: #ff4500; font-weight: bold; margin: 15px 0;">
-                        See you at checkout! 🎃👻
-                    </p>
-                    <p style="font-size: 32px; margin: 20px 0;">⏰🎃🚨</p>
-                </div>
-            </div>
-            
-            <!-- Footer -->
-            <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 5px 0; color: #dc143c; font-weight: bold; font-size: 18px;">🎃 PIONDE - Last Chance for Halloween Savings! 🎃</p>
-                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
-                <p style="margin: 10px 0; opacity: 0.9;">
-                    🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
-                </p>
-                <p style="margin: 15px 0; font-size: 16px; opacity: 0.9; color: #ff6b35;">
-                    Use code <strong>HALLOWEEN40</strong> - Ends TONIGHT at MIDNIGHT!
-                </p>
-            </div>
-        </div>
-        </body></html>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
         """
     },
 
