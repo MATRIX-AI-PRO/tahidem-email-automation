@@ -39,8 +39,9 @@ EMAIL_ACCOUNTS = [
     {'email': 'connect@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
     {'email': 'growth@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
     {'email': 'soulminecraft@tahidem.com', 'password': 'lxB6LJ/u=L0', 'type': 'etsy_customer', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
-    # 🎃 PIONDE HALLOWEEN HESABI
-    {'email': 'pionnde@gmail.com', 'password': '081025@Pp', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.gmail.com', 'smtp_port': 587}
+    # 🎃 PIONDE HALLOWEEN HESAPLARI
+    {'email': 'pionde@tahidem.com', 'password': 'kY]0AOKhiD', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'piondediscount@tahidem.com', 'password': 'Bw^98ft[:3qW', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465}
 ]
 
 # 🎯 YENİ TEMPLATE SİSTEMİ - HALLOWEEN ÖZEL KAMPANYA DAHİL
@@ -184,7 +185,7 @@ DEFAULT_TEMPLATES = {
             <!-- Footer -->
             <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
                 <p style="margin: 5px 0; color: #ff6b35; font-weight: bold; font-size: 18px;">🎃 PIONDE - Your Halloween Headquarters 🎃</p>
-                <p style="margin: 10px 0; opacity: 0.9;">📧 pionnde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
                     🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
                 </p>
@@ -337,7 +338,7 @@ DEFAULT_TEMPLATES = {
             <!-- Footer -->
             <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
                 <p style="margin: 5px 0; color: #dc143c; font-weight: bold; font-size: 18px;">🎃 PIONDE - Last Chance for Halloween Savings! 🎃</p>
-                <p style="margin: 10px 0; opacity: 0.9;">📧 pionnde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
                     🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
                 </p>
@@ -507,7 +508,7 @@ DEFAULT_TEMPLATES = {
             <!-- Footer -->
             <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
                 <p style="margin: 5px 0; color: #ffd700; font-weight: bold; font-size: 18px;">👑 PIONDE VIP - Exclusive Halloween Offer 👑</p>
-                <p style="margin: 10px 0; opacity: 0.9;">📧 pionnde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
                     🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ffd700; text-decoration: none;">Visit Our Etsy Shop</a>
                 </p>
@@ -522,418 +523,416 @@ DEFAULT_TEMPLATES = {
 
     # 🎯 BRAND HUNTER TEMPLATES (Marka Arayıcıları)
     "brand_hunter_1": {
-    "name": "Amazon Brand Hunter - General Recruitment",
-    "category": "brand_hunter",
-    "subject": "Amazon Brand Partnership Opportunity - TAHIDEM LLC Collaboration",
-    "content": """
-    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-    <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-        
-        <!-- Header -->
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center; color: white;">
-            <h1 style="margin: 0; font-size: 32px; font-weight: bold;">TAHIDEM LLC</h1>
-            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Amazon Partnership Specialists</p>
-            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
-        </div>
-        
-        <!-- Main Content -->
-        <div style="padding: 40px 30px;">
-            <h2 style="color: #2c3e50; font-size: 24px; margin-bottom: 20px;">Hello {name},</h2>
+        "name": "Amazon Brand Hunter - General Recruitment",
+        "category": "brand_hunter",
+        "subject": "Amazon Brand Partnership Opportunity - TAHIDEM LLC Collaboration",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
             
-            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. We are establishing exclusive distribution partnerships with successful Amazon brands, and we want to work with experienced professionals in this field.
-            </p>
-            
-            <!-- Sought Profile Box -->
-            <div style="background: #f8f9fa; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0;">
-                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🎯 SOUGHT PROFILE:</h3>
-                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                    <li style="margin-bottom: 10px;">✅ <strong>Amazon ecosystem experience</strong></li>
-                    <li style="margin-bottom: 10px;">✅ <strong>Network with brand owners/managers</strong></li>
-                    <li style="margin-bottom: 10px;">✅ <strong>English communication skills</strong></li>
-                    <li style="margin-bottom: 10px;">✅ <strong>Sales/business development experience</strong></li>
-                </ul>
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center; color: white;">
+                <h1 style="margin: 0; font-size: 32px; font-weight: bold;">TAHIDEM LLC</h1>
+                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Amazon Partnership Specialists</p>
+                <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
             </div>
             
-            <!-- Job Description -->
-            <div style="background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px;">💼 JOB DESCRIPTION:</h3>
-                <ul style="margin: 15px 0; padding-left: 20px;">
-                    <li style="margin-bottom: 10px;">• Identify brands selling on Amazon</li>
-                    <li style="margin-bottom: 10px;">• Establish communication with brand authorities</li>
-                    <li style="margin-bottom: 10px;">• Conduct preliminary meetings on behalf of TAHIDEM LLC</li>
-                    <li style="margin-bottom: 10px;">• Manage distribution agreement signing process</li>
-                </ul>
-            </div>
-            
-            <!-- Payment Structure -->
-            <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 22px;">💰 PAYMENT STRUCTURE</h3>
-                <div style="font-size: 18px; margin: 20px 0;">
-                    <p style="margin: 10px 0;"><strong>Standard Brands:</strong> $1,000</p>
-                    <p style="margin: 10px 0;"><strong>Mid-scale ($200K+ monthly):</strong> $1,500-$3,500</p>
-                    <p style="margin: 10px 0;"><strong>Premium Brands ($500K+ monthly):</strong> $4,000-$7,500</p>
-                    <p style="margin: 10px 0;"><strong>Proven profitability and growth trajectory</strong></p>
+            <!-- Main Content -->
+            <div style="padding: 40px 30px;">
+                <h2 style="color: #2c3e50; font-size: 24px; margin-bottom: 20px;">Hello {name},</h2>
+                
+                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. We are establishing exclusive distribution partnerships with successful Amazon brands, and we want to work with experienced professionals in this field.
+                </p>
+                
+                <!-- Sought Profile Box -->
+                <div style="background: #f8f9fa; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0;">
+                    <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🎯 SOUGHT PROFILE:</h3>
+                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                        <li style="margin-bottom: 10px;">✅ <strong>Amazon ecosystem experience</strong></li>
+                        <li style="margin-bottom: 10px;">✅ <strong>Network with brand owners/managers</strong></li>
+                        <li style="margin-bottom: 10px;">✅ <strong>English communication skills</strong></li>
+                        <li style="margin-bottom: 10px;">✅ <strong>Sales/business development experience</strong></li>
+                    </ul>
+                </div>
+                
+                <!-- Job Description -->
+                <div style="background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
+                    <h3 style="margin-top: 0; font-size: 20px;">💼 JOB DESCRIPTION:</h3>
+                    <ul style="margin: 15px 0; padding-left: 20px;">
+                        <li style="margin-bottom: 10px;">• Identify brands selling on Amazon</li>
+                        <li style="margin-bottom: 10px;">• Establish communication with brand authorities</li>
+                        <li style="margin-bottom: 10px;">• Conduct preliminary meetings on behalf of TAHIDEM LLC</li>
+                        <li style="margin-bottom: 10px;">• Manage distribution agreement signing process</li>
+                    </ul>
+                </div>
+                
+                <!-- Payment Structure -->
+                <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
+                    <h3 style="margin-top: 0; font-size: 22px;">💰 PAYMENT STRUCTURE</h3>
+                    <div style="font-size: 18px; margin: 20px 0;">
+                        <p style="margin: 10px 0;"><strong>Standard Brands:</strong> $1,000</p>
+                        <p style="margin: 10px 0;"><strong>Mid-scale ($200K+ monthly):</strong> $1,500-$3,500</p>
+                        <p style="margin: 10px 0;"><strong>Premium Brands ($500K+ monthly):</strong> $4,000-$7,500</p>
+                        <p style="margin: 10px 0;"><strong>Proven profitability and growth trajectory</strong></p>
+                    </div>
+                </div>
+                
+                <!-- AMAZON Target Criteria -->
+                <div style="border: 2px solid #e74c3c; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                    <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">🎯 AMAZON TARGET CRITERIA:</h3>
+                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                        <li style="margin-bottom: 8px;">• Monthly Amazon sales $50K+</li>
+                        <li style="margin-bottom: 8px;">• Active in US/Australia/Europe markets</li>
+                        <li style="margin-bottom: 8px;">• Trademarked products</li>
+                        <li style="margin-bottom: 8px;">• 3+ years active on Amazon</li>
+                    </ul>
+                </div>
+                
+                <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50;">
+                    <strong>Would you like to evaluate this opportunity?</strong>
+                </p>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="mailto:partnerships@tahidem.com" style="background: #e74c3c; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Apply Now</a>
                 </div>
             </div>
             
-            <!-- AMAZON Target Criteria -->
-            <div style="border: 2px solid #e74c3c; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">🎯 AMAZON TARGET CRITERIA:</h3>
-                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                    <li style="margin-bottom: 8px;">• Monthly Amazon sales $50K+</li>
-                    <li style="margin-bottom: 8px;">• Active in US/Australia/Europe markets</li>
-                    <li style="margin-bottom: 8px;">• Trademarked products</li>
-                    <li style="margin-bottom: 8px;">• 3+ years active on Amazon</li>
-                </ul>
-            </div>
-            
-            <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50;">
-                <strong>Would you like to evaluate this opportunity?</strong>
-            </p>
-            
-            <!-- CTA Button -->
-            <div style="text-align: center; margin: 40px 0;">
-                <a href="mailto:partnerships@tahidem.com" style="background: #e74c3c; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Apply Now</a>
+            <!-- Footer -->
+            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #667eea; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+                <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+                <p style="margin: 5px 0 0 0; opacity: 0.8;">partnerships@tahidem.com | https://tahidem.com/</p>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-            <p style="margin: 5px 0; color: #667eea; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
-            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
-            <p style="margin: 5px 0 0 0; opacity: 0.8;">partnerships@tahidem.com | https://tahidem.com/</p>
-        </div>
-    </div>
-    </body></html>
-    """
-},
+        </body></html>
+        """
+    },
 
-"brand_hunter_2": {
-    "name": "Detailed Brand Hunter Position",
-    "category": "brand_hunter",
-    "subject": "Brand Hunter Position - TAHIDEM LLC - $10K+ Per Deal",
-    "content": """
-    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-    <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-        
-        <!-- Header -->
-        <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center; color: white;">
-            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎯 BRAND HUNTER POSITION</h1>
-            <p style="margin: 10px 0 0  0; font-size: 16px; opacity: 0.9;">TAHIDEM LLC - Exclusive Opportunity</p>
-            <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
-        </div>
-        
-        <!-- Main Content -->
-        <div style="padding: 40px 30px;">
-            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
+    "brand_hunter_2": {
+        "name": "Detailed Brand Hunter Position",
+        "category": "brand_hunter",
+        "subject": "Brand Hunter Position - TAHIDEM LLC - $10K+ Per Deal",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
             
-            <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. We want to work with you for the <strong>Brand Hunter position</strong> within TAHIDEM LLC.
-            </p>
+            <!-- Header -->
+            <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center;
+ color: white;">
+                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎯 BRAND HUNTER POSITION</h1>
+                <p style="margin: 10px 0 0  0; font-size: 16px; opacity: 0.9;">TAHIDEM LLC - Exclusive Opportunity</p>
+                <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
+            </div>
             
-            <!-- Job Tasks -->
-            <div style="margin: 30px 0;">
-                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">📋 JOB DESCRIPTION:</h3>
+            <!-- Main Content -->
+            <div style="padding: 40px 30px;">
+                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
                 
-                <!-- Task 1 -->
-                <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #3742fa;">
-                    <h4 style="color: #3742fa; margin: 0 0 10px 0;">1. BRAND IDENTIFICATION:</h4>
-                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                        <li>Identify brands making $50K+ monthly sales on Amazon</li>
-                        <li>Sales volume and potential analysis</li>
-                        <li>Competition status evaluation</li>
+                <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
+                My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. We want to work with you for the <strong>Brand Hunter position</strong> within TAHIDEM LLC.
+                </p>
+                
+                <!-- Job Tasks -->
+                <div style="margin: 30px 0;">
+                    <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">📋 JOB DESCRIPTION:</h3>
+                    
+                    <!-- Task 1 -->
+                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #3742fa;">
+                        <h4 style="color: #3742fa; margin: 0 0 10px 0;">1. BRAND IDENTIFICATION:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                            <li>Identify brands making $50K+ monthly sales on Amazon</li>
+                            <li>Sales volume and potential analysis</li>
+                            <li>Competition status evaluation</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Task 2 -->
+                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #2ed573;">
+                        <h4 style="color: #2ed573; margin: 0 0 10px 0;">2. COMMUNICATION ESTABLISHMENT:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                            <li>Direct communication with brand owners/CEOs</li>
+                            <li>Preliminary presentation representing TAHIDEM LLC</li>
+                            <li>Explain distribution partnership opportunity</li>
+                            <li>Plan meeting appointments</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Task 3 -->
+                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #ff6348;">
+                        <h4 style="color: #ff6348; margin: 0 0 10px 0;">3. PROCESS MANAGEMENT:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
+                            <li>Bridge between brand and TAHIDEM LLC</li>
+                            <li>Preliminary negotiation of agreement terms</li>
+                            <li>Collection of required documents</li>
+                            <li>Follow-up of signing process</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Target Brands -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
+                    <h3 style="margin-top: 0; font-size: 18px;">🎯 TARGET BRANDS:</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Consumer Electronics</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Home & Kitchen</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Health & Personal Care</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Sports & Outdoors</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Baby Products</span>
+                    </div>
+                </div>
+                
+                <!-- Payment Details -->
+                <div style="background: #2ed573; padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
+                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">💰 PAYMENT DETAILS</h3>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <p style="margin: 8px 0; font-size: 16px;"><strong>Base Payment:</strong> $1,000 per deal</p>
+                        <p style="margin: 8px 0; font-size: 16px;"><strong>$100K+ monthly sales:</strong> +$1,000 bonus</p>
+                        <p style="margin: 8px 0; font-size: 16px;"><strong>$200K+ monthly sales:</strong> +$1,500 - $3,000 bonus</p>
+                        <p style="margin: 8px 0; font-size: 16px;"><strong>$500K+ monthly sales:</strong> +$3,500 - $7,500 bonus</p>
+                    </div>
+                    <p style="text-align: center; margin: 15px 0 0 0; font-size: 14px; opacity: 0.9;">Payment processing during agreement signing</p>
+                </div>
+                
+                <!-- Working Conditions -->
+                <div style="border: 2px solid #3742fa; padding: 20px; border-radius: 10px; margin: 30px 0;">
+                    <h3 style="color: #3742fa; margin-top: 0;">⚙️ WORKING CONDITIONS:</h3>
+                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
+                        <li style="margin-bottom: 8px;">• Completely remote work</li>
+                        <li style="margin-bottom: 8px;">• Flexible working hours</li>
+                        <li style="margin-bottom: 8px;">• Weekly progress report</li>
+                        <li style="margin-bottom: 8px;">• Monthly minimum 5 brand target</li>
                     </ul>
                 </div>
                 
-                <!-- Task 2 -->
-                <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #2ed573;">
-                    <h4 style="color: #2ed573; margin: 0 0 10px 0;">2. COMMUNICATION ESTABLISHMENT:</h4>
-                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                        <li>Direct communication with brand owners/CEOs</li>
-                        <li>Preliminary presentation representing TAHIDEM LLC</li>
-                        <li>Explain distribution partnership opportunity</li>
-                        <li>Plan meeting appointments</li>
-                    </ul>
-                </div>
+                <p style="font-size: 16px; margin: 30px 0; text-align: center; color: #2c3e50;">
+                    If interested, could you share your CV and Amazon experience?
+                </p>
                 
-                <!-- Task 3 -->
-                <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #ff6348;">
-                    <h4 style="color: #ff6348; margin: 0 0 10px 0;">3. PROCESS MANAGEMENT:</h4>
-                    <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                        <li>Bridge between brand and TAHIDEM LLC</li>
-                        <li>Preliminary negotiation of agreement terms</li>
-                        <li>Collection of required documents</li>
-                        <li>Follow-up of signing process</li>
-                    </ul>
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="mailto:team@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Send Your CV</a>
                 </div>
             </div>
             
-            <!-- Target Brands -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 18px;">🎯 TARGET BRANDS:</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
-                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Consumer Electronics</span>
-                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Home & Kitchen</span>
-                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Health & Personal Care</span>
-                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Sports & Outdoors</span>
-                    <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Baby Products</span>
-                </div>
-            </div>
-            
-            <!-- Payment Details -->
-            <div style="background: #2ed573; padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">💰 PAYMENT DETAILS</h3>
-                <div style="text-align: center; margin: 20px 0;">
-                    <p style="margin: 8px 0; font-size: 16px;"><strong>Base Payment:</strong> $1,000 per deal</p>
-                    <p style="margin: 8px 0; font-size: 16px;"><strong>$100K+ monthly sales:</strong> +$1,000 bonus</p>
-                    <p style="margin: 8px 0; font-size: 16px;"><strong>$200K+ monthly sales:</strong> +$1,500 - $3,000 bonus</p>
-                    <p style="margin: 8px 0; font-size: 16px;"><strong>$500K+ monthly sales:</strong> +$3,500 - $7,500 bonus</p>
-                </div>
-                <p style="text-align: center; margin: 15px 0 0 0; font-size: 14px; opacity: 0.9;">Payment processing during agreement signing</p>
-            </div>
-            
-            <!-- Working Conditions -->
-            <div style="border: 2px solid #3742fa; padding: 20px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #3742fa; margin-top: 0;">⚙️ WORKING CONDITIONS:</h3>
-                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                    <li style="margin-bottom: 8px;">• Completely remote work</li>
-                    <li style="margin-bottom: 8px;">• Flexible working hours</li>
-                    <li style="margin-bottom: 8px;">• Weekly progress report</li>
-                    <li style="margin-bottom: 8px;">• Monthly minimum 5 brand target</li>
-                </ul>
-            </div>
-            
-            <p style="font-size: 16px; margin: 30px 0; text-align: center; color: #2c3e50;">
-                If interested, could you share your CV and Amazon experience?
-            </p>
-            
-            <!-- CTA Button -->
-            <div style="text-align: center; margin: 40px 0;">
-                <a href="mailto:team@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Send Your CV</a>
+            <!-- Footer -->
+            <div style="background: #2c3e50; padding: 25px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+                <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+                <p style="margin: 5px 0 0 0; opacity: 0.8;">team@tahidem.com | https://tahidem.com/</p>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <div style="background: #2c3e50; padding: 25px; text-align: center; color: white;">
-            <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
-            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
-            <p style="margin: 5px 0 0 0; opacity: 0.8;">team@tahidem.com | https://tahidem.com/</p>
-        </div>
-    </div>
-    </body></html>
-    """
-},
+        </body></html>
+        """
+    },
     
     # 🤝 BRAND PARTNERSHIP TEMPLATES (Marka Ortaklıkları)
-
-"brand_partnership_2": {
-    "name": "Exclusive Distribution Agreement",
-    "category": "brand_partnership", 
-    "subject": "Exclusive Amazon Distribution Partnership - {company} Authorized Reseller Opportunity",
-    "content": """
-    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-    <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-        
-        <!-- Header -->
-        <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center; color: white; position: relative;">
-            <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">EXCLUSIVE DISTRIBUTOR</div>
-            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🤝 EXCLUSIVE AMAZON DISTRIBUTION</h1>
-            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">TAHIDEM LLC - Authorized Reseller Partnership</p>
-        </div>
-        
-        <!-- Main Content -->
-        <div style="padding: 40px 30px;">
-            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
+    "brand_partnership_2": {
+        "name": "Exclusive Distribution Agreement",
+        "category": "brand_partnership", 
+        "subject": "Exclusive Amazon Distribution Partnership - {company} Authorized Reseller Opportunity",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
             
-            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a wholesale partnership with <strong>{company}</strong> and becoming your exclusive authorized distributor on Amazon with significant investment commitment.
-            </p>
-            
-            <!-- Company Information -->
-            <div style="background: #f8f9fa; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0;">
-                <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🏢 About TAHIDEM LLC</h3>
-                <div style="color: #555; margin: 15px 0;">
-                    <p style="margin: 8px 0;"><strong>Company:</strong> TAHIDEM LLC</p>
-                    <p style="margin: 8px 0;"><strong>EIN:</strong> 35-2742119</p>
-                    <p style="margin: 8px 0;"><strong>Owner:</strong> Onur Nakis</p>
-                    <p style="margin: 8px 0;"><strong>Location:</strong> 30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
-                    <p style="margin: 8px 0;"><strong>Contact:</strong> business@tahidem.com</p>
-                </div>
+            <!-- Header -->
+            <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center; color: white; position: relative;">
+                <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">EXCLUSIVE DISTRIBUTOR</div>
+                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🤝 EXCLUSIVE AMAZON DISTRIBUTION</h1>
+                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">TAHIDEM LLC - Authorized Reseller Partnership</p>
             </div>
             
-            <!-- Our Primary Partnership Goal -->
-            <div style="background: #2c3e50; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0; color: white;">
-                <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🎯 Our Primary Partnership Goal</h3>
-                <p style="color: #fff; margin: 15px 0; font-size: 16px;">
-                    <strong>Become your exclusive authorized distributor</strong> for ASINs you authorize us to sell, taking complete ownership of listing optimization, sales growth, and inventory management while maintaining continuous brand communication.
-                </p>
-            </div>
-            
-            <!-- Partnership Request -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🎯 PARTNERSHIP REQUEST</h3>
+            <!-- Main Content -->
+            <div style="padding: 40px 30px;">
+                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
                 
-                <div style="display: grid; gap: 15px; margin: 25px 0;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🏪 Wholesale Account Approval</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">To purchase your products directly at wholesale prices with significant investment commitment</p>
+                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a wholesale partnership with <strong>{company}</strong> and becoming your exclusive authorized distributor on Amazon with significant investment commitment.
+                </p>
+                
+                <!-- Company Information -->
+                <div style="background: #f8f9fa; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0;">
+                    <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🏢 About TAHIDEM LLC</h3>
+                    <div style="color: #555; margin: 15px 0;">
+                        <p style="margin: 8px 0;"><strong>Company:</strong> TAHIDEM LLC</p>
+                        <p style="margin: 8px 0;"><strong>EIN:</strong> 35-2742119</p>
+                        <p style="margin: 8px 0;"><strong>Owner:</strong> Onur Nakis</p>
+                        <p style="margin: 8px 0;"><strong>Location:</strong> 30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+                        <p style="margin: 8px 0;"><strong>Contact:</strong> business@tahidem.com</p>
                     </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📋 Letter of Authorization (LOA)</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Confirming that TAHIDEM LLC is an authorized reseller of your brand on Amazon</p>
+                </div>
+                
+                <!-- Our Primary Partnership Goal -->
+                <div style="background: #2c3e50; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0; color: white;">
+                    <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🎯 Our Primary Partnership Goal</h3>
+                    <p style="color: #fff; margin: 15px 0; font-size: 16px;">
+                        <strong>Become your exclusive authorized distributor</strong> for ASINs you authorize us to sell, taking complete ownership of listing optimization, sales growth, and inventory management while maintaining continuous brand communication.
+                    </p>
+                </div>
+                
+                <!-- Partnership Request -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
+                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🎯 PARTNERSHIP REQUEST</h3>
+                    
+                    <div style="display: grid; gap: 15px; margin: 25px 0;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 10px 0; font-size: 16px;">🏪 Wholesale Account Approval</h4>
+                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">To purchase your products directly at wholesale prices with significant investment commitment</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 10px 0; font-size: 16px;">📋 Letter of Authorization (LOA)</h4>
+                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Confirming that TAHIDEM LLC is an authorized reseller of your brand on Amazon</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Brand Exclusivity</h4>
+                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Exclusive rights to sell your brand's products on Amazon with written consent requirement</p>
+                        </div>
                     </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Brand Exclusivity</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Exclusive rights to sell your brand's products on Amazon with written consent requirement</p>
-                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="mailto:business@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Exclusive Distribution Partnership</a>
                 </div>
             </div>
             
-            <!-- CTA Button -->
-            <div style="text-align: center; margin: 40px 0;">
-                <a href="mailto:business@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Exclusive Distribution Partnership</a>
+            <!-- Footer -->
+            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+                <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+                <p style="margin: 5px 0 0 0; opacity: 0.8;">business@tahidem.com | https://tahidem.com/</p>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-            <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
-            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
-            <p style="margin: 5px 0 0 0; opacity: 0.8;">business@tahidem.com | https://tahidem.com/</p>
-        </div>
-    </div>
-    </body></html>
-    """
-},
+        </body></html>
+        """
+    },
     
     # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
-
-"supplier_outreach_4": {
-    "name": "Wholesale Distribution Partnership",
-    "category": "supplier_outreach",
-    "subject": "Wholesale Distribution Partnership - {company} x TAHIDEM LLC - Million Dollar Opportunity",
-    "content": """
-    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-    <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-        
-        <!-- Header -->
-        <div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 40px 30px; text-align: center; color: white; position: relative;">
-            <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">WHOLESALE DISTRIBUTOR</div>
-            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🏢 WHOLESALE DISTRIBUTION PARTNERSHIP</h1>
-            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">TAHIDEM LLC - Million Dollar Opportunity</p>
-        </div>
-        
-        <!-- Main Content -->
-        <div style="padding: 40px 30px;">
-            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
+    "supplier_outreach_4": {
+        "name": "Wholesale Distribution Partnership",
+        "category": "supplier_outreach",
+        "subject": "Wholesale Distribution Partnership - {company} x TAHIDEM LLC - Million Dollar Opportunity",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
             
-            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-            My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a <strong>wholesale distribution partnership</strong> with <strong>{company}</strong> to scale your business through our million-dollar customer network.
-            </p>
+            <!-- Header -->
+            <div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 40px 30px; text-align: center; color: white; position: relative;">
+                <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">WHOLESALE DISTRIBUTOR</div>
+                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🏢 WHOLESALE DISTRIBUTION PARTNERSHIP</h1>
+                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">TAHIDEM LLC - Million Dollar Opportunity</p>
+            </div>
             
-            <!-- CTA Button -->
-            <div style="text-align: center; margin: 40px 0;">
-                <a href="mailto:connect@tahidem.com" style="background: #667eea; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Wholesale Partnership</a>
+            <!-- Main Content -->
+            <div style="padding: 40px 30px;">
+                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello {name},</h2>
+                
+                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a <strong>wholesale distribution partnership</strong> with <strong>{company}</strong> to scale your business through our million-dollar customer network.
+                </p>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="mailto:connect@tahidem.com" style="background: #667eea; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Wholesale Partnership</a>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #667eea; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
+                <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
+                <p style="margin: 5px 0 0 0; opacity: 0.8;">connect@tahidem.com | https://tahidem.com/</p>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-            <p style="margin: 5px 0; color: #667eea; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
-            <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
-            <p style="margin: 5px 0 0 0; opacity: 0.8;">connect@tahidem.com | https://tahidem.com/</p>
-        </div>
-    </div>
-    </body></html>
-    """
-},
+        </body></html>
+        """
+    },
 
     # 🛍️ ETSY CUSTOMER TEMPLATES (Etsy Müşteri Şablonları)
-    
-"etsy_customer_1": {
-    "name": "SoulMineCraft Weekend Special Offer",
-    "category": "etsy_customer",
-    "subject": "🧡 This Weekend Only - 60% OFF Your Custom 3D Portrait Keychain - SoulMineCraft",
-    "content": """
-    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-    <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
-        
-        <!-- Header -->
-        <div style="background: linear-gradient(135deg, #ff7b54 0%, #ff6b35 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
-            <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">WEEKEND SPECIAL</div>
-            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎨 SoulMineCraft</h1>
-            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Custom 3D Portrait Keychains</p>
-        </div>
-        
-        <!-- Main Content -->
-        <div style="padding: 40px 30px;">
-            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello from SoulMineCraft! 🧡</h2>
+    "etsy_customer_1": {
+        "name": "SoulMineCraft Weekend Special Offer",
+        "category": "etsy_customer",
+        "subject": "🧡 This Weekend Only - 60% OFF Your Custom 3D Portrait Keychain - SoulMineCraft",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
             
-            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                <strong>This weekend is all about your story... :))</strong>
-            </p>
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #ff7b54 0%, #ff6b35 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
+                <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">WEEKEND SPECIAL</div>
+                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎨 SoulMineCraft</h1>
+                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Custom 3D Portrait Keychains</p>
+            </div>
             
-            <!-- CTA Button -->
-            <div style="text-align: center; margin: 40px 0;">
-                <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #ff7b54; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Shop Now - 60% OFF</a>
+            <!-- Main Content -->
+            <div style="padding: 40px 30px;">
+                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Hello from SoulMineCraft! 🧡</h2>
+                
+                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                    <strong>This weekend is all about your story... :))</strong>
+                </p>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #ff7b54; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Shop Now - 60% OFF</a>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #ff7b54; font-weight: bold;">SoulMineCraft Team</p>
+                <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
+                <p style="margin: 10px 0 0 0; opacity: 0.8;">
+                    <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #ff7b54; text-decoration: none;">Visit Our Etsy Shop</a>
+                </p>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-            <p style="margin: 5px 0; color: #ff7b54; font-weight: bold;">SoulMineCraft Team</p>
-            <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
-            <p style="margin: 10px 0 0 0; opacity: 0.8;">
-                <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #ff7b54; text-decoration: none;">Visit Our Etsy Shop</a>
-            </p>
-        </div>
-    </div>
-    </body></html>
-    """
-},
+        </body></html>
+        """
+    },
 
-"etsy_customer_2": {
-    "name": "SoulMineCraft Memory Collection - Alternative Offer",
-    "category": "etsy_customer",
-    "subject": "✨ Turn Your Precious Moments Into Art - Exclusive SoulMineCraft Collection",
-    "content": """
-    <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-    <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
-        
-        <!-- Header -->
-        <div style="background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
-            <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">EXCLUSIVE COLLECTION</div>
-            <h1 style="margin: 0; font-size: 28px; font-weight: bold;">✨ SoulMineCraft</h1>
-            <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Where Memories Become Art</p>
-        </div>
-        
-        <!-- Main Content -->
-        <div style="padding: 40px 30px;">
-            <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
+    "etsy_customer_2": {
+        "name": "SoulMineCraft Memory Collection - Alternative Offer",
+        "category": "etsy_customer",
+        "subject": "✨ Turn Your Precious Moments Into Art - Exclusive SoulMineCraft Collection",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
             
-            <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                Every moment tells a story. Every memory deserves to be treasured.
-            </p>
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
+                <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">EXCLUSIVE COLLECTION</div>
+                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">✨ SoulMineCraft</h1>
+                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Where Memories Become Art</p>
+            </div>
             
-            <!-- CTA Button -->
-            <div style="text-align: center; margin: 40px 0;">
-                <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #88d8c0; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Create Your Memory</a>
+            <!-- Main Content -->
+            <div style="padding: 40px 30px;">
+                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
+                
+                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                    Every moment tells a story. Every memory deserves to be treasured.
+                </p>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #88d8c0; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Create Your Memory</a>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #88d8c0; font-weight: bold;">SoulMineCraft Team</p>
+                <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
+                <p style="margin: 10px 0 0 0; opacity: 0.8;">
+                    <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #88d8c0; text-decoration: none;">Visit Our Etsy Shop</a>
+                </p>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-            <p style="margin: 5px 0; color: #88d8c0; font-weight: bold;">SoulMineCraft Team</p>
-            <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
-            <p style="margin: 10px 0 0 0; opacity: 0.8;">
-                <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #88d8c0; text-decoration: none;">Visit Our Etsy Shop</a>
-            </p>
-        </div>
-    </div>
-    </body></html>
-    """
-}
+        </body></html>
+        """
+    }
 }
 
 
@@ -1021,13 +1020,8 @@ class EmailAutomation:
     
     def send_single_email(self, sender_account, recipient, subject, content):
         try:
-            # Gmail için TLS kullan, diğerleri için SSL
-            if sender_account['smtp_server'] == 'smtp.gmail.com':
-                server = smtplib.SMTP(sender_account['smtp_server'], sender_account['smtp_port'])
-                server.starttls()  # TLS başlat
-            else:
-                server = smtplib.SMTP_SSL(sender_account['smtp_server'], sender_account['smtp_port'])
-            
+            # Tüm hesaplar için SSL kullan (Hostinger)
+            server = smtplib.SMTP_SSL(sender_account['smtp_server'], sender_account['smtp_port'])
             server.login(sender_account['email'], sender_account['password'])
             
             msg = MIMEMultipart()
@@ -1041,11 +1035,10 @@ class EmailAutomation:
             server.quit()
             
             # Stats güncelle
-            st.session_state.email_stats['successful'] += 1
-            st.session_state.email_stats['daily_counts'][sender_account['email']] += 1
+                        st.session_state.email_stats['daily_counts'][sender_account['email']] += 1
             sender_account['sent_today'] += 1
             
-            return True , "Success"
+            return True, "Success"
             
         except Exception as e:
             st.session_state.email_stats['failed'] += 1
@@ -1722,8 +1715,7 @@ def main_app():
             "Pionde Halloween": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween']),
             "Brand Hunter": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter']),
             "Brand Partnership": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership']),
-            "Supplier Outreach": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category']
-== 'supplier_outreach']),
+            "Supplier Outreach": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach']),
             "Etsy Customer": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer'])
         }
         
@@ -1740,23 +1732,21 @@ def main_app():
         with col5:
             st.metric("🛍️ Etsy", template_categories["Etsy Customer"])
         
-        st.info(f"**Total Templates:** {len(DEFAULT_TEMPLATES)} professional templates")
+        st.info(f"**Total Templates:** {len(DEFAULT_TEMPLATES)} professional email templates")
         
-        # Email hesap özeti
+        # Email account summary
         st.markdown("---")
         st.subheader("📧 Email Account Summary")
         
         account_summary = []
         for acc in EMAIL_ACCOUNTS:
-            sent = st.session_state.email_stats['daily_counts'][acc['email']]
             account_summary.append({
                 'Email': acc['email'],
                 'Type': acc['type'].replace('_', ' ').title(),
                 'SMTP Server': acc['smtp_server'],
                 'Port': acc['smtp_port'],
-                'Sent Today': sent,
-                'Remaining': 100 - sent,
-                'Status': '🟢 Active' if sent < 70 else ('🟡 Medium' if sent < 90 else '🔴 Near Limit')
+                'Sent Today': st.session_state.email_stats['daily_counts'][acc['email']],
+                'Remaining': 100 - st.session_state.email_stats['daily_counts'][acc['email']]
             })
         
         summary_df = pd.DataFrame(account_summary)
@@ -1764,7 +1754,7 @@ def main_app():
         
         # Export settings
         st.markdown("---")
-        st.subheader("💾 Export Settings")
+        st.subheader("💾 Export Data")
         
         col1, col2 = st.columns(2)
         
@@ -1785,7 +1775,7 @@ def main_app():
                 st.download_button(
                     label="📥 Download Statistics CSV",
                     data=csv,
-                    file_name=f"tahidem_stats_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    file_name=f"tahidem_email_stats_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                     mime="text/csv"
                 )
         
@@ -1795,12 +1785,122 @@ def main_app():
                 st.download_button(
                     label="📥 Download Account Status CSV",
                     data=csv,
-                    file_name=f"tahidem_accounts_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    file_name=f"tahidem_account_status_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                     mime="text/csv"
                 )
 
-# Ana program
+# Ana program akışı
 def main():
+    # Custom CSS
+    st.markdown("""
+    <style>
+        .stApp {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .main {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+        }
+        .stButton>button {
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .stButton>button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .stMetric {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .stProgress > div > div > div > div {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 8px;
+        }
+        .stTabs [data-baseweb="tab"] {
+            border-radius: 8px 8px 0 0;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+        }
+        .stTabs [aria-selected="true"] {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .stDataFrame {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .stSelectbox, .stTextInput, .stTextArea {
+            border-radius: 8px;
+        }
+        .stInfo {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            border-radius: 8px;
+        }
+        .stSuccess {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            border-radius: 8px;
+        }
+        .stWarning {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            border-radius: 8px;
+        }
+        .stError {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            border-radius: 8px;
+        }
+        .sidebar .sidebar-content {
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .sidebar .sidebar-content h1, 
+        .sidebar .sidebar-content h2, 
+        .sidebar .sidebar-content h3,
+        .sidebar .sidebar-content p {
+            color: white !important;
+        }
+        /* Animation for pulse effect */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        /* Card style */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 10px 0;
+        }
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    # Şifre kontrolü
     if check_password():
         main_app()
 
@@ -1808,4 +1908,4 @@ if __name__ == "__main__":
     main()
 
 
-
+            
