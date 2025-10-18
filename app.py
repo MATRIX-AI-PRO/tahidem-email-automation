@@ -24,29 +24,502 @@ MASTER_PASSWORD_HASH = "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d
 
 # Email hesapları
 EMAIL_ACCOUNTS = [
-    {'email': 'partnerships@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0},
-    {'email': 'business@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0},
-    {'email': 'collaborations@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0},
-    {'email': 'deals@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0},
-    {'email': 'marketing@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'etsy_customer', 'sent_today': 0},
-    {'email': 'partnership@tahidem.com', 'password': 'GM8+h!M>An5', 'type': 'brand_partnership', 'sent_today': 0},
-    {'email': 'amazonpartnership@tahidem.com', 'password': '5V7SOWq:V&zQ', 'type': 'brand_partnership', 'sent_today': 0},
-    {'email': 'partnershipamazon@tahidem.com', 'password': 'u&17]ukQ', 'type': 'brand_partnership', 'sent_today': 0},
-    {'email': 'exclusivebrand@tahidem.com', 'password': '5M?$Kz^m', 'type': 'brand_partnership', 'sent_today': 0},
-    {'email': 'outreach@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_hunter', 'sent_today': 0},
-    {'email': 'team@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_hunter', 'sent_today': 0},
-    {'email': 'hello@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'etsy_customer', 'sent_today': 0},
-    {'email': 'connect@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0},
-    {'email': 'growth@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0},
-    {'email': 'soulminecraft@tahidem.com', 'password': 'lxB6LJ/u=L0', 'type': 'etsy_customer', 'sent_today': 0}
+    {'email': 'partnerships@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'business@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'collaborations@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_partnership', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'deals@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'marketing@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'etsy_customer', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'partnership@tahidem.com', 'password': 'GM8+h!M>An5', 'type': 'brand_partnership', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'amazonpartnership@tahidem.com', 'password': '5V7SOWq:V&zQ', 'type': 'brand_partnership', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'partnershipamazon@tahidem.com', 'password': 'u&17]ukQ', 'type': 'brand_partnership', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'exclusivebrand@tahidem.com', 'password': '5M?$Kz^m', 'type': 'brand_partnership', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'outreach@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_hunter', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'team@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'brand_hunter', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'hello@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'etsy_customer', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'connect@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'growth@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'soulminecraft@tahidem.com', 'password': 'lxB6LJ/u=L0', 'type': 'etsy_customer', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    # 🎃 PIONDE HALLOWEEN HESABI
+    {'email': 'pionde@gmail.com', 'password': '081025@Pp', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.gmail.com', 'smtp_port': 587}
 ]
 
-# SMTP ayarları
-SMTP_SERVER = 'smtp.hostinger.com'
-SMTP_PORT = 465
-
-# 🎯 YENİ TEMPLATE SİSTEMİ - 11 FARKLI TEMPLATE
+# 🎯 YENİ TEMPLATE SİSTEMİ - HALLOWEEN ÖZEL KAMPANYA DAHİL
 DEFAULT_TEMPLATES = {
+    # 🎃 PIONDE HALLOWEEN TEMPLATES
+    "pionde_halloween_1": {
+        "name": "Pionde Halloween Special - Spooky Savings",
+        "category": "pionde_halloween",
+        "subject": "🎃 BOO! Halloween Special - 40% OFF Everything at Pionde! 👻",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #1a1a1a;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- Halloween Header -->
+            <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); padding: 40px 30px; text-align: center; color: white; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"40\">🎃👻🕷️🦇</text></svg>'); opacity: 0.1; background-repeat: repeat;"></div>
+                <div style="position: relative; z-index: 1;">
+                    <h1 style="margin: 0; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🎃 PIONDE 🎃</h1>
+                    <p style="margin: 10px 0 0 0; font-size: 22px; opacity: 0.95;">HALLOWEEN SPOOKTACULAR SALE!</p>
+                    <div style="margin: 20px 0; padding: 15px; background: rgba(255,255,255,0.2); border-radius: 10px; display: inline-block;">
+                        <p style="margin: 0; font-size: 48px; font-weight: bold; letter-spacing: 3px;">40% OFF</p>
+                        <p style="margin: 5px 0 0 0; font-size: 16px;">EVERYTHING IN STORE!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #ff4500; font-size: 28px; margin-bottom: 20px; text-align: center;">👻 BOO! Hello {name}! 🎃</h2>
+                
+                <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                    <strong>Halloween is here, and we've got a SPOOKY surprise for you!</strong><br>
+                    Get ready for the most FRIGHTFULLY GOOD deals of the year! 🕷️
+                </p>
+                
+                <!-- Halloween Offer Box -->
+                <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); padding: 35px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(255,69,0,0.3);">
+                    <h3 style="margin-top: 0; font-size: 32px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🎃 HALLOWEEN MEGA SALE 🎃</h3>
+                    <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 12px; margin: 25px 0; backdrop-filter: blur(10px);">
+                        <h2 style="margin: 0; font-size: 56px; font-weight: bold; letter-spacing: 2px; text-shadow: 3px 3px 6px rgba(0,0,0,0.4);">40% OFF</h2>
+                        <p style="margin: 15px 0 10px 0; font-size: 22px; font-weight: bold;">USE CODE:</p>
+                        <div style="background: #fff; color: #ff4500; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: bold; letter-spacing: 3px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                            HALLOWEEN40
+                        </div>
+                    </div>
+                    <p style="margin: 20px 0; font-size: 18px; line-height: 1.6;">
+                        🕷️ <strong>Valid:</strong> October 25-31, 2024<br>
+                        👻 <strong>On:</strong> ALL Products - No Exclusions!<br>
+                        🦇 <strong>Free Shipping:</strong> Orders over $50
+                    </p>
+                </div>
+                
+                <!-- Why Shop This Halloween -->
+                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px dashed #ff6b35;">
+                    <h3 style="color: #ff4500; margin-top: 0; font-size: 24px; text-align: center;">🎃 Why Shop Pionde This Halloween? 🎃</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">👻 Spooktacular Savings</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">40% OFF everything - our biggest discount ever!</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff8c00; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">🕷️ Premium Quality</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Handcrafted items with attention to every detail</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6347; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">🦇 Fast Delivery</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Free shipping on orders over $50 - arrives before Halloween!</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff4500; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">🎃 Perfect Gifts</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Unique items perfect for Halloween gifting!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Popular Categories -->
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
+                    <h3 style="color: #ff4500; margin-top: 0; font-size: 24px; text-align: center;">🛍️ Popular Halloween Categories 🛍️</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; margin: 25px 0; text-align: center;">
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <div style="font-size: 40px; margin-bottom: 10px;">🎃</div>
+                            <h4 style="margin: 0; color: #333; font-size: 16px;">Halloween Decor</h4>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <div style="font-size: 40px; margin-bottom: 10px;">👻</div>
+                            <h4 style="margin: 0; color: #333; font-size: 16px;">Spooky Gifts</h4>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <div style="font-size: 40px; margin-bottom: 10px;">🕷️</div>
+                            <h4 style="margin: 0; color: #333; font-size: 16px;">Party Supplies</h4>
+                        </div>
+                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <div style="font-size: 40px; margin-bottom: 10px;">🦇</div>
+                            <h4 style="margin: 0; color: #333; font-size: 16px;">Costumes</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Urgency Message -->
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center; border: 3px solid #ff4500;">
+                    <h3 style="margin-top: 0; font-size: 26px; color: #ff6b35;">⏰ LIMITED TIME ONLY! ⏰</h3>
+                    <p style="margin: 20px 0; font-size: 18px; line-height: 1.8;">
+                        This SPOOKTACULAR sale ends on <strong style="color: #ff6b35;">October 31st at midnight!</strong><br>
+                        Don't let these BOO-tiful deals slip away! 👻<br>
+                        <strong style="font-size: 22px; color: #ff4500;">Shop NOW before it's too late!</strong>
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/Pionde" style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(255,69,0,0.4); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px;">
+                        🎃 SHOP HALLOWEEN SALE NOW 🎃
+                    </a>
+                </div>
+                
+                <!-- Social Proof -->
+                <div style="background: #fff5e6; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; border: 2px solid #ff6b35;">
+                    <p style="color: #ff4500; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                        "Best Halloween deals I've found! Quality products and amazing customer service!" 🎃
+                    </p>
+                    <p style="color: #666; margin: 10px 0; font-size: 14px;">
+                        - Sarah M., Happy Halloween Shopper
+                    </p>
+                    <p style="color: #ff4500; margin: 20px 0; font-size: 16px; font-weight: bold;">
+                        ⭐⭐⭐⭐⭐ Join 5,000+ Happy Customers This Halloween!
+                    </p>
+                </div>
+                
+                <!-- Thank You -->
+                <div style="text-align: center; margin: 30px 0;">
+                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
+                        Thank you for being part of the <strong style="color: #ff4500;">Pionde family!</strong>
+                    </p>
+                    <p style="font-size: 22px; color: #ff4500; font-weight: bold; margin: 15px 0;">
+                        Have a SPOOKTACULAR Halloween! 🎃👻
+                    </p>
+                    <p style="font-size: 32px; margin: 20px 0;">🎃🕷️👻🦇🕸️</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #ff6b35; font-weight: bold; font-size: 18px;">🎃 PIONDE - Your Halloween Headquarters 🎃</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
+                </p>
+                <p style="margin: 15px 0; font-size: 14px; opacity: 0.7;">
+                    Use code <strong style="color: #ff6b35;">HALLOWEEN40</strong> at checkout for 40% OFF!
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
+    "pionde_halloween_2": {
+        "name": "Pionde Halloween - Last Chance Alert",
+        "category": "pionde_halloween",
+        "subject": "⚠️ LAST CHANCE! Halloween Sale Ending Soon - 40% OFF at Pionde! 🎃",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #1a1a1a;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- Urgent Header -->
+            <div style="background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
+                <div style="position: absolute; top: 10px; right: 20px; background: #ffff00; color: #dc143c; padding: 8px 20px; border-radius: 25px; font-size: 14px; font-weight: bold; animation: pulse 1.5s infinite;">
+                    ⚠️ URGENT
+                </div>
+                <h1 style="margin: 0; font-size: 38px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">⏰ LAST CHANCE ⏰</h1>
+                <p style="margin: 15px 0; font-size: 24px; opacity: 0.95;">Halloween Sale Ending TONIGHT!</p>
+                <div style="margin: 25px 0; padding: 20px; background: rgba(255,255,255,0.15); border-radius: 12px; display: inline-block;">
+                    <p style="margin: 0; font-size: 52px; font-weight: bold; letter-spacing: 3px;">40% OFF</p>
+                    <p style="margin: 10px 0 0 0; font-size: 18px;">Ends at MIDNIGHT!</p>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #dc143c; font-size: 30px; margin-bottom: 20px; text-align: center;">🚨 Don't Miss Out, {name}! 🚨</h2>
+                
+                <p style="font-size: 19px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                    <strong>This is your FINAL WARNING!</strong><br>
+                    Our biggest Halloween sale of the year ends <strong style="color: #dc143c;">TONIGHT at MIDNIGHT!</strong> 🎃
+                </p>
+                
+                <!-- Countdown Timer Visual -->
+                <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); padding: 35px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(220,20,60,0.4);">
+                    <h3 style="margin-top: 0; font-size: 28px;">⏰ TIME IS RUNNING OUT! ⏰</h3>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 25px 0;">
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 36px; font-weight: bold;">12</div>
+                            <div style="font-size: 14px; opacity: 0.9;">HOURS</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 36px; font-weight: bold;">30</div>
+                            <div style="font-size: 14px; opacity: 0.9;">MINUTES</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 36px; font-weight: bold;">45</div>
+                            <div style="font-size: 14px; opacity: 0.9;">SECONDS</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 36px; font-weight: bold;">🎃</div>
+                            <div style="font-size: 14px; opacity: 0.9;">LEFT!</div>
+                        </div>
+                    </div>
+                    <div style="background: #fff; color: #ff4500; padding: 18px 35px; border-radius: 10px; display: inline-block; font-size: 30px; font-weight: bold; letter-spacing: 3px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); margin-top: 20px;">
+                        HALLOWEEN40
+                    </div>
+                </div>
+                
+                <!-- What You're Missing -->
+                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px solid #dc143c;">
+                    <h3 style="color: #dc143c; margin-top: 0; font-size: 24px; text-align: center;">😱 What You're About to MISS! 😱</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #dc143c; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">💰 40% OFF Everything</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Our BIGGEST discount ever - won't see this again until next year!</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff4500; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🚚 FREE Shipping</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Free delivery on orders over $50 - save even more!</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🎁 Exclusive Items</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Limited edition Halloween items - once they're gone, they're GONE!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Customer Testimonials -->
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
+                    <h3 style="color: #ff4500; margin-top: 0; font-size: 22px; text-align: center;">💬 What Our Customers Are Saying 💬</h3>
+                    <div style="display: grid; gap: 15px; margin: 20px 0;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Just ordered! Can't believe these prices! 🎃"</p>
+                            <p style="margin: 0; color: #ff4500; font-weight: bold;">- Jessica T.</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Best Halloween shopping experience ever! 👻"</p>
+                            <p style="margin: 0; color: #ff4500; font-weight: bold;">- Michael R.</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"40% off is INSANE! Already placed 3 orders! 🕷️"</p>
+                            <p style="margin: 0; color: #ff4500; font-weight: bold;">- Amanda K.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Final Warning -->
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 35px; border-radius: 12px; margin: 30px 0; color: white; text-align: center; border: 4px solid #dc143c;">
+                    <h3 style="margin-top: 0; font-size: 32px; color: #ff6b35;">🚨 FINAL WARNING! 🚨</h3>
+                    <p style="margin: 20px 0; font-size: 20px; line-height: 1.8;">
+                        After <strong style="color: #dc143c;">MIDNIGHT TONIGHT</strong>, prices return to normal!<br>
+                        This is your <strong style="color: #ff6b35;">LAST CHANCE</strong> to save 40%!<br>
+                        <strong style="font-size: 24px; color: #ff4500;">Don't have regrets tomorrow!</strong>
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/Pionde" style="background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%); color: white; padding: 22px 55px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 22px; display: inline-block; box-shadow: 0 10px 30px rgba(220,20,60,0.5); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px; animation: pulse 2s infinite;">
+                        🎃 SHOP NOW BEFORE IT'S TOO LATE! 🎃
+                    </a>
+                    <p style="margin: 20px 0; font-size: 16px; color: #dc143c; font-weight: bold;">
+                        ⏰ Sale ends at MIDNIGHT - Don't miss out!
+                    </p>
+                </div>
+                
+                <!-- Stock Warning -->
+                <div style="background: #fff5e6; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; border: 2px dashed #ff4500;">
+                    <p style="color: #dc143c; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                        ⚠️ STOCK WARNING: Many items are selling out FAST!
+                    </p>
+                    <p style="color: #666; margin: 10px 0; font-size: 16px;">
+                        Over 500 orders placed in the last 24 hours!<br>
+                        Don't wait - secure your favorites NOW!
+                    </p>
+                </div>
+                
+                <!-- Thank You -->
+                <div style="text-align: center; margin: 30px 0;">
+                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
+                        This is your <strong style="color: #dc143c;">LAST CHANCE</strong> to save BIG!
+                    </p>
+                    <p style="font-size: 22px; color: #ff4500; font-weight: bold; margin: 15px 0;">
+                        See you at checkout! 🎃👻
+                    </p>
+                    <p style="font-size: 32px; margin: 20px 0;">⏰🎃🚨</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #dc143c; font-weight: bold; font-size: 18px;">🎃 PIONDE - Last Chance for Halloween Savings! 🎃</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
+                </p>
+                <p style="margin: 15px 0; font-size: 16px; opacity: 0.9; color: #ff6b35;">
+                    Use code <strong>HALLOWEEN40</strong> - Ends TONIGHT at MIDNIGHT!
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
+    "pionde_halloween_3": {
+        "name": "Pionde Halloween - Exclusive VIP Offer",
+        "category": "pionde_halloween",
+        "subject": "🎃 VIP EXCLUSIVE: Extra 10% OFF Halloween Sale at Pionde! (50% Total!) 👻",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #1a1a1a;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- VIP Header -->
+            <div style="background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); padding: 40px 30px; text-align: center; color: #1a1a1a; position: relative;">
+                <div style="position: absolute; top: 10px; right: 20px; background: #1a1a1a; color: #ffd700; padding: 8px 20px; border-radius: 25px; font-size: 12px; font-weight: bold; border: 2px solid #ffd700;">
+                    👑 VIP ONLY
+                </div>
+                <h1 style="margin: 0; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">👑 VIP EXCLUSIVE 👑</h1>
+                <p style="margin: 15px 0; font-size: 22px; opacity: 0.95;">Special Halloween Offer Just For You!</p>
+                <div style="margin: 25px 0; padding: 20px; background: rgba(0,0,0,0.1); border-radius: 12px; display: inline-block;">
+                    <p style="margin: 0; font-size: 48px; font-weight: bold; letter-spacing: 3px; color: #dc143c;">50% OFF</p>
+                    <p style="margin: 10px 0 0 0; font-size: 16px;">40% + Extra 10% VIP Bonus!</p>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #ffd700; font-size: 28px; margin-bottom: 20px; text-align: center;">🌟 Hello VIP Customer {name}! 🌟</h2>
+                
+                <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                    As one of our <strong style="color: #ffd700;">most valued customers</strong>, we're giving you an<br>
+                    <strong style="color: #dc143c; font-size: 22px;">EXCLUSIVE EXTRA 10% OFF</strong> on top of our Halloween sale! 🎃
+                </p>
+                
+                <!-- VIP Offer Box -->
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 35px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(255,215,0,0.3); border: 3px solid #ffd700;">
+                    <h3 style="margin-top: 0; font-size: 28px; color: #ffd700;">👑 YOUR VIP HALLOWEEN PACKAGE 👑</h3>
+                    
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: rgba(255,215,0,0.1); padding: 20px; border-radius: 10px; border: 2px solid #ffd700;">
+                            <h4 style="color: #ffd700; margin: 0 0 10px 0; font-size: 20px;">🎃 Base Halloween Sale</h4>
+                            <p style="margin: 0; font-size: 32px; font-weight: bold; color: #ff6b35;">40% OFF</p>
+                        </div>
+                        <div style="font-size: 32px; color: #ffd700;">+</div>
+                        <div style="background: rgba(255,215,0,0.1); padding: 20px; border-radius: 10px; border: 2px solid #ffd700;">
+                            <h4 style="color: #ffd700; margin: 0 0 10px 0; font-size: 20px;">👑 VIP Exclusive Bonus</h4>
+                            <p style="margin: 0; font-size: 32px; font-weight: bold; color: #dc143c;">EXTRA 10% OFF</p>
+                        </div>
+                        <div style="font-size: 32px; color: #ffd700;">=</div>
+                        <div style="background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); padding: 25px; border-radius: 10px;">
+                            <h4 style="color: #1a1a1a; margin: 0 0 10px 0; font-size: 22px;">💎 TOTAL VIP SAVINGS</h4>
+                            <p style="margin: 0; font-size: 48px; font-weight: bold; color: #dc143c; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">50% OFF!</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff; color: #1a1a1a; padding: 20px 35px; border-radius: 10px; display: inline-block; margin-top: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                        <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">Your VIP Code:</p>
+                        <p style="margin: 0; font-size: 32px; font-weight: bold; letter-spacing: 3px; color: #ffd700;">VIPHALLOWEEN</p>
+                    </div>
+                </div>
+                
+                <!-- VIP Benefits -->
+                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px solid #ffd700;">
+                    <h3 style="color: #ff8c00; margin-top: 0; font-size: 24px; text-align: center;">👑 Your VIP Benefits 👑</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ffd700; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">💰 Maximum Savings</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">50% OFF - the biggest discount we've EVER offered!</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff8c00; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">🚚 FREE Priority Shipping</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Free expedited delivery on ALL orders - no minimum!</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #dc143c; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">🎁 Exclusive Gift</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Free Halloween surprise gift with every VIP order!</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">⚡ Priority Processing</h4>
+                            <p style="margin: 0; color: #555; font-size: 15px;">Your orders are processed first - guaranteed fast delivery!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Why You're VIP -->
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
+                    <h3 style="color: #ffd700; margin-top: 0; font-size: 22px; text-align: center;">🌟 Why You Received This VIP Offer 🌟</h3>
+                    <p style="text-align: center; color: #555; font-size: 16px; line-height: 1.8; margin: 20px 0;">
+                        You're one of our <strong>most loyal customers</strong>, and we wanted to show our appreciation!<br>
+                        This exclusive 50% OFF offer is our way of saying <strong style="color: #ffd700;">THANK YOU</strong> for your continued support.<br>
+                        <strong style="color: #dc143c;">This offer is not available to the general public!</strong>
+                    </p>
+                </div>
+                
+                <!-- Urgency -->
+                <div style="background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center; border: 3px solid #ffd700;">
+                    <h3 style="margin-top: 0; font-size: 26px; color: #ffd700;">⏰ VIP EXCLUSIVE - LIMITED TIME! ⏰</h3>
+                    <p style="margin: 20px 0; font-size: 18px; line-height: 1.8;">
+                        This <strong style="color: #ffd700;">VIP 50% OFF offer</strong> is valid for<br>
+                        <strong style="font-size: 24px; color: #ffd700;">48 HOURS ONLY!</strong><br>
+                        Don't miss this exclusive opportunity!
+                    </p>
+                </div>
+                
+                <!-- How to Redeem -->
+                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 2px dashed #ffd700;">
+                    <h3 style="color: #ff8c00; margin-top: 0; font-size: 22px; text-align: center;">📝 How to Redeem Your VIP Offer 📝</h3>
+                    <div style="display: grid; gap: 15px; margin: 20px 0;">
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #ffd700;">
+                            <strong style="color: #ff8c00;">Step 1:</strong> Click the button below to visit our shop
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #ff8c00;">
+                            <strong style="color: #ff8c00;">Step 2:</strong> Add your favorite items to cart
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #dc143c;">
+                            <strong style="color: #ff8c00;">Step 3:</strong> Enter code <strong style="color: #ffd700;">VIPHALLOWEEN</strong> at checkout
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #ff6b35;">
+                            <strong style="color: #ff8c00;">Step 4:</strong> Enjoy your 50% savings + FREE shipping!
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/Pionde" style="background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); color: #1a1a1a; padding: 22px 55px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 22px; display: inline-block; box-shadow: 0 10px 30px rgba(255,215,0,0.5); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px; border: 3px solid #1a1a1a;">
+                        👑 CLAIM YOUR VIP 50% OFF NOW! 👑
+                    </a>
+                    <p style="margin: 20px 0; font-size: 16px; color: #dc143c; font-weight: bold;">
+                        🌟 Exclusive VIP offer - Not available to public!
+                    </p>
+                </div>
+                
+                <!-- VIP Testimonial -->
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; border: 2px solid #ffd700;">
+                    <p style="color: #ff8c00; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                        "I can't believe I got 50% off! Being a VIP customer is amazing!" 👑
+                    </p>
+                    <p style="color: #666; margin: 10px 0; font-size: 14px;">
+                        - Rachel S., VIP Customer
+                    </p>
+                    <p style="color: #ffd700; margin: 20px 0; font-size: 16px; font-weight: bold;">
+                        ⭐⭐⭐⭐⭐ Join Our VIP Family!
+                    </p>
+                </div>
+                
+                <!-- Thank You -->
+                <div style="text-align: center; margin: 30px 0;">
+                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
+                        Thank you for being a <strong style="color: #ffd700;">VIP member</strong> of the Pionde family!
+                    </p>
+                    <p style="font-size: 22px; color: #ff8c00; font-weight: bold; margin: 15px 0;">
+                        Enjoy your exclusive 50% OFF! 🎃👑
+                    </p>
+                    <p style="font-size: 32px; margin: 20px 0;">👑🎃✨</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #ffd700; font-weight: bold; font-size: 18px;">👑 PIONDE VIP - Exclusive Halloween Offer 👑</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ffd700; text-decoration: none;">Visit Our Etsy Shop</a>
+                </p>
+                <p style="margin: 15px 0; font-size: 16px; opacity: 0.9; color: #ffd700;">
+                    VIP Code: <strong>VIPHALLOWEEN</strong> - 50% OFF Everything!
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
     # 🎯 BRAND HUNTER TEMPLATES (Marka Arayıcıları)
     "brand_hunter_1": {
     "name": "Amazon Brand Hunter - General Recruitment",
@@ -147,7 +620,7 @@ DEFAULT_TEMPLATES = {
         <!-- Header -->
         <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center; color: white;">
             <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎯 BRAND HUNTER POSITION</h1>
-            <p style="margin: 10px 0 0 0; font-size: 16px; opacity: 0.9;">TAHIDEM LLC - Exclusive Opportunity</p>
+            <p style="margin: 10px 0 0  0; font-size: 16px; opacity: 0.9;">TAHIDEM LLC - Exclusive Opportunity</p>
             <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
         </div>
         
@@ -317,103 +790,6 @@ DEFAULT_TEMPLATES = {
                 </div>
             </div>
             
-            <!-- Exclusive Distribution Services -->
-            <div style="background: linear-gradient(135deg, #27ae60 0%, #2ed573 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🏆 EXCLUSIVE DISTRIBUTOR SERVICES</h3>
-                
-                <div style="display: grid; gap: 15px; margin: 25px 0;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Exclusive ASIN Authorization</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Become sole authorized seller for ASINs you authorize us to sell</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📈 Complete Listing Development</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Advanced SEO optimization, A+ content creation, and search ranking strategies</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🎥 Professional Content Creation</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">High-quality product photography, infographics, and promotional videos</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">⭐ Strategic Review Growth</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Positive feedback enhancement and reputation management strategies</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Million Dollar Customer Network -->
-            <div style="background: #ff6b6b; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 22px;">💰 MILLION DOLLAR CUSTOMER NETWORK</h3>
-                <div style="margin: 20px 0;">
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Million-dollar customer network</strong> ensures guaranteed sales volume</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>3-6 month bulk inventory purchases</strong> based on 30-day Amazon sales data</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Zero inventory risk for your brand</strong> - we handle all stock management</p>
-                                        <p style="margin: 8px 0; font-size: 16px;">✅ <strong>No stock purchase problems</strong> - guaranteed inventory commitment</p>
-                </div>
-            </div>
-            
-            <!-- Partnership Benefits -->
-            <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 22px;">🎁 WHAT THIS PARTNERSHIP OFFERS</h3>
-                <div style="margin: 20px 0;">
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Protect and enhance your brand's image</strong> on Amazon</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Maintain consistent pricing and representation</strong></p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Drive long-term sales growth</strong> with strong investment in inventory</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Significant investment in stocking and promoting</strong> your products</p>
-                </div>
-            </div>
-            
-            <!-- Distribution Partnership Process -->
-            <div style="margin: 30px 0;">
-                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🔄 Exclusive Distribution Process:</h3>
-                
-                <div style="display: grid; gap: 15px; margin: 20px 0;">
-                    <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
-                        <h4 style="color: #27ae60; margin: 0 0 8px 0;">1️⃣ Exclusive Distribution Authorization</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Secure exclusive rights to sell your authorized Amazon ASINs as sole distributor</p>
-                    </div>
-                    <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
-                        <h4 style="color: #3742fa; margin: 0 0 8px 0;">2️⃣ Complete ASIN Development & Growth</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">SEO optimization, visual content creation, and listing development with continuous brand communication</p>
-                    </div>
-                    <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
-                        <h4 style="color: #ff9f43; margin: 0 0 8px 0;">3️⃣ Strategic Inventory Management</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">3-6 month bulk purchasing based on 30-day Amazon sales data analysis</p>
-                    </div>
-                    <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
-                        <h4 style="color: #ff6348; margin: 0 0 8px 0;">4️⃣ Comprehensive Reporting & Legal Compliance</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Weekly/monthly sales & advertising reports, full legal requirements tracking</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Exclusive Partnership Benefits -->
-            <div style="border: 2px solid #667eea; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #667eea; margin-top: 0;">🎁 Exclusive Distribution Benefits:</h3>
-                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                    <li style="margin-bottom: 8px;"><strong>Exclusive authorized distributor status</strong> for ASINs you authorize us to sell</li>
-                    <li style="margin-bottom: 8px;"><strong>Complete ASIN development and optimization</strong> with continuous brand communication</li>
-                    <li style="margin-bottom: 8px;"><strong>Guaranteed bulk inventory purchases</strong> from million-dollar customer network</li>
-                    <li style="margin-bottom: 8px;"><strong>Professional content creation</strong> (images, videos, A+ content, infographics)</li>
-                    <li style="margin-bottom: 8px;"><strong>Strategic positive review growth</strong> and reputation management</li>
-                    <li style="margin-bottom: 8px;"><strong>Weekly/monthly performance reporting</strong> and advertising analytics</li>
-                    <li style="margin-bottom: 8px;"><strong>Full legal compliance tracking</strong> and brand protection</li>
-                    <li style="margin-bottom: 8px;"><strong>3-6 month inventory commitment</strong> based on 30-day sales data</li>
-                </ul>
-            </div>
-            
-            <!-- Professional Priority Statement -->
-            <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 25px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 20px;">🎯 OUR PROFESSIONAL PRIORITY</h3>
-                <p style="margin: 15px 0; font-size: 16px;">
-                    <strong>Our priority is to become the sole authorized seller</strong> for Amazon ASINs you provide us. We want to be your brand's distributor for relevant ASINs in the most professional way possible.
-                </p>
-            </div>
-            
-            <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
-                Ready to proceed immediately with exclusive distribution partnership?
-            </p>
-            
             <!-- CTA Button -->
             <div style="text-align: center; margin: 40px 0;">
                 <a href="mailto:business@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Exclusive Distribution Partnership</a>
@@ -454,182 +830,6 @@ DEFAULT_TEMPLATES = {
             
             <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
             My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. I am very interested in establishing a <strong>wholesale distribution partnership</strong> with <strong>{company}</strong> to scale your business through our million-dollar customer network.
-            </p>
-            
-            <!-- Company Information -->
-            <div style="background: #f8f9fa; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0;">
-                <h3 style="color: #667eea; margin-top: 0; font-size: 20px;">🏢 About TAHIDEM LLC</h3>
-                <div style="color: #555; margin: 15px 0;">
-                    <p style="margin: 8px 0;"><strong>Company:</strong> TAHIDEM LLC</p>
-                    <p style="margin: 8px 0;"><strong>EIN:</strong> 35-2742119</p>
-                    <p style="margin: 8px 0;"><strong>Owner:</strong> Onur Nakis</p>
-                    <p style="margin: 8px 0;"><strong>Location:</strong> 30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
-                    <p style="margin: 8px 0;"><strong>Contact:</strong> business@tahidem.com</p>
-                    <p style="margin: 8px 0;"><strong>Specialization:</strong> Amazon & E-commerce Distribution</p>
-                </div>
-            </div>
-            
-            <!-- Our Primary Distribution Goal -->
-            <div style="background: #2c3e50; border-left: 5px solid #667eea; padding: 25px; margin: 30px 0; color: white;">
-                <h3 style="color: #667eea; margin-top: 0; font-size: 20px;">🎯 Our Primary Distribution Goal</h3>
-                <p style="color: #fff; margin: 15px 0; font-size: 16px;">
-                    <strong>Become your exclusive wholesale distributor</strong> for Amazon and global e-commerce platforms, taking complete ownership of inventory management, sales growth, and market expansion while maintaining continuous brand communication.
-                </p>
-            </div>
-            
-            <!-- Partnership Request -->
-            <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🎯 WHOLESALE PARTNERSHIP REQUEST</h3>
-                
-                <div style="display: grid; gap: 15px; margin: 25px 0;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🏪 Wholesale Account Authorization</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Direct wholesale purchasing with significant volume commitments and competitive pricing</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📋 Distribution Agreement</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Formal distributor status for Amazon and global e-commerce platforms</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Exclusive Distribution Rights</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Exclusive or preferred distributor status for specific regions or product lines</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Million Dollar Customer Network -->
-            <div style="background: #27ae60; padding: 30px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 22px;">💰 MILLION DOLLAR CUSTOMER NETWORK</h3>
-                <div style="margin: 20px 0;">
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>$50M+ annual sales volume</strong> across 200+ brand partnerships</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Active in 15+ countries</strong> with localized operations</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>3-6 month bulk inventory purchases</strong> based on sales data analysis</p>
-                    <p style="margin: 8px 0; font-size: 16px;">✅ <strong>Zero inventory risk</strong> - guaranteed volume commitments</p>
-                </div>
-            </div>
-            
-            <!-- Wholesale Distribution Services -->
-            <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🏆 WHOLESALE DISTRIBUTION SERVICES</h3>
-                
-                <div style="display: grid; gap: 15px; margin: 25px 0;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📦 Bulk Inventory Management</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Large-scale inventory purchasing and strategic stock management</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">🌍 Global Market Expansion</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Multi-country distribution across Amazon US, EU, Australia, and Canada</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">📈 Sales Growth Optimization</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Advanced listing optimization, SEO, and advertising strategies</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 16px;">💼 Brand Protection & Compliance</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Legal compliance tracking and brand reputation management</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Financial Projections -->
-            <div style="background: #ff6b6b; padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">📊 FINANCIAL PROJECTIONS</h3>
-                <div style="display: grid; gap: 20px; margin: 25px 0; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                        <h4 style="margin: 0; font-size: 24px;">Q1</h4>
-                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$500K</p>
-                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Initial Orders</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                        <h4 style="margin: 0; font-size: 24px;">Q2</h4>
-                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$1.2M</p>
-                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Scale Up</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                        <h4 style="margin: 0; font-size: 24px;">Q3</h4>
-                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$2.5M</p>
-                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Peak Season</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; text-align: center;">
-                        <h4 style="margin: 0; font-size: 24px;">Q4</h4>
-                        <p style="margin: 10px 0; font-size: 18px; font-weight: bold;">$3.8M</p>
-                        <p style="margin: 0; font-size: 12px; opacity: 0.8;">Holiday Rush</p>
-                    </div>
-                </div>
-                <p style="text-align: center; margin: 20px 0 0 0; font-size: 16px; font-weight: bold;">
-                    Total Year 1 Projection: $8M+
-                </p>
-            </div>
-            
-            <!-- Distribution Partnership Process -->
-            <div style="margin: 30px 0;">
-                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🔄 Wholesale Distribution Process:</h3>
-                
-                <div style="display: grid; gap: 15px; margin: 20px 0;">
-                    <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; border-left: 4px solid #27ae60;">
-                        <h4 style="color: #27ae60; margin: 0 0 8px 0;">1️⃣ Wholesale Agreement Establishment</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Secure wholesale pricing and distribution rights with volume commitments</p>
-                    </div>
-                    <div style="background: #e8f4fd; padding: 20px; border-radius: 8px; border-left: 4px solid #3742fa;">
-                        <h4 style="color: #3742fa; margin: 0 0 8px 0;">2️⃣ Market Analysis & Strategy</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Comprehensive market research and sales strategy development</p>
-                    </div>
-                    <div style="background: #fff5e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9f43;">
-                        <h4 style="color: #ff9f43; margin: 0 0 8px 0;">3️⃣ Bulk Inventory Investment</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Large-scale inventory purchasing based on demand forecasting</p>
-                    </div>
-                    <div style="background: #ffeaea; padding: 20px; border-radius: 8px; border-left: 4px solid #ff6348;">
-                        <h4 style="color: #ff6348; margin: 0 0 8px 0;">4️⃣ Global Distribution & Reporting</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Multi-platform distribution with comprehensive performance reporting</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Partnership Benefits -->
-            <div style="border: 2px solid #4facfe; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #4facfe; margin-top: 0;">🎁 Wholesale Distribution Benefits:</h3>
-                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                    <li style="margin-bottom: 8px;"><strong>Guaranteed bulk inventory purchases</strong> from million-dollar customer network</li>
-                    <li style="margin-bottom: 8px;"><strong>Multi-platform distribution</strong> across Amazon US, EU, Australia, Canada</li>
-                    <li style="margin-bottom: 8px;"><strong>Professional listing optimization</strong> and content creation services</li>
-                    <li style="margin-bottom: 8px;"><strong>Advanced advertising strategies</strong> and market penetration</li>
-                    <li style="margin-bottom: 8px;"><strong>Weekly/monthly sales reporting</strong> and performance analytics</li>
-                    <li style="margin-bottom: 8px;"><strong>Fast payment terms</strong> (15-30 days) with early payment discounts</li>
-                    <li style="margin-bottom: 8px;"><strong>Brand protection and compliance</strong> tracking across all platforms</li>
-                    <li style="margin-bottom: 8px;"><strong>Long-term partnership</strong> with annual volume growth commitments</li>
-                </ul>
-            </div>
-            
-            <!-- Success Metrics -->
-            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #2c3e50; margin-top: 0;">📊 Our Success Metrics:</h3>
-                <div style="display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; justify-content: center;">
-                    <div style="text-align: center; flex: 1; min-width: 120px;">
-                        <div style="background: #3742fa; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">98%</div>
-                        <p style="margin: 0; color: #555; font-size: 14px;">On-time Delivery</p>
-                    </div>
-                    <div style="text-align: center; flex: 1; min-width: 120px;">
-                        <div style="background: #27ae60; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">15</div>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Day Payment Terms</p>
-                    </div>
-                    <div style="text-align: center; flex: 1; min-width: 120px;">
-                        <div style="background: #ff6348; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 24px; font-weight: bold;">24/7</div>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Support Available</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Professional Priority Statement -->
-            <div style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 25px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 20px;">🎯 OUR PROFESSIONAL PRIORITY</h3>
-                <p style="margin: 15px 0; font-size: 16px;">
-                    <strong>Our priority is to become your trusted wholesale distributor</strong> for global e-commerce platforms, scaling your business through our proven distribution network and million-dollar customer base.
-                </p>
-            </div>
-            
-            <p style="font-size: 18px; margin: 30px 0; text-align: center; color: #2c3e50; font-weight: bold;">
-                Ready to scale your business with our wholesale distribution network?
             </p>
             
             <!-- CTA Button -->
@@ -674,85 +874,9 @@ DEFAULT_TEMPLATES = {
                 <strong>This weekend is all about your story... :))</strong>
             </p>
             
-            <!-- Story Section -->
-            <div style="background: #f8f9fa; border-left: 5px solid #ff7b54; padding: 25px; margin: 30px 0; text-align: center;">
-                                <p style="color: #2c3e50; margin: 10px 0; font-size: 18px; font-style: italic;">
-                    This is more than just a keychain…<br>
-                    It's your story.<br>
-                    A memory you hold.<br>
-                    A moment frozen in time.
-                </p>
-            </div>
-            
-            <!-- Weekend Offer -->
-            <div style="background: linear-gradient(135deg, #ff7b54 0%, #ff6b35 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 24px;">🧡 This Weekend Only!</h3>
-                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
-                    <h2 style="margin: 0; font-size: 36px; font-weight: bold;">60% OFF</h2>
-                    <p style="margin: 10px 0; font-size: 18px;">COUPON CODE: <strong>'DISCOUNT'</strong></p>
-                    <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">on all our custom 3D portrait keychains</p>
-                </div>
-                <p style="margin: 15px 0; font-size: 16px;">
-                    Send us a photo, and we'll turn it into a miniature 3D memory you can carry everywhere.
-                </p>
-            </div>
-            
-            <!-- What's Included -->
-            <div style="background: #e8f5e8; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #27ae60; margin-top: 0; font-size: 20px;">🎁 What's Included:</h3>
-                <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                    <li style="margin-bottom: 10px;">✔ <strong>60% OFF</strong> (automatically applied at checkout)</li>
-                    <li style="margin-bottom: 10px;">✔ <strong>Valid only this weekend</strong> – Friday through Sunday</li>
-                    <li style="margin-bottom: 10px;">✔ <strong>Handmade with love</strong>, durable quality</li>
-                    <li style="margin-bottom: 10px;">✔ <strong>Personalized design</strong> from your own photo</li>
-                </ul>
-            </div>
-            
-            <!-- Shop Links -->
-            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🛒 Order Now:</h3>
-                <p style="margin: 15px 0; color: #555;">Want to see more? Browse the full collection here:</p>
-                
-                <div style="margin: 20px 0;">
-                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4306449848" style="color: #ff7b54; text-decoration: none;">Featured Collection</a></strong></p>
-                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4307158353" style="color: #ff7b54; text-decoration: none;">Premium Designs</a></strong></p>
-                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #ff7b54; text-decoration: none;">Full SoulMineCraft Shop</a></strong></p>
-                </div>
-            </div>
-            
-            <!-- Perfect Time -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 20px;">📌 Perfect Timing</h3>
-                <p style="margin: 15px 0; font-size: 16px;">
-                    Whether it's for yourself or a gift for someone special…<br>
-                    <strong>Now is the perfect time to turn memories into art.</strong>
-                </p>
-            </div>
-            
-            <!-- Thank You Message -->
-            <div style="text-align: center; margin: 30px 0;">
-                <p style="font-size: 18px; color: #2c3e50; margin: 15px 0;">
-                    Thank you for being part of the SoulMineCraft family.
-                </p>
-                <p style="font-size: 18px; color: #ff7b54; font-weight: bold; margin: 15px 0;">
-                    Let's create something meaningful together.
-                </p>
-                <p style="font-size: 24px; margin: 20px 0;">❤️</p>
-            </div>
-            
             <!-- CTA Button -->
             <div style="text-align: center; margin: 40px 0;">
                 <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #ff7b54; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Shop Now - 60% OFF</a>
-            </div>
-            
-            <!-- Social Proof -->
-            <div style="background: #fff3e0; padding: 20px; border-radius: 10px; margin: 30px 0; text-align: center;">
-                <p style="color: #e65100; margin: 10px 0; font-size: 16px; font-weight: bold;">
-                    Every piece we craft is made with care and emotion — and loved by 1,000+ happy customers.
-                </p>
-                <p style="color: #ff7b54; margin: 10px 0; font-size: 18px; font-weight: bold;">
-                    Be one of them this weekend. Don't miss out!
-                </p>
             </div>
         </div>
         
@@ -760,7 +884,6 @@ DEFAULT_TEMPLATES = {
         <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
             <p style="margin: 5px 0; color: #ff7b54; font-weight: bold;">SoulMineCraft Team</p>
             <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
-            <p style="margin: 5px 0; opacity: 0.8;">🌐 Instagram @SoulMineCraft | WP: +905435540046</p>
             <p style="margin: 10px 0 0 0; opacity: 0.8;">
                 <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #ff7b54; text-decoration: none;">Visit Our Etsy Shop</a>
             </p>
@@ -790,136 +913,12 @@ DEFAULT_TEMPLATES = {
             <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
             
             <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                Every moment tells a story. Every memory deserves to be treasured. At <strong>SoulMineCraft</strong>, we believe your most precious moments should be more than just photos on your phone.
+                Every moment tells a story. Every memory deserves to be treasured.
             </p>
-            
-            <!-- Story Section -->
-            <div style="background: #f0f8ff; border-left: 5px solid #88d8c0; padding: 25px; margin: 30px 0;">
-                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">💫 Your Story, Your Art</h3>
-                <p style="color: #555; margin: 15px 0; font-size: 16px; font-style: italic;">
-                    "A photograph captures a moment in time, but a 3D portrait keychain captures the soul of that moment. 
-                    It's something you can hold, touch, and carry with you wherever life takes you."
-                </p>
-            </div>
-            
-            <!-- Special Collection -->
-            <div style="background: linear-gradient(135deg, #88d8c0 0%, #a8e6cf 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white; text-align: center;">
-                <h3 style="margin-top: 0; font-size: 24px;">🎨 Exclusive Memory Collection</h3>
-                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
-                    <h2 style="margin: 0; font-size: 32px; font-weight: bold;">SPECIAL PRICING</h2>
-                    <p style="margin: 10px 0; font-size: 18px;">Limited Time Offer</p>
-                    <p style="margin: 5px 0; font-size: 14px; opacity: 0.9;">Custom 3D Portrait Keychains</p>
-                </div>
-                <p style="margin: 15px 0; font-size: 16px;">
-                    Transform your favorite photo into a stunning 3D miniature masterpiece that tells your unique story.
-                </p>
-            </div>
-            
-            <!-- Why Choose SoulMineCraft -->
-            <div style="margin: 30px 0;">
-                <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">🌟 Why Choose SoulMineCraft?</h3>
-                
-                <div style="display: grid; gap: 15px; margin: 20px 0;">
-                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #88d8c0;">
-                        <h4 style="color: #88d8c0; margin: 0 0 10px 0;">✨ Handcrafted Excellence</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Each piece is carefully crafted by skilled artisans with attention to every detail</p>
-                    </div>
-                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #a8e6cf;">
-                        <h4 style="color: #a8e6cf; margin: 0 0 10px 0;">💎 Premium Quality Materials</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">Durable, long-lasting materials that preserve your memories for years to come</p>
-                    </div>
-                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #7fcdcd;">
-                        <h4 style="color: #7fcdcd; margin: 0 0 10px 0;">🎯 Perfect Personalization</h4>
-                        <p style="margin: 0; color: #555; font-size: 14px;">From your photo to your hands - completely customized to capture your moment</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product Showcase -->
-            <div style="background: #fff5f5; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #e74c3c; margin-top: 0; font-size: 20px;">🎁 Perfect For:</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
-                    <div style="text-align: center; padding: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 10px;">💕</div>
-                        <h4 style="margin: 0; color: #2c3e50;">Couples</h4>
-                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Anniversary gifts</p>
-                    </div>
-                    <div style="text-align: center; padding: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 10px;">👨‍👩‍👧‍👦</div>
-                        <h4 style="margin: 0; color: #2c3e50;">Families</h4>
-                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Family portraits</p>
-                    </div>
-                    <div style="text-align: center; padding: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 10px;">🐕</div>
-                        <h4 style="margin: 0; color: #2c3e50;">Pet Lovers</h4>
-                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Furry friends</p>
-                    </div>
-                    <div style="text-align: center; padding: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 10px;">🎓</div>
-                        <h4 style="margin: 0; color: #2c3e50;">Milestones</h4>
-                        <p style="margin: 5px 0; font-size: 14px; color: #555;">Special achievements</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Shop Links -->
-            <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 30px 0;">
-                <h3 style="color: #2c3e50; margin-top: 0; font-size: 20px;">🛒 Explore Our Collection:</h3>
-                <p style="margin: 15px 0; color: #555;">Discover the perfect way to preserve your memories:</p>
-                
-                <div style="margin: 20px 0;">
-                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4306449848" style="color: #88d8c0; text-decoration: none;">Classic Portrait Collection</a></strong></p>
-                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/listing/4307158353" style="color: #88d8c0; text-decoration: none;">Premium Art Series</a></strong></p>
-                    <p style="margin: 8px 0;"><strong>👉 <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #88d8c0; text-decoration: none;">Complete SoulMineCraft Gallery</a></strong></p>
-                </div>
-            </div>
-            
-            <!-- Process -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
-                <h3 style="margin-top: 0; font-size: 20px; text-align: center;">📋 Simple 3-Step Process</h3>
-                <div style="display: grid; gap: 20px; margin: 25px 0;">
-                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 8px 0;">1️⃣ Send Your Photo</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Upload your favorite high-quality photo</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 8px 0;">2️⃣ We Create Magic</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Our artisans craft your personalized 3D keychain</p>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 8px 0;">3️⃣ Treasure Forever</h4>
-                        <p style="margin: 0; font-size: 14px; opacity: 0.9;">Receive your unique memory to carry everywhere</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Thank You Message -->
-            <div style="text-align: center; margin: 30px 0;">
-                <p style="font-size: 18px; color: #2c3e50; margin: 15px 0;">
-                    Thank you for trusting SoulMineCraft with your precious memories.
-                </p>
-                <p style="font-size: 18px; color: #88d8c0; font-weight: bold; margin: 15px 0;">
-                    Let's turn your moments into timeless art together.
-                </p>
-                <p style="font-size: 24px; margin: 20px 0;">✨</p>
-            </div>
             
             <!-- CTA Button -->
             <div style="text-align: center; margin: 40px 0;">
                 <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #88d8c0; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Create Your Memory</a>
-            </div>
-            
-            <!-- Social Proof -->
-            <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; margin: 30px 0; text-align: center;">
-                <p style="color: #2c3e50; margin: 10px 0; font-size: 16px; font-weight: bold;">
-                    "The attention to detail is incredible! My keychain looks exactly like my photo but in amazing 3D!" 
-                </p>
-                <p style="color: #88d8c0; margin: 10px 0; font-size: 14px;">
-                    - Sarah M., Happy Customer
-                </p>
-                <p style="color: #667eea; margin: 15px 0; font-size: 16px; font-weight: bold;">
-                    Join 1,000+ satisfied customers who carry their memories with them.
-                </p>
             </div>
         </div>
         
@@ -927,7 +926,6 @@ DEFAULT_TEMPLATES = {
         <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
             <p style="margin: 5px 0; color: #88d8c0; font-weight: bold;">SoulMineCraft Team</p>
             <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
-            <p style="margin: 5px 0; opacity: 0.8;">🌐 Instagram @SoulMineCraft | WP: +905435540046</p>
             <p style="margin: 10px 0 0 0; opacity: 0.8;">
                 <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #88d8c0; text-decoration: none;">Visit Our Etsy Shop</a>
             </p>
@@ -954,17 +952,15 @@ def check_password():
             if entered_hash == ADMIN_PASSWORD_HASH:
                 st.session_state["password_correct"] = True
                 st.session_state["user_role"] = "admin"
-                del st.session_state["password"]  # Şifreyi bellekten sil
+                del st.session_state["password"]
             elif entered_hash == MASTER_PASSWORD_HASH:
                 st.session_state["password_correct"] = True
                 st.session_state["user_role"] = "master"
-                del st.session_state["password"]  # Şifreyi bellekten sil
+                del st.session_state["password"]
             else:
                 st.session_state["password_correct"] = False
 
-    # İlk giriş kontrolü
     if "password_correct" not in st.session_state:
-        # Login sayfası
         st.markdown("""
         <div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
             <div style="text-align: center; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background: white; max-width: 400px;">
@@ -990,7 +986,6 @@ def check_password():
         
         return False
     
-    # Yanlış şifre
     elif not st.session_state["password_correct"]:
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
@@ -1008,7 +1003,6 @@ def check_password():
         
         return False
     
-    # Doğru şifre - Ana uygulamaya geç
     else:
         return True
 
@@ -1027,11 +1021,17 @@ class EmailAutomation:
     
     def send_single_email(self, sender_account, recipient, subject, content):
         try:
-            server = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
+            # Gmail için TLS kullan, diğerleri için SSL
+            if sender_account['smtp_server'] == 'smtp.gmail.com':
+                server = smtplib.SMTP(sender_account['smtp_server'], sender_account['smtp_port'])
+                server.starttls()  # TLS başlat
+            else:
+                server = smtplib.SMTP_SSL(sender_account['smtp_server'], sender_account['smtp_port'])
+            
             server.login(sender_account['email'], sender_account['password'])
             
             msg = MIMEMultipart()
-            msg['From'] = f"Tahidem <{sender_account['email']}>"
+            msg['From'] = f"Pionde <{sender_account['email']}>" if 'pionde' in sender_account['email'] else f"Tahidem <{sender_account['email']}>"
             msg['To'] = recipient
             msg['Subject'] = subject
             
@@ -1045,7 +1045,7 @@ class EmailAutomation:
             st.session_state.email_stats['daily_counts'][sender_account['email']] += 1
             sender_account['sent_today'] += 1
             
-            return True, "Success"
+            return True , "Success"
             
         except Exception as e:
             st.session_state.email_stats['failed'] += 1
@@ -1076,7 +1076,7 @@ def main_app():
     col1, col2, col3 = st.columns([3, 1, 1])
     with col1:
         st.title("🚀 Tahidem Professional Email Automation")
-        st.markdown("**Advanced Email Campaign Management System - 11 Professional Templates**")
+        st.markdown("**Advanced Email Campaign Management System - 14 Professional Templates (Including 3 Halloween Specials)**")
     
     with col2:
         user_role = st.session_state.get("user_role", "admin")
@@ -1139,10 +1139,11 @@ def main_app():
         with col1:
             # Template kategorileri
             template_categories = {
-                "Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
-                "Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
-                "Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
-                "Etsy Customer": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer']
+                "🎃 Pionde Halloween": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween'],
+                "🎯 Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
+                "🤝 Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
+                "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
+                "🛍️ Etsy Customer": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer']
             }
             
             selected_category = st.selectbox("📂 Template Category", list(template_categories.keys()))
@@ -1173,7 +1174,7 @@ def main_app():
             
         with col2:
             st.success(f"**Available Accounts:** {len(suitable_accounts)}")
-            for acc in suitable_accounts[:3]:  # Show first 3
+            for acc in suitable_accounts[:3]:
                 remaining = 100 - st.session_state.email_stats['daily_counts'][acc]
                 st.write(f"📧 {acc}: {remaining}/100 remaining")
         
@@ -1221,7 +1222,7 @@ def main_app():
                         
                         # Pad lists to match email count
                         while len(names) < len(emails):
-                            names.append("Dear Professional")
+                            names.append("Dear Customer")
                         while len(companies) < len(emails):
                             companies.append("Your Company")
                         
@@ -1266,7 +1267,7 @@ def main_app():
                         # Template hazırla
                         subject, content = automation.format_template(
                             selected_template_key, 
-                            row.get('name', 'Dear Professional'),
+                            row.get('name', 'Dear Customer'),
                             row.get('company', 'Your Company')
                         )
                         
@@ -1354,7 +1355,7 @@ def main_app():
                     else:
                         # Fill missing columns
                         if 'name' not in df.columns:
-                            df['name'] = 'Dear Professional'
+                            df['name'] = 'Dear Customer'
                         if 'company' not in df.columns:
                             df['company'] = 'Your Company'
                         
@@ -1381,7 +1382,7 @@ def main_app():
                                 # Template hazırla
                                 subject, content = automation.format_template(
                                     selected_template_key, 
-                                    row.get('name', 'Dear Professional'),
+                                    row.get('name', 'Dear Customer'),
                                     row.get('company', 'Your Company')
                                 )
                                 
@@ -1461,10 +1462,11 @@ def main_app():
             
             # Template kategorileri
             template_categories = {
-                "Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
-                "Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
-                "Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
-                "Etsy Customer": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer']
+                "🎃 Pionde Halloween": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween'],
+                "🎯 Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
+                "🤝 Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
+                "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
+                "🛍️ Etsy Customer": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer']
             }
             
             single_category = st.selectbox("📂 Category", list(template_categories.keys()), key="single_category")
@@ -1512,10 +1514,11 @@ def main_app():
     
     with tab3:
         st.header("📝 Template Manager")
-        st.markdown("Manage your 11 professional email templates across 4 categories.")
+        st.markdown("Manage your 14 professional email templates across 5 categories (including 3 Halloween specials).")
         
         # Template kategorileri
         template_categories = {
+            "🎃 Pionde Halloween": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween'],
             "🎯 Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
             "🤝 Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
             "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
@@ -1672,7 +1675,7 @@ def main_app():
                     
                     st.markdown(f"**{acc['email']}**")
                     st.progress(progress)
-                    st.caption(f"Sent: {sent_today}/100 | Remaining: {remaining}")
+                    st.caption(f"Sent: {sent_today}/100 | Remaining: {remaining} | SMTP: {acc['smtp_server']}")
                     st.markdown("---")
         
         with col2:
@@ -1704,7 +1707,6 @@ def main_app():
                 st.warning("⚠️ Master user exclusive features")
                 
                 if st.button("🗑️ Clear All Data", type="secondary"):
-                    # Tüm session state'i temizle
                     keys_to_keep = ["password_correct", "user_role"]
                     for key in list(st.session_state.keys()):
                         if key not in keys_to_keep:
@@ -1717,67 +1719,93 @@ def main_app():
         st.subheader("📊 Template Statistics")
         
         template_categories = {
+            "Pionde Halloween": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween']),
             "Brand Hunter": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter']),
             "Brand Partnership": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership']),
-            "Supplier Outreach": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach']),
+            "Supplier Outreach": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category']
+== 'supplier_outreach']),
             "Etsy Customer": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer'])
         }
         
         col1, col2, col3, col4, col5 = st.columns(5)
+        
         with col1:
-            st.metric("Total Templates", len(DEFAULT_TEMPLATES))
+            st.metric("🎃 Halloween", template_categories["Pionde Halloween"])
         with col2:
-            st.metric("Brand Hunter", template_categories["Brand Hunter"])
+            st.metric("🎯 Brand Hunter", template_categories["Brand Hunter"])
         with col3:
-            st.metric("Brand Partnership", template_categories["Brand Partnership"])
+            st.metric("🤝 Partnership", template_categories["Brand Partnership"])
         with col4:
-            st.metric("Supplier Outreach", template_categories["Supplier Outreach"])
+            st.metric("🏢 Supplier", template_categories["Supplier Outreach"])
         with col5:
-            st.metric("Etsy Customer", template_categories["Etsy Customer"])
+            st.metric("🛍️ Etsy", template_categories["Etsy Customer"])
         
-        # System info
+        st.info(f"**Total Templates:** {len(DEFAULT_TEMPLATES)} professional templates")
+        
+        # Email hesap özeti
         st.markdown("---")
-        st.subheader("ℹ️ System Information")
+        st.subheader("📧 Email Account Summary")
         
-        col1, col2, col3, col4 = st.columns(4)
-        with col1:
-            st.metric("Total Accounts", len(EMAIL_ACCOUNTS))
-        with col2:
-            partnership_accounts = len([acc for acc in EMAIL_ACCOUNTS if acc['type'] == 'brand_partnership'])
-            st.metric("Partnership Accounts", partnership_accounts)
-        with col3:
-            hunter_accounts = len([acc for acc in EMAIL_ACCOUNTS if acc['type'] == 'brand_hunter'])
-            st.metric("Hunter Accounts", hunter_accounts)
-        with col4:
-            etsy_accounts = len([acc for acc in EMAIL_ACCOUNTS if acc['type'] == 'etsy_customer'])
-            st.metric("Etsy Accounts", etsy_accounts)
+        account_summary = []
+        for acc in EMAIL_ACCOUNTS:
+            sent = st.session_state.email_stats['daily_counts'][acc['email']]
+            account_summary.append({
+                'Email': acc['email'],
+                'Type': acc['type'].replace('_', ' ').title(),
+                'SMTP Server': acc['smtp_server'],
+                'Port': acc['smtp_port'],
+                'Sent Today': sent,
+                'Remaining': 100 - sent,
+                'Status': '🟢 Active' if sent < 70 else ('🟡 Medium' if sent < 90 else '🔴 Near Limit')
+            })
         
-        st.info("💡 **Daily Limit:** 100 emails per account | **Total Daily Capacity:** 1500 emails")
-        st.info("🎯 **Template System:** 11 professional templates across 4 categories")
+        summary_df = pd.DataFrame(account_summary)
+        st.dataframe(summary_df, use_container_width=True)
         
-        # Güvenlik bilgileri
+        # Export settings
         st.markdown("---")
-        st.subheader("🔐 Security Information")
-        
-        user_role = st.session_state.get("user_role", "admin")
-        login_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        st.subheader("💾 Export Settings")
         
         col1, col2 = st.columns(2)
+        
         with col1:
-            st.info(f"👤 **Current User:** {user_role.upper()}")
-            st.info(f"🕒 **Session Started:** {login_time}")
+            if st.button("📥 Export Statistics as CSV"):
+                stats_data = {
+                    'Metric': ['Total Sent', 'Successful', 'Failed', 'Success Rate'],
+                    'Value': [
+                        st.session_state.email_stats['successful'] + st.session_state.email_stats['failed'],
+                        st.session_state.email_stats['successful'],
+                        st.session_state.email_stats['failed'],
+                        f"{(st.session_state.email_stats['successful'] / max(st.session_state.email_stats['successful'] + st.session_state.email_stats['failed'], 1)) * 100:.1f}%"
+                    ]
+                }
+                stats_df = pd.DataFrame(stats_data)
+                
+                csv = stats_df.to_csv(index=False)
+                st.download_button(
+                    label="📥 Download Statistics CSV",
+                    data=csv,
+                    file_name=f"tahidem_stats_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    mime="text/csv"
+                )
         
         with col2:
-            st.info("🔒 **Security Level:** High")
-            st.info("🛡️ **Data Encryption:** Active")
+            if st.button("📥 Export Account Status as CSV"):
+                csv = summary_df.to_csv(index=False)
+                st.download_button(
+                    label="📥 Download Account Status CSV",
+                    data=csv,
+                    file_name=f"tahidem_accounts_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    mime="text/csv"
+                )
 
-# Ana uygulama başlatma
+# Ana program
 def main():
-    # Şifre kontrolü
     if check_password():
         main_app()
 
 if __name__ == "__main__":
     main()
+
 
 
