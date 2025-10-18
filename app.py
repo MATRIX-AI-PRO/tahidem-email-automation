@@ -40,7 +40,7 @@ EMAIL_ACCOUNTS = [
     {'email': 'growth@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
     {'email': 'soulminecraft@tahidem.com', 'password': 'lxB6LJ/u=L0', 'type': 'etsy_customer', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
     # 🎃 PIONDE HALLOWEEN HESABI
-    {'email': 'pionde@gmail.com', 'password': '081025@Pp', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.gmail.com', 'smtp_port': 587}
+    {'email': 'pionnde@gmail.com', 'password': '081025@Pp', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.gmail.com', 'smtp_port': 587}
 ]
 
 # 🎯 YENİ TEMPLATE SİSTEMİ - HALLOWEEN ÖZEL KAMPANYA DAHİL
@@ -184,7 +184,7 @@ DEFAULT_TEMPLATES = {
             <!-- Footer -->
             <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
                 <p style="margin: 5px 0; color: #ff6b35; font-weight: bold; font-size: 18px;">🎃 PIONDE - Your Halloween Headquarters 🎃</p>
-                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionnde@gmail.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
                     🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
                 </p>
@@ -337,7 +337,7 @@ DEFAULT_TEMPLATES = {
             <!-- Footer -->
             <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
                 <p style="margin: 5px 0; color: #dc143c; font-weight: bold; font-size: 18px;">🎃 PIONDE - Last Chance for Halloween Savings! 🎃</p>
-                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionnde@gmail.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
                     🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
                 </p>
@@ -507,7 +507,7 @@ DEFAULT_TEMPLATES = {
             <!-- Footer -->
             <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
                 <p style="margin: 5px 0; color: #ffd700; font-weight: bold; font-size: 18px;">👑 PIONDE VIP - Exclusive Halloween Offer 👑</p>
-                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@gmail.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionnde@gmail.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
                     🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ffd700; text-decoration: none;">Visit Our Etsy Shop</a>
                 </p>
