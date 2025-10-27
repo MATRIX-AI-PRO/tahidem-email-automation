@@ -1,4 +1,3 @@
-
 import streamlit as st
 import smtplib
 import pandas as pd
@@ -40,158 +39,455 @@ EMAIL_ACCOUNTS = [
     {'email': 'connect@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
     {'email': 'growth@tahidem.com', 'password': '8JCQaK/;L$w', 'type': 'supplier_outreach', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
     {'email': 'soulminecraft@tahidem.com', 'password': 'lxB6LJ/u=L0', 'type': 'etsy_customer', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
-    # 🎃 PIONDE HALLOWEEN HESAPLARI
-    {'email': 'pionde@tahidem.com', 'password': 'kY]0AOKhiD', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
-    {'email': 'piondediscount@tahidem.com', 'password': 'Bw^98ft[:3qW', 'type': 'pionde_halloween', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465}
+    # 🎨 PIONDE POD HESAPLARI
+    {'email': 'pionde@tahidem.com', 'password': 'kY]0AOKhiD', 'type': 'pionde_pod', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465},
+    {'email': 'piondediscount@tahidem.com', 'password': 'Bw^98ft[:3qW', 'type': 'pionde_pod', 'sent_today': 0, 'smtp_server': 'smtp.hostinger.com', 'smtp_port': 465}
 ]
 
-# 🎯 YENİ TEMPLATE SİSTEMİ - HALLOWEEN ÖZEL KAMPANYA DAHİL
+# 🎯 TEMPLATE SİSTEMİ - TÜM TEMPLATE'LER
 DEFAULT_TEMPLATES = {
-    # 🎃 PIONDE HALLOWEEN TEMPLATES
-    "pionde_halloween_1": {
-        "name": "Pionde Halloween Special - Spooky Savings",
-        "category": "pionde_halloween",
-        "subject": "🎃 BOO! Halloween Special - 40% OFF Everything at Pionde! 👻",
+    # ============================================
+    # 🎨 PIONDE POD GENEL PAZARLAMA TEMPLATE'LERİ
+    # ============================================
+    
+    "pionde_welcome_series_1": {
+        "name": "Pionde Welcome - New Customer",
+        "category": "pionde_pod",
+        "subject": "🎉 Welcome to Pionde! Here's 25% OFF Your First Order! 🎁",
         "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #1a1a1a;">
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #f5f5f5;">
         <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
             
-            <!-- Halloween Header -->
-            <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); padding: 40px 30px; text-align: center; color: white; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"40\">🎃👻🕷️🦇</text></svg>'); opacity: 0.1; background-repeat: repeat;"></div>
-                <div style="position: relative; z-index: 1;">
-                    <h1 style="margin: 0; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🎃 PIONDE 🎃</h1>
-                    <p style="margin: 10px 0 0 0; font-size: 22px; opacity: 0.95;">HALLOWEEN SPOOKTACULAR SALE!</p>
-                    <div style="margin: 20px 0; padding: 15px; background: rgba(255,255,255,0.2); border-radius: 10px; display: inline-block;">
-                        <p style="margin: 0; font-size: 48px; font-weight: bold; letter-spacing: 3px;">40% OFF</p>
-                        <p style="margin: 5px 0 0 0; font-size: 16px;">EVERYTHING IN STORE!</p>
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 50px 30px; text-align: center; color: white;">
+                <h1 style="margin: 0; font-size: 42px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Welcome to PIONDE! 🎉</h1>
+                <p style="margin: 15px 0 0 0; font-size: 20px; opacity: 0.95;">Your Journey to Unique POD Products Starts Here!</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #667eea; font-size: 28px; margin-bottom: 20px; text-align: center;">Hi {name}! 👋</h2>
+                
+                <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                    We're <strong>THRILLED</strong> to have you here!<br>
+                    Get ready to discover amazing print-on-demand products that you'll absolutely LOVE! ❤️
+                </p>
+                
+                <!-- Welcome Offer Box -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(102,126,234,0.4);">
+                    <h3 style="margin-top: 0; font-size: 32px;">🎁 SPECIAL WELCOME GIFT 🎁</h3>
+                    <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 12px; margin: 25px 0;">
+                        <h2 style="margin: 0; font-size: 60px; font-weight: bold; letter-spacing: 2px;">25% OFF</h2>
+                        <p style="margin: 15px 0 10px 0; font-size: 22px; font-weight: bold;">YOUR FIRST ORDER!</p>
+                        <div style="background: #fff; color: #667eea; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: bold; letter-spacing: 3px; margin-top: 15px;">
+                            WELCOME25
+                        </div>
                     </div>
+                    <p style="margin: 20px 0; font-size: 16px;">
+                        ⏰ Valid for 7 days | 🚚 Free shipping on orders over $50
+                    </p>
+                </div>
+                
+                <!-- What Makes Us Special -->
+                <div style="background: #f8f9fa; padding: 35px; border-radius: 12px; margin: 30px 0;">
+                    <h3 style="color: #667eea; margin-top: 0; font-size: 26px; text-align: center;">✨ Why Choose Pionde? ✨</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 25px; border-radius: 10px; border-left: 5px solid #667eea; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #667eea; margin: 0 0 10px 0; font-size: 20px;">🎨 Unique Designs</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">Exclusive POD products you won't find anywhere else!</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; border-left: 5px solid #764ba2; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #764ba2; margin: 0 0 10px 0; font-size: 20px;">⚡ Premium Quality</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">High-quality materials and printing technology</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; border-left: 5px solid #667eea; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #667eea; margin: 0 0 10px 0; font-size: 20px;">🚀 Fast Shipping</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">Quick production and delivery to your door</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; border-left: 5px solid #764ba2; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                            <h4 style="color: #764ba2; margin: 0 0 10px 0; font-size: 20px;">💯 100% Satisfaction</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">Love it or your money back guarantee!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/pionde" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(102,126,234,0.4); text-transform: uppercase; letter-spacing: 2px;">
+                        🛍️ START SHOPPING NOW 🛍️
+                    </a>
+                </div>
+                
+                <!-- Urgency -->
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 30px 0; color: white; text-align: center;">
+                    <p style="margin: 0; font-size: 20px; font-weight: bold;">⏰ Your 25% OFF expires in 7 days!</p>
+                    <p style="margin: 10px 0 0 0; font-size: 16px;">Don't miss out on this exclusive welcome offer!</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #2d3748; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #667eea; font-weight: bold; font-size: 18px;">🎨 PIONDE - Unique POD Products 🎨</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/pionde" style="color: #667eea; text-decoration: none;">Visit Our Etsy Shop</a>
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
+    "pionde_abandoned_cart_1": {
+        "name": "Pionde Abandoned Cart - Aggressive",
+        "category": "pionde_pod",
+        "subject": "⚠️ {name}, You Left Something Behind! + EXTRA 15% OFF Inside! 🎁",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #f5f5f5;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 50px 30px; text-align: center; color: white;">
+                <h1 style="margin: 0; font-size: 42px; font-weight: bold;">😢 DON'T GO!</h1>
+                <p style="margin: 15px 0 0 0; font-size: 22px;">You left something amazing behind...</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #f5576c; font-size: 28px; margin-bottom: 20px; text-align: center;">Hey {name}! 👋</h2>
+                
+                <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                    We noticed you left some <strong>AWESOME</strong> items in your cart!<br>
+                    They're still waiting for you... but <strong style="color: #f5576c;">NOT FOR LONG!</strong> ⏰
+                </p>
+                
+                <!-- Special Offer Box -->
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(245,87,108,0.4);">
+                    <h3 style="margin-top: 0; font-size: 32px;">🎁 SPECIAL OFFER JUST FOR YOU! 🎁</h3>
+                    <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 12px; margin: 25px 0;">
+                        <p style="margin: 0 0 10px 0; font-size: 20px;">Complete your order NOW and get:</p>
+                        <h2 style="margin: 10px 0; font-size: 60px; font-weight: bold; letter-spacing: 2px;">EXTRA 15% OFF</h2>
+                        <p style="margin: 15px 0 10px 0; font-size: 22px; font-weight: bold;">USE CODE:</p>
+                        <div style="background: #fff; color: #f5576c; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: bold; letter-spacing: 3px;">
+                            COMEBACK15
+                        </div>
+                    </div>
+                    <p style="margin: 20px 0; font-size: 18px; font-weight: bold;">
+                        ⏰ This offer expires in 24 HOURS!
+                    </p>
+                </div>
+                
+                <!-- Why Complete Now -->
+                <div style="background: #fff5f5; padding: 35px; border-radius: 12px; margin: 30px 0; border: 3px dashed #f5576c;">
+                    <h3 style="color: #f5576c; margin-top: 0; font-size: 26px; text-align: center;">⚡ Why Complete Your Order NOW? ⚡</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">⏰</span>
+                            <div>
+                                <h4 style="color: #f5576c; margin: 0 0 5px 0; font-size: 18px;">Limited Stock!</h4>
+                                <p style="margin: 0; color: #555; font-size: 15px;">Your items are selling FAST - don't miss out!</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">💰</span>
+                            <div>
+                                <h4 style="color: #f5576c; margin: 0 0 5px 0; font-size: 18px;">Extra Savings!</h4>
+                                <p style="margin: 0; color: #555; font-size: 15px;">15% OFF on top of any existing discounts!</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">🚚</span>
+                            <div>
+                                <h4 style="color: #f5576c; margin: 0 0 5px 0; font-size: 18px;">Free Shipping!</h4>
+                                <p style="margin: 0; color: #555; font-size: 15px;">On orders over $50 - you're almost there!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Urgency Timer -->
+                <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center; border: 3px solid #ff4757;">
+                    <h3 style="margin-top: 0; font-size: 28px;">⏰ HURRY! TIME IS RUNNING OUT! ⏰</h3>
+                    <p style="margin: 15px 0; font-size: 20px; line-height: 1.8;">
+                        Your cart items are reserved for <strong style="font-size: 24px;">24 HOURS ONLY!</strong><br>
+                        After that, we can't guarantee availability! 😱
+                    </p>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/pionde" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(245,87,108,0.4); text-transform: uppercase; letter-spacing: 2px; margin: 10px;">
+                        🛒 COMPLETE MY ORDER NOW 🛒
+                    </a>
+                    <p style="margin: 20px 0; font-size: 14px; color: #666;">
+                        or <a href="https://www.etsy.com/shop/pionde" style="color: #f5576c; text-decoration: underline;">continue shopping</a>
+                    </p>
+                </div>
+                
+                <!-- Social Proof -->
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center;">
+                    <p style="color: #f5576c; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                        "I'm so glad I completed my order! The quality is AMAZING!" ⭐⭐⭐⭐⭐
+                    </p>
+                    <p style="color: #666; margin: 10px 0; font-size: 14px;">
+                        - Jennifer K., Verified Buyer
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #2d3748; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #f5576c; font-weight: bold; font-size: 18px;">🎨 PIONDE 🎨</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/pionde" style="color: #f5576c; text-decoration: none;">Visit Our Shop</a>
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
+    "pionde_flash_sale": {
+        "name": "Pionde Flash Sale - Urgent",
+        "category": "pionde_pod",
+        "subject": "⚡ FLASH SALE! 50% OFF Everything - 6 HOURS ONLY! ⚡",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #000;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- Urgent Header -->
+            <div style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); padding: 50px 30px; text-align: center; color: white; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px);"></div>
+                <div style="position: relative; z-index: 1;">
+                    <h1 style="margin: 0; font-size: 48px; font-weight: bold; text-shadow: 3px 3px 6px rgba(0,0,0,0.3);">⚡ FLASH SALE ⚡</h1>
+                    <div style="background: rgba(255,255,255,0.3); padding: 20px; border-radius: 15px; margin: 20px 0; display: inline-block;">
+                        <p style="margin: 0; font-size: 64px; font-weight: bold; letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">50% OFF</p>
+                        <p style="margin: 10px 0 0 0; font-size: 24px; font-weight: bold;">EVERYTHING IN STORE!</p>
+                    </div>
+                    <p style="margin: 15px 0 0 0; font-size: 28px; font-weight: bold; background: #ff0844; padding: 15px; border-radius: 10px; display: inline-block;">
+                        ⏰ 6 HOURS ONLY! ⏰
+                    </p>
                 </div>
             </div>
             
             <!-- Main Content -->
             <div style="padding: 40px 30px; background: #fff;">
-                <h2 style="color: #ff4500; font-size: 28px; margin-bottom: 20px; text-align: center;">👻 BOO! Hello {name}! 🎃</h2>
+                <h2 style="color: #ff0844; font-size: 32px; margin-bottom: 20px; text-align: center;">🔥 {name}, THIS IS INSANE! 🔥</h2>
                 
-                <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
-                    <strong>Halloween is here, and we've got a SPOOKY surprise for you!</strong><br>
-                    Get ready for the most FRIGHTFULLY GOOD deals of the year! 🕷️
+                <p style="font-size: 20px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8; font-weight: bold;">
+                    Our BIGGEST SALE EVER is happening RIGHT NOW!<br>
+                    <span style="color: #ff0844; font-size: 24px;">50% OFF EVERYTHING - NO EXCEPTIONS!</span>
                 </p>
                 
-                <!-- Halloween Offer Box -->
-                <div style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); padding: 35px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(255,69,0,0.3);">
-                    <h3 style="margin-top: 0; font-size: 32px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🎃 HALLOWEEN MEGA SALE 🎃</h3>
-                    <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 12px; margin: 25px 0; backdrop-filter: blur(10px);">
-                        <h2 style="margin: 0; font-size: 56px; font-weight: bold; letter-spacing: 2px; text-shadow: 3px 3px 6px rgba(0,0,0,0.4);">40% OFF</h2>
-                        <p style="margin: 15px 0 10px 0; font-size: 22px; font-weight: bold;">USE CODE:</p>
-                        <div style="background: #fff; color: #ff4500; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: bold; letter-spacing: 3px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
-                            HALLOWEEN40
+                <!-- Countdown Timer Visual -->
+                <div style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(255,8,68,0.4);">
+                    <h3 style="margin-top: 0; font-size: 28px;">⏰ SALE ENDS IN:</h3>
+                    <div style="display: flex; justify-content: center; gap: 20px; margin: 25px 0; flex-wrap: wrap;">
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; min-width: 80px;">
+                            <p style="margin: 0; font-size: 48px; font-weight: bold;">06</p>
+                            <p style="margin: 5px 0 0 0; font-size: 14px;">HOURS</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; min-width: 80px;">
+                            <p style="margin: 0; font-size: 48px; font-weight: bold;">00</p>
+                            <p style="margin: 5px 0 0 0; font-size: 14px;">MINUTES</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; min-width: 80px;">
+                            <p style="margin: 0; font-size: 48px; font-weight: bold;">00</p>
+                            <p style="margin: 5px 0 0 0; font-size: 14px;">SECONDS</p>
                         </div>
                     </div>
-                    <p style="margin: 20px 0; font-size: 18px; line-height: 1.6;">
-                        🕷️ <strong>Valid:</strong> October 25-31, 2024<br>
-                        👻 <strong>On:</strong> ALL Products - No Exclusions!<br>
-                        🦇 <strong>Free Shipping:</strong> Orders over $50
+                    <div style="background: #fff; color: #ff0844; padding: 20px 40px; border-radius: 10px; display: inline-block; margin-top: 20px;">
+                        <p style="margin: 0 0 10px 0; font-size: 18px; font-weight: bold;">USE CODE:</p>
+                        <p style="margin: 0; font-size: 36px; font-weight: bold; letter-spacing: 4px;">FLASH50</p>
+                    </div>
+                </div>
+                
+                <!-- What's Included -->
+                <div style="background: #fff5f5; padding: 35px; border-radius: 12px; margin: 30px 0; border: 3px solid #ff0844;">
+                    <h3 style="color: #ff0844; margin-top: 0; font-size: 26px; text-align: center;">🎯 WHAT'S INCLUDED? 🎯</h3>
+                    <div style="display: grid; gap: 15px; margin: 25px 0;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center; border-left: 5px solid #ff0844;">
+                            <span style="font-size: 36px; margin-right: 20px;">✅</span>
+                            <div>
+                                <h4 style="color: #ff0844; margin: 0 0 5px 0; font-size: 20px;">ALL Products - 50% OFF!</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Every single item in our store included!</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center; border-left: 5px solid #ff0844;">
+                            <span style="font-size: 36px; margin-right: 20px;">✅</span>
+                            <div>
+                                <h4 style="color: #ff0844; margin: 0 0 5px 0; font-size: 20px;">FREE Shipping!</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">On ALL orders - no minimum required!</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center; border-left: 5px solid #ff0844;">
+                            <span style="font-size: 36px; margin-right: 20px;">✅</span>
+                            <div>
+                                <h4 style="color: #ff0844; margin: 0 0 5px 0; font-size: 20px;">Stack with Other Offers!</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Combine with loyalty rewards for even MORE savings!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Massive Urgency Block -->
+                <div style="background: linear-gradient(135deg, #ff0844 0%, #ff5722 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; border: 5px solid #ff0844; box-shadow: 0 0 30px rgba(255,8,68,0.5);">
+                    <h3 style="margin-top: 0; font-size: 32px; text-transform: uppercase;">🚨 WARNING! 🚨</h3>
+                    <p style="margin: 20px 0; font-size: 22px; line-height: 1.8; font-weight: bold;">
+                        This sale is SO GOOD, our servers are getting HAMMERED!<br>
+                        <span style="font-size: 28px; background: rgba(0,0,0,0.3); padding: 10px 20px; border-radius: 8px; display: inline-block; margin-top: 15px;">
+                            ⚡ SHOP NOW BEFORE IT'S TOO LATE! ⚡
+                        </span>
                     </p>
-                </div>
-                
-                <!-- Why Shop This Halloween -->
-                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px dashed #ff6b35;">
-                    <h3 style="color: #ff4500; margin-top: 0; font-size: 24px; text-align: center;">🎃 Why Shop Pionde This Halloween? 🎃</h3>
-                    <div style="display: grid; gap: 20px; margin: 25px 0;">
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">👻 Spooktacular Savings</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">40% OFF everything - our biggest discount ever!</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff8c00; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">🕷️ Premium Quality</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Handcrafted items with attention to every detail</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6347; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">🦇 Fast Delivery</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Free shipping on orders over $50 - arrives before Halloween!</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff4500; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff4500; margin: 0 0 10px 0; font-size: 18px;">🎃 Perfect Gifts</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Unique items perfect for Halloween gifting!</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Popular Categories -->
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
-                    <h3 style="color: #ff4500; margin-top: 0; font-size: 24px; text-align: center;">🛍️ Popular Halloween Categories 🛍️</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; margin: 25px 0; text-align: center;">
-                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <div style="font-size: 40px; margin-bottom: 10px;">🎃</div>
-                            <h4 style="margin: 0; color: #333; font-size: 16px;">Halloween Decor</h4>
-                        </div>
-                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <div style="font-size: 40px; margin-bottom: 10px;">👻</div>
-                            <h4 style="margin: 0; color: #333; font-size: 16px;">Spooky Gifts</h4>
-                        </div>
-                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <div style="font-size: 40px; margin-bottom: 10px;">🕷️</div>
-                            <h4 style="margin: 0; color: #333; font-size: 16px;">Party Supplies</h4>
-                        </div>
-                        <div style="padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <div style="font-size: 40px; margin-bottom: 10px;">🦇</div>
-                            <h4 style="margin: 0; color: #333; font-size: 16px;">Costumes</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Urgency Message -->
-                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center; border: 3px solid #ff4500;">
-                    <h3 style="margin-top: 0; font-size: 26px; color: #ff6b35;">⏰ LIMITED TIME ONLY! ⏰</h3>
-                    <p style="margin: 20px 0; font-size: 18px; line-height: 1.8;">
-                        This SPOOKTACULAR sale ends on <strong style="color: #ff6b35;">October 31st at midnight!</strong><br>
-                        Don't let these BOO-tiful deals slip away! 👻<br>
-                        <strong style="font-size: 22px; color: #ff4500;">Shop NOW before it's too late!</strong>
+                    <p style="margin: 20px 0 0 0; font-size: 18px;">
+                        Over 500 people shopping RIGHT NOW! 🔥
                     </p>
                 </div>
                 
                 <!-- CTA Button -->
                 <div style="text-align: center; margin: 40px 0;">
-                    <a href="https://www.etsy.com/shop/Pionde" style="background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%); color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(255,69,0,0.4); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px;">
-                        🎃 SHOP HALLOWEEN SALE NOW 🎃
+                    <a href="https://www.etsy.com/shop/pionde" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); color: white; padding: 25px 60px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 24px; display: inline-block; box-shadow: 0 15px 40px rgba(255,8,68,0.5); text-transform: uppercase; letter-spacing: 3px; border: 3px solid #fff;">
+                        ⚡ SHOP FLASH SALE NOW ⚡
+                    </a>
+                    <p style="margin: 20px 0; font-size: 18px; color: #ff0844; font-weight: bold;">
+                        ⏰ Hurry! Only 6 hours left!
+                    </p>
+                </div>
+                
+                <!-- Social Proof -->
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0; text-align: center;">
+                    <p style="color: #ff0844; margin: 10px 0; font-size: 20px; font-weight: bold;">
+                        "I saved $150 on this flash sale! Best deal EVER!" 🤩
+                    </p>
+                    <p style="color: #666; margin: 10px 0; font-size: 14px;">
+                        - Michael R., 15 minutes ago
+                    </p>
+                    <p style="color: #ff0844; margin: 20px 0; font-size: 18px; font-weight: bold;">
+                        ⭐⭐⭐⭐⭐ Join 1,247 Happy Customers Today!
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #ff0844; font-weight: bold; font-size: 20px;">⚡ PIONDE FLASH SALE ⚡</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/pionde" style="color: #ff0844; text-decoration: none;">Shop Now</a>
+                </p>
+                <p style="margin: 15px 0; font-size: 16px; opacity: 0.9;">
+                    Use code <strong style="color: #ff0844;">FLASH50</strong> - Expires in 6 hours!
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
+# Devam edecek... (Karakter limiti nedeniyle 2. kısımda devam edeceğim)
+        "pionde_new_arrival": {
+        "name": "Pionde New Arrivals - Exclusive",
+        "category": "pionde_pod",
+        "subject": "🆕 JUST DROPPED! New Exclusive Designs You'll LOVE! 😍",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #f5f5f5;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- Header -->
+            <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 50px 30px; text-align: center; color: white;">
+                <h1 style="margin: 0; font-size: 42px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🆕 NEW ARRIVALS! 🆕</h1>
+                <p style="margin: 15px 0 0 0; font-size: 22px; opacity: 0.95;">Fresh Designs Just For You!</p>
+                <div style="background: rgba(255,255,255,0.2); padding: 15px 30px; border-radius: 10px; display: inline-block; margin-top: 20px;">
+                    <p style="margin: 0; font-size: 20px; font-weight: bold;">🎁 EARLY BIRD: 30% OFF!</p>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #11998e; font-size: 28px; margin-bottom: 20px; text-align: center;">Hey {name}! 👋</h2>
+                
+                <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                    Get ready to be <strong>AMAZED!</strong> 🤩<br>
+                    We just launched our <strong style="color: #11998e;">HOTTEST new designs</strong> and you're getting first access!
+                </p>
+                
+                <!-- Early Bird Offer -->
+                <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(17,153,142,0.4);">
+                    <h3 style="margin-top: 0; font-size: 32px;">🎉 EARLY BIRD SPECIAL! 🎉</h3>
+                    <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 12px; margin: 25px 0;">
+                        <p style="margin: 0 0 10px 0; font-size: 20px;">Be the FIRST to own these designs!</p>
+                        <h2 style="margin: 10px 0; font-size: 60px; font-weight: bold; letter-spacing: 2px;">30% OFF</h2>
+                        <p style="margin: 15px 0 10px 0; font-size: 22px; font-weight: bold;">USE CODE:</p>
+                        <div style="background: #fff; color: #11998e; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: bold; letter-spacing: 3px;">
+                            NEWARRIVAL30
+                        </div>
+                    </div>
+                    <p style="margin: 20px 0; font-size: 16px;">
+                        ⏰ Valid for 48 hours only! | 🚚 Free shipping on orders over $50
+                    </p>
+                </div>
+                
+                <!-- What's New -->
+                <div style="background: #f0fff4; padding: 35px; border-radius: 12px; margin: 30px 0; border: 3px solid #38ef7d;">
+                    <h3 style="color: #11998e; margin-top: 0; font-size: 26px; text-align: center;">✨ WHAT'S NEW? ✨</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-left: 5px solid #11998e;">
+                            <h4 style="color: #11998e; margin: 0 0 10px 0; font-size: 20px;">🎨 Exclusive Designs</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">Limited edition prints you won't find anywhere else!</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-left: 5px solid #38ef7d;">
+                            <h4 style="color: #38ef7d; margin: 0 0 10px 0; font-size: 20px;">🔥 Trending Styles</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">The hottest designs everyone will be talking about!</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-left: 5px solid #11998e;">
+                            <h4 style="color: #11998e; margin: 0 0 10px 0; font-size: 20px;">💎 Premium Quality</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">Top-tier materials and printing technology!</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); border-left: 5px solid #38ef7d;">
+                            <h4 style="color: #38ef7d; margin: 0 0 10px 0; font-size: 20px;">⚡ Limited Quantity</h4>
+                            <p style="margin: 0; color: #555; font-size: 16px;">Once they're gone, they're GONE forever!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Urgency Block -->
+                <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center;">
+                    <h3 style="margin-top: 0; font-size: 26px;">⚠️ DON'T MISS OUT! ⚠️</h3>
+                    <p style="margin: 15px 0; font-size: 18px; line-height: 1.8;">
+                        These designs are <strong>LIMITED EDITION</strong>!<br>
+                        Once sold out, we won't restock them! 😱<br>
+                        <strong style="font-size: 22px;">Grab yours before it's too late!</strong>
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/pionde" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(17,153,142,0.4); text-transform: uppercase; letter-spacing: 2px;">
+                        🛍️ SHOP NEW ARRIVALS 🛍️
                     </a>
                 </div>
                 
                 <!-- Social Proof -->
-                <div style="background: #fff5e6; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; border: 2px solid #ff6b35;">
-                    <p style="color: #ff4500; margin: 10px 0; font-size: 18px; font-weight: bold;">
-                        "Best Halloween deals I've found! Quality products and amazing customer service!" 🎃
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center;">
+                    <p style="color: #11998e; margin: 10px 0; font-size: 18px; font-weight: bold;">
+                        "These new designs are INCREDIBLE! Already ordered 3!" 😍
                     </p>
                     <p style="color: #666; margin: 10px 0; font-size: 14px;">
-                        - Sarah M., Happy Halloween Shopper
+                        - Emma T., Early Bird Customer
                     </p>
-                    <p style="color: #ff4500; margin: 20px 0; font-size: 16px; font-weight: bold;">
-                        ⭐⭐⭐⭐⭐ Join 5,000+ Happy Customers This Halloween!
+                    <p style="color: #11998e; margin: 20px 0; font-size: 16px; font-weight: bold;">
+                        ⭐⭐⭐⭐⭐ 342 people already shopping!
                     </p>
-                </div>
-                
-                <!-- Thank You -->
-                <div style="text-align: center; margin: 30px 0;">
-                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
-                        Thank you for being part of the <strong style="color: #ff4500;">Pionde family!</strong>
-                    </p>
-                    <p style="font-size: 22px; color: #ff4500; font-weight: bold; margin: 15px 0;">
-                        Have a SPOOKTACULAR Halloween! 🎃👻
-                    </p>
-                    <p style="font-size: 32px; margin: 20px 0;">🎃🕷️👻🦇🕸️</p>
                 </div>
             </div>
             
             <!-- Footer -->
-            <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 5px 0; color: #ff6b35; font-weight: bold; font-size: 18px;">🎃 PIONDE - Your Halloween Headquarters 🎃</p>
+            <div style="background: #2d3748; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #38ef7d; font-weight: bold; font-size: 18px;">🎨 PIONDE - New Arrivals 🎨</p>
                 <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
-                    🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ff6b35; text-decoration: none;">Visit Our Etsy Shop</a>
-                </p>
-                <p style="margin: 15px 0; font-size: 14px; opacity: 0.7;">
-                    Use code <strong style="color: #ff6b35;">HALLOWEEN40</strong> at checkout for 40% OFF!
+                    🌐 <a href="https://www.etsy.com/shop/pionde" style="color: #38ef7d; text-decoration: none;">Visit Our Shop</a>
                 </p>
             </div>
         </div>
@@ -199,438 +495,102 @@ DEFAULT_TEMPLATES = {
         """
     },
 
-    "pionde_halloween_2": {
-        "name": "Pionde Halloween - Last Chance Alert",
-        "category": "pionde_halloween",
-        "subject": "⚠️ LAST CHANCE! Halloween Sale Ending Soon - 40% OFF at Pionde! 🎃",
+    # ============================================
+    # 🎃 PIONDE ÖZEL GÜNLER (HALLOWEEN, CHRISTMAS, BLACK FRIDAY, VALENTINE)
+    # ============================================
+
+    "pionde_christmas": {
+        "name": "Pionde Christmas Special",
+        "category": "pionde_holidays",
+        "subject": "🎄 CHRISTMAS MEGA SALE! 45% OFF + Free Gift Wrapping! 🎁",
         "content": """
-        
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Last Chance - Halloween Sale</title>
-</head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #f5f5f5;">
-
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #1a1a1a;">
-    <tr>
-        <td align="center" style="padding: 20px 0;">
-            
-            <table width="650" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; max-width: 650px;">
-                
-                <!-- Urgent Header -->
-                <tr>
-                    <td style="background: #dc143c; padding: 40px 30px; text-align: center; color: white; position: relative;">
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                            <tr>
-                                <td align="center">
-                                    <div style="background: #ffff00; color: #dc143c; padding: 8px 20px; border-radius: 25px; font-size: 14px; font-weight: bold; display: inline-block; margin-bottom: 15px;">
-                                        ⚠️ URGENT
-                                    </div>
-                                    <h1 style="margin: 0; font-size: 38px; font-weight: bold; color: white;">⏰ LAST CHANCE ⏰</h1>
-                                    <p style="margin: 15px 0; font-size: 24px; color: white;">Halloween Sale Ending TONIGHT!</p>
-                                    <div style="margin: 25px 0; padding: 20px; background: rgba(255,255,255,0.15); border-radius: 12px; display: inline-block;">
-                                        <p style="margin: 0; font-size: 52px; font-weight: bold; letter-spacing: 3px; color: white;">40% OFF</p>
-                                        <p style="margin: 10px 0 0 0; font-size: 18px; color: white;">Ends at MIDNIGHT!</p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                
-                <!-- Main Content -->
-                <tr>
-                    <td style="padding: 40px 30px; background: #fff;">
-                        
-                        <h2 style="color: #dc143c; font-size: 30px; margin-bottom: 20px; text-align: center;">🚨 Don't Miss Out! 🚨</h2>
-                        
-                        <p style="font-size: 19px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
-                            <strong>This is your FINAL WARNING!</strong><br>
-                            Our biggest Halloween sale of the year ends <strong style="color: #dc143c;">TONIGHT at MIDNIGHT!</strong> 🎃
-                        </p>
-                        
-                        <!-- First CTA Button -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
-                            <tr>
-                                <td align="center">
-                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #dc143c; color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
-                                        🎃 SHOP NOW 🎃
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Countdown Timer -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ff4500; padding: 35px; border-radius: 15px; margin: 30px 0;">
-                            <tr>
-                                <td align="center">
-                                    <h3 style="margin-top: 0; font-size: 28px; color: white;">⏰ TIME IS RUNNING OUT! ⏰</h3>
-                                    
-                                    <table width="100%" cellpadding="10" cellspacing="10" border="0" style="margin: 25px 0;">
-                                        <tr>
-                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                                                <div style="font-size: 36px; font-weight: bold; color: white;">12</div>
-                                                <div style="font-size: 14px; color: white;">HOURS</div>
-                                            </td>
-                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                                                <div style="font-size: 36px; font-weight: bold; color: white;">30</div>
-                                                <div style="font-size: 14px; color: white;">MINUTES</div>
-                                            </td>
-                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                                                <div style="font-size: 36px; font-weight: bold; color: white;">45</div>
-                                                <div style="font-size: 14px; color: white;">SECONDS</div>
-                                            </td>
-                                            <td width="25%" align="center" style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
-                                                <div style="font-size: 36px; font-weight: bold; color: white;">🎃</div>
-                                                <div style="font-size: 14px; color: white;">LEFT!</div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    
-                                    <div style="background: #fff; color: #ff4500; padding: 18px 35px; border-radius: 10px; display: inline-block; font-size: 30px; font-weight: bold; letter-spacing: 3px; margin-top: 20px;">
-                                        HALLOWEEN40
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- What You're Missing -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px solid #dc143c;">
-                            <tr>
-                                <td>
-                                    <h3 style="color: #dc143c; margin-top: 0; font-size: 24px; text-align: center;">😱 What You're About to MISS! 😱</h3>
-                                    
-                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 25px 0;">
-                                        <tr>
-                                            <td style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #dc143c;">
-                                                <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">💰 40% OFF Everything</h4>
-                                                <p style="margin: 0; color: #555; font-size: 15px;">Our BIGGEST discount ever - won't see this again until next year!</p>
-                                            </td>
-                                        </tr>
-                                        <tr><td style="height: 15px;"></td></tr>
-                                        <tr>
-                                            <td style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff4500;">
-                                                <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🚚 FREE Shipping</h4>
-                                                <p style="margin: 0; color: #555; font-size: 15px;">Free delivery on orders over $50 - save even more!</p>
-                                            </td>
-                                        </tr>
-                                        <tr><td style="height: 15px;"></td></tr>
-                                        <tr>
-                                            <td style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35;">
-                                                <h4 style="color: #dc143c; margin: 0 0 10px 0; font-size: 18px;">🎁 Exclusive Items</h4>
-                                                <p style="margin: 0; color: #555; font-size: 15px;">Limited edition Halloween items - once they're gone, they're GONE!</p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Second CTA Button -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
-                            <tr>
-                                <td align="center">
-                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #ff4500; color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
-                                        👻 GRAB YOUR DISCOUNT NOW 👻
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Customer Testimonials -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
-                            <tr>
-                                <td>
-                                    <h3 style="color: #ff4500; margin-top: 0; font-size: 22px; text-align: center;">💬 What Our Customers Are Saying 💬</h3>
-                                    
-                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 20px 0;">
-                                        <tr>
-                                            <td style="background: white; padding: 20px; border-radius: 10px;">
-                                                <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Just ordered! Can't believe these prices! 🎃"</p>
-                                                <p style="margin: 0; color: #ff4500; font-weight: bold;">- Jessica T.</p>
-                                            </td>
-                                        </tr>
-                                        <tr><td style="height: 15px;"></td></tr>
-                                        <tr>
-                                            <td style="background: white; padding: 20px; border-radius: 10px;">
-                                                <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"Best Halloween shopping experience ever! 👻"</p>
-                                                <p style="margin: 0; color: #ff4500; font-weight: bold;">- Michael R.</p>
-                                            </td>
-                                        </tr>
-                                        <tr><td style="height: 15px;"></td></tr>
-                                        <tr>
-                                            <td style="background: white; padding: 20px; border-radius: 10px;">
-                                                <p style="margin: 0 0 10px 0; color: #333; font-style: italic;">"40% off is INSANE! Already placed 3 orders! 🕷️"</p>
-                                                <p style="margin: 0; color: #ff4500; font-weight: bold;">- Amanda K.</p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Final Warning -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #1a1a1a; padding: 35px; border-radius: 12px; margin: 30px 0; border: 4px solid #dc143c;">
-                            <tr>
-                                <td align="center">
-                                    <h3 style="margin-top: 0; font-size: 32px; color: #ff6b35;">🚨 FINAL WARNING! 🚨</h3>
-                                    <p style="margin: 20px 0; font-size: 20px; line-height: 1.8; color: white;">
-                                        After <strong style="color: #dc143c;">MIDNIGHT TONIGHT</strong>, prices return to normal!<br>
-                                        This is your <strong style="color: #ff6b35;">LAST CHANCE</strong> to save 40%!<br>
-                                        <strong style="font-size: 24px; color: #ff4500;">Don't have regrets tomorrow!</strong>
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Main CTA Button -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 40px 0;">
-                            <tr>
-                                <td align="center">
-                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #dc143c; color: white; padding: 22px 55px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 22px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
-                                        🎃 SHOP NOW BEFORE IT'S TOO LATE! 🎃
-                                    </a>
-                                    <p style="margin: 20px 0; font-size: 16px; color: #dc143c; font-weight: bold;">
-                                        ⏰ Sale ends at MIDNIGHT - Don't miss out!
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Stock Warning -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #fff5e6; padding: 25px; border-radius: 12px; margin: 30px 0; border: 2px dashed #ff4500;">
-                            <tr>
-                                <td align="center">
-                                    <p style="color: #dc143c; margin: 10px 0; font-size: 18px; font-weight: bold;">
-                                        ⚠️ STOCK WARNING: Many items are selling out FAST!
-                                    </p>
-                                    <p style="color: #666; margin: 10px 0; font-size: 16px;">
-                                        Over 500 orders placed in the last 24 hours!<br>
-                                        Don't wait - secure your favorites NOW!
-                                    </p>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Final CTA Button -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
-                            <tr>
-                                <td align="center">
-                                    <a href="https://www.etsy.com/shop/Pionde" style="background: #ff6b35; color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; text-transform: uppercase; letter-spacing: 2px;">
-                                        🕷️ CLAIM YOUR 40% OFF NOW 🕷️
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                        <!-- Thank You -->
-                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 30px 0;">
-                            <tr>
-                                <td align="center">
-                                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
-                                        This is your <strong style="color: #dc143c;">LAST CHANCE</strong> to save BIG!
-                                    </p>
-                                    <p style="font-size: 22px; color: #ff4500; font-weight: bold; margin: 15px 0;">
-                                        See you at checkout! 🎃👻
-                                    </p>
-                                    <p style="font-size: 32px; margin: 20px 0;">⏰🎃🚨</p>
-                                </td>
-                            </tr>
-                        </table>
-                        
-                    </td>
-                </tr>
-                
-                <!-- Footer -->
-                <tr>
-                    <td style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
-                        <p style="margin: 5px 0; color: #dc143c; font-weight: bold; font-size: 18px;">🎃 PIONDE - Last Chance for Halloween Savings! 🎃</p>
-                        <p style="margin: 15px 0; font-size: 16px; color: #ff6b35;">
-                            Use code <strong>HALLOWEEN40</strong> - Ends TONIGHT at MIDNIGHT!
-                        </p>
-                        <p style="margin: 20px 0; font-size: 12px; color: #999;">
-                            You're receiving this email because you're a valued customer of PIONDE.
-                        </p>
-                    </td>
-                </tr>
-                
-            </table>
-            
-        </td>
-    </tr>
-</table>
-
-</body>
-</html>
-        """
-    },
-
-    "pionde_halloween_3": {
-        "name": "Pionde Halloween - Exclusive VIP Offer",
-        "category": "pionde_halloween",
-        "subject": "🎃 VIP EXCLUSIVE: Extra 10% OFF Halloween Sale at Pionde! (50% Total!) 👻",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #1a1a1a;">
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #0f2027;">
         <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
             
-            <!-- VIP Header -->
-            <div style="background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); padding: 40px 30px; text-align: center; color: #1a1a1a; position: relative;">
-                <div style="position: absolute; top: 10px; right: 20px; background: #1a1a1a; color: #ffd700; padding: 8px 20px; border-radius: 25px; font-size: 12px; font-weight: bold; border: 2px solid #ffd700;">
-                    👑 VIP ONLY
-                </div>
-                <h1 style="margin: 0; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">👑 VIP EXCLUSIVE 👑</h1>
-                <p style="margin: 15px 0; font-size: 22px; opacity: 0.95;">Special Halloween Offer Just For You!</p>
-                <div style="margin: 25px 0; padding: 20px; background: rgba(0,0,0,0.1); border-radius: 12px; display: inline-block;">
-                    <p style="margin: 0; font-size: 48px; font-weight: bold; letter-spacing: 3px; color: #dc143c;">50% OFF</p>
-                    <p style="margin: 10px 0 0 0; font-size: 16px;">40% + Extra 10% VIP Bonus!</p>
+            <!-- Christmas Header -->
+            <div style="background: linear-gradient(135deg, #c31432 0%, #240b36 100%); padding: 50px 30px; text-align: center; color: white; position: relative;">
+                <div style="font-size: 60px; margin-bottom: 20px;">🎄</div>
+                <h1 style="margin: 0; font-size: 42px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">CHRISTMAS SALE!</h1>
+                <p style="margin: 15px 0; font-size: 22px;">The Most Wonderful Deals of the Year!</p>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; display: inline-block; margin-top: 20px;">
+                    <p style="margin: 0; font-size: 56px; font-weight: bold; letter-spacing: 3px;">45% OFF</p>
+                    <p style="margin: 10px 0 0 0; font-size: 18px;">+ FREE GIFT WRAPPING!</p>
                 </div>
             </div>
             
             <!-- Main Content -->
             <div style="padding: 40px 30px; background: #fff;">
-                <h2 style="color: #ffd700; font-size: 28px; margin-bottom: 20px; text-align: center;">🌟 Hello VIP Customer {name}! 🌟</h2>
+                <h2 style="color: #c31432; font-size: 28px; margin-bottom: 20px; text-align: center;">🎅 Ho Ho Ho, {name}! 🎅</h2>
                 
                 <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
-                    As one of our <strong style="color: #ffd700;">most valued customers</strong>, we're giving you an<br>
-                    <strong style="color: #dc143c; font-size: 22px;">EXCLUSIVE EXTRA 10% OFF</strong> on top of our Halloween sale! 🎃
+                    Santa came early to Pionde! 🎁<br>
+                    Get <strong style="color: #c31432;">MASSIVE savings</strong> on all your favorite products!
                 </p>
                 
-                <!-- VIP Offer Box -->
-                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 35px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(255,215,0,0.3); border: 3px solid #ffd700;">
-                    <h3 style="margin-top: 0; font-size: 28px; color: #ffd700;">👑 YOUR VIP HALLOWEEN PACKAGE 👑</h3>
-                    
+                <!-- Christmas Offer -->
+                <div style="background: linear-gradient(135deg, #c31432 0%, #7f1d1d 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(195,20,50,0.4);">
+                    <h3 style="margin-top: 0; font-size: 32px;">🎄 CHRISTMAS SPECIAL 🎄</h3>
+                    <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 12px; margin: 25px 0;">
+                        <h2 style="margin: 0; font-size: 60px; font-weight: bold;">45% OFF</h2>
+                        <p style="margin: 15px 0 10px 0; font-size: 22px; font-weight: bold;">USE CODE:</p>
+                        <div style="background: #fff; color: #c31432; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: bold; letter-spacing: 3px;">
+                            XMAS45
+                        </div>
+                        <p style="margin: 20px 0 0 0; font-size: 18px;">🎁 PLUS: Free Gift Wrapping on ALL Orders!</p>
+                    </div>
+                </div>
+                
+                <!-- Christmas Benefits -->
+                <div style="background: #fef3f3; padding: 35px; border-radius: 12px; margin: 30px 0; border: 3px dashed #c31432;">
+                    <h3 style="color: #c31432; margin-top: 0; font-size: 26px; text-align: center;">🎁 CHRISTMAS PERKS 🎁</h3>
                     <div style="display: grid; gap: 20px; margin: 25px 0;">
-                        <div style="background: rgba(255,215,0,0.1); padding: 20px; border-radius: 10px; border: 2px solid #ffd700;">
-                            <h4 style="color: #ffd700; margin: 0 0 10px 0; font-size: 20px;">🎃 Base Halloween Sale</h4>
-                            <p style="margin: 0; font-size: 32px; font-weight: bold; color: #ff6b35;">40% OFF</p>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">🎁</span>
+                            <div>
+                                <h4 style="color: #c31432; margin: 0 0 5px 0; font-size: 20px;">Free Gift Wrapping</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Beautiful wrapping on every order!</p>
+                            </div>
                         </div>
-                        <div style="font-size: 32px; color: #ffd700;">+</div>
-                        <div style="background: rgba(255,215,0,0.1); padding: 20px; border-radius: 10px; border: 2px solid #ffd700;">
-                            <h4 style="color: #ffd700; margin: 0 0 10px 0; font-size: 20px;">👑 VIP Exclusive Bonus</h4>
-                            <p style="margin: 0; font-size: 32px; font-weight: bold; color: #dc143c;">EXTRA 10% OFF</p>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">🚚</span>
+                            <div>
+                                <h4 style="color: #c31432; margin: 0 0 5px 0; font-size: 20px;">Express Shipping</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Guaranteed delivery before Christmas!</p>
+                            </div>
                         </div>
-                        <div style="font-size: 32px; color: #ffd700;">=</div>
-                        <div style="background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); padding: 25px; border-radius: 10px;">
-                            <h4 style="color: #1a1a1a; margin: 0 0 10px 0; font-size: 22px;">💎 TOTAL VIP SAVINGS</h4>
-                            <p style="margin: 0; font-size: 48px; font-weight: bold; color: #dc143c; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">50% OFF!</p>
-                        </div>
-                    </div>
-                    
-                    <div style="background: #fff; color: #1a1a1a; padding: 20px 35px; border-radius: 10px; display: inline-block; margin-top: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                        <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">Your VIP Code:</p>
-                        <p style="margin: 0; font-size: 32px; font-weight: bold; letter-spacing: 3px; color: #ffd700;">VIPHALLOWEEN</p>
-                    </div>
-                </div>
-                
-                <!-- VIP Benefits -->
-                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 3px solid #ffd700;">
-                    <h3 style="color: #ff8c00; margin-top: 0; font-size: 24px; text-align: center;">👑 Your VIP Benefits 👑</h3>
-                    <div style="display: grid; gap: 20px; margin: 25px 0;">
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ffd700; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">💰 Maximum Savings</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">50% OFF - the biggest discount we've EVER offered!</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff8c00; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">🚚 FREE Priority Shipping</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Free expedited delivery on ALL orders - no minimum!</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #dc143c; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">🎁 Exclusive Gift</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Free Halloween surprise gift with every VIP order!</p>
-                        </div>
-                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 5px solid #ff6b35; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                            <h4 style="color: #ff8c00; margin: 0 0 10px 0; font-size: 18px;">⚡ Priority Processing</h4>
-                            <p style="margin: 0; color: #555; font-size: 15px;">Your orders are processed first - guaranteed fast delivery!</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Why You're VIP -->
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin: 30px 0;">
-                    <h3 style="color: #ffd700; margin-top: 0; font-size: 22px; text-align: center;">🌟 Why You Received This VIP Offer 🌟</h3>
-                    <p style="text-align: center; color: #555; font-size: 16px; line-height: 1.8; margin: 20px 0;">
-                        You're one of our <strong>most loyal customers</strong>, and we wanted to show our appreciation!<br>
-                        This exclusive 50% OFF offer is our way of saying <strong style="color: #ffd700;">THANK YOU</strong> for your continued support.<br>
-                        <strong style="color: #dc143c;">This offer is not available to the general public!</strong>
-                    </p>
-                </div>
-                
-                <!-- Urgency -->
-                <div style="background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center; border: 3px solid #ffd700;">
-                    <h3 style="margin-top: 0; font-size: 26px; color: #ffd700;">⏰ VIP EXCLUSIVE - LIMITED TIME! ⏰</h3>
-                    <p style="margin: 20px 0; font-size: 18px; line-height: 1.8;">
-                        This <strong style="color: #ffd700;">VIP 50% OFF offer</strong> is valid for<br>
-                        <strong style="font-size: 24px; color: #ffd700;">48 HOURS ONLY!</strong><br>
-                        Don't miss this exclusive opportunity!
-                    </p>
-                </div>
-                
-                <!-- How to Redeem -->
-                <div style="background: #fff5e6; padding: 30px; border-radius: 12px; margin: 30px 0; border: 2px dashed #ffd700;">
-                    <h3 style="color: #ff8c00; margin-top: 0; font-size: 22px; text-align: center;">📝 How to Redeem Your VIP Offer 📝</h3>
-                    <div style="display: grid; gap: 15px; margin: 20px 0;">
-                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #ffd700;">
-                            <strong style="color: #ff8c00;">Step 1:</strong> Click the button below to visit our shop
-                        </div>
-                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #ff8c00;">
-                            <strong style="color: #ff8c00;">Step 2:</strong> Add your favorite items to cart
-                        </div>
-                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #dc143c;">
-                            <strong style="color: #ff8c00;">Step 3:</strong> Enter code <strong style="color: #ffd700;">VIPHALLOWEEN</strong> at checkout
-                        </div>
-                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #ff6b35;">
-                            <strong style="color: #ff8c00;">Step 4:</strong> Enjoy your 50% savings + FREE shipping!
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">💝</span>
+                            <div>
+                                <h4 style="color: #c31432; margin: 0 0 5px 0; font-size: 20px;">Gift Messages</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Add personalized messages for free!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- CTA Button -->
                 <div style="text-align: center; margin: 40px 0;">
-                    <a href="https://www.etsy.com/shop/Pionde" style="background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%); color: #1a1a1a; padding: 22px 55px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 22px; display: inline-block; box-shadow: 0 10px 30px rgba(255,215,0,0.5); transition: all 0.3s; text-transform: uppercase; letter-spacing: 2px; border: 3px solid #1a1a1a;">
-                        👑 CLAIM YOUR VIP 50% OFF NOW! 👑
+                    <a href="https://www.etsy.com/shop/pionde" style="background: linear-gradient(135deg, #c31432 0%, #7f1d1d 100%); color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(195,20,50,0.4); text-transform: uppercase; letter-spacing: 2px;">
+                        🎄 SHOP CHRISTMAS SALE 🎄
                     </a>
-                    <p style="margin: 20px 0; font-size: 16px; color: #dc143c; font-weight: bold;">
-                        🌟 Exclusive VIP offer - Not available to public!
-                    </p>
                 </div>
                 
-                <!-- VIP Testimonial -->
-                <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 30px 0; text-align: center; border: 2px solid #ffd700;">
-                    <p style="color: #ff8c00; margin: 10px 0; font-size: 18px; font-weight: bold;">
-                        "I can't believe I got 50% off! Being a VIP customer is amazing!" 👑
+                <!-- Urgency -->
+                <div style="background: linear-gradient(135deg, #1a472a 0%, #2d5016 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center;">
+                    <h3 style="margin-top: 0; font-size: 26px;">⏰ LAST CHANCE FOR CHRISTMAS DELIVERY! ⏰</h3>
+                    <p style="margin: 15px 0; font-size: 18px; line-height: 1.8;">
+                        Order by December 20th to guarantee delivery before Christmas! 🎅<br>
+                        <strong style="font-size: 22px;">Don't leave gift shopping to the last minute!</strong>
                     </p>
-                    <p style="color: #666; margin: 10px 0; font-size: 14px;">
-                        - Rachel S., VIP Customer
-                    </p>
-                    <p style="color: #ffd700; margin: 20px 0; font-size: 16px; font-weight: bold;">
-                        ⭐⭐⭐⭐⭐ Join Our VIP Family!
-                    </p>
-                </div>
-                
-                <!-- Thank You -->
-                <div style="text-align: center; margin: 30px 0;">
-                    <p style="font-size: 20px; color: #333; margin: 15px 0; line-height: 1.6;">
-                        Thank you for being a <strong style="color: #ffd700;">VIP member</strong> of the Pionde family!
-                    </p>
-                    <p style="font-size: 22px; color: #ff8c00; font-weight: bold; margin: 15px 0;">
-                        Enjoy your exclusive 50% OFF! 🎃👑
-                    </p>
-                    <p style="font-size: 32px; margin: 20px 0;">👑🎃✨</p>
                 </div>
             </div>
             
             <!-- Footer -->
             <div style="background: #1a1a1a; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 5px 0; color: #ffd700; font-weight: bold; font-size: 18px;">👑 PIONDE VIP - Exclusive Halloween Offer 👑</p>
+                <p style="margin: 5px 0; color: #c31432; font-weight: bold; font-size: 18px;">🎄 PIONDE - Merry Christmas! 🎄</p>
                 <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
                 <p style="margin: 10px 0; opacity: 0.9;">
-                    🌐 <a href="https://www.etsy.com/shop/Pionde" style="color: #ffd700; text-decoration: none;">Visit Our Etsy Shop</a>
-                </p>
-                <p style="margin: 15px 0; font-size: 16px; opacity: 0.9; color: #ffd700;">
-                    VIP Code: <strong>VIPHALLOWEEN</strong> - 50% OFF Everything!
+                    🌐 <a href="https://www.etsy.com/shop/pionde" style="color: #c31432; text-decoration: none;">Visit Our Shop</a>
                 </p>
             </div>
         </div>
@@ -638,7 +598,238 @@ DEFAULT_TEMPLATES = {
         """
     },
 
-    # 🎯 BRAND HUNTER TEMPLATES (Marka Arayıcıları)
+    "pionde_black_friday": {
+        "name": "Pionde Black Friday Mega Sale",
+        "category": "pionde_holidays",
+        "subject": "🖤 BLACK FRIDAY: 60% OFF EVERYTHING! Our Biggest Sale EVER! 💥",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #000;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- Black Friday Header -->
+            <div style="background: #000; padding: 50px 30px; text-align: center; color: white; border: 5px solid #ffd700;">
+                <h1 style="margin: 0; font-size: 48px; font-weight: bold; color: #ffd700; text-shadow: 3px 3px 6px rgba(255,215,0,0.5);">🖤 BLACK FRIDAY 🖤</h1>
+                <p style="margin: 15px 0; font-size: 24px; color: #fff;">THE SALE YOU'VE BEEN WAITING FOR!</p>
+                <div style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); padding: 25px; border-radius: 15px; margin: 20px 0; color: #000;">
+                    <p style="margin: 0; font-size: 72px; font-weight: bold; letter-spacing: 3px;">60% OFF</p>
+                    <p style="margin: 10px 0 0 0; font-size: 24px; font-weight: bold;">ABSOLUTELY EVERYTHING!</p>
+                </div>
+                <p style="margin: 20px 0 0 0; font-size: 20px; background: #ffd700; color: #000; padding: 15px; border-radius: 10px; display: inline-block; font-weight: bold;">
+                    ⏰ 48 HOURS ONLY! ⏰
+                </p>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #000; font-size: 32px; margin-bottom: 20px; text-align: center; background: #ffd700; padding: 15px; border-radius: 10px;">💥 {name}, THIS IS IT! 💥</h2>
+                
+                <p style="font-size: 20px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8; font-weight: bold;">
+                    Our <span style="color: #ffd700; background: #000; padding: 5px 15px; border-radius: 5px;">BIGGEST SALE EVER</span> is LIVE!<br>
+                    <span style="font-size: 24px; color: #000;">60% OFF EVERYTHING - NO LIMITS!</span>
+                </p>
+                
+                <!-- Black Friday Offer -->
+                <div style="background: #000; padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; border: 5px solid #ffd700; box-shadow: 0 10px 30px rgba(255,215,0,0.3);">
+                    <h3 style="margin-top: 0; font-size: 36px; color: #ffd700;">🔥 BLACK FRIDAY DEAL 🔥</h3>
+                    <div style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); padding: 35px; border-radius: 12px; margin: 25px 0; color: #000;">
+                        <h2 style="margin: 0; font-size: 72px; font-weight: bold;">60% OFF</h2>
+                        <p style="margin: 15px 0 10px 0; font-size: 24px; font-weight: bold;">USE CODE:</p>
+                        <div style="background: #000; color: #ffd700; padding: 20px 40px; border-radius: 8px; display: inline-block; font-size: 36px; font-weight: bold; letter-spacing: 4px; border: 3px solid #ffd700;">
+                            BLACKFRIDAY60
+                        </div>
+                    </div>
+                    <p style="margin: 20px 0; font-size: 20px; color: #ffd700; font-weight: bold;">
+                        + FREE SHIPPING WORLDWIDE! 🌍
+                    </p>
+                </div>
+                
+                <!-- What's Included -->
+                <div style="background: #fffbeb; padding: 35px; border-radius: 12px; margin: 30px 0; border: 3px solid #000;">
+                    <h3 style="color: #000; margin-top: 0; font-size: 28px; text-align: center; background: #ffd700; padding: 15px; border-radius: 8px;">🎯 WHAT'S INCLUDED? 🎯</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-left: 8px solid #000;">
+                            <h4 style="color: #000; margin: 0 0 10px 0; font-size: 22px;">✅ ALL Products - 60% OFF!</h4>
+                            <p style="margin: 0; color: #555; font-size: 17px; font-weight: bold;">Every single item in our entire store!</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-left: 8px solid #ffd700;">
+                            <h4 style="color: #000; margin: 0 0 10px 0; font-size: 22px;">✅ FREE Worldwide Shipping!</h4>
+                            <p style="margin: 0; color: #555; font-size: 17px; font-weight: bold;">No minimum purchase required!</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-left: 8px solid #000;">
+                            <h4 style="color: #000; margin: 0 0 10px 0; font-size: 22px;">✅ Stack Multiple Discounts!</h4>
+                            <p style="margin: 0; color: #555; font-size: 17px; font-weight: bold;">Combine with loyalty points for INSANE savings!</p>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-left: 8px solid #ffd700;">
+                            <h4 style="color: #000; margin: 0 0 10px 0; font-size: 22px;">✅ Extended Returns!</h4>
+                            <p style="margin: 0; color: #555; font-size: 17px; font-weight: bold;">60-day return policy on all Black Friday orders!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Countdown Urgency -->
+                <div style="background: linear-gradient(135deg, #ff0000 0%, #8b0000 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; border: 5px solid #000; box-shadow: 0 0 40px rgba(255,0,0,0.5);">
+                    <h3 style="margin-top: 0; font-size: 36px; text-transform: uppercase;">🚨 EXTREME URGENCY! 🚨</h3>
+                    <p style="margin: 20px 0; font-size: 24px; line-height: 1.8; font-weight: bold;">
+                        This sale is TOO GOOD to last!<br>
+                        <span style="font-size: 32px; background: #000; padding: 15px 30px; border-radius: 10px; display: inline-block; margin-top: 20px; border: 3px solid #ffd700;">
+                            ⏰ ENDS IN 48 HOURS! ⏰
+                        </span>
+                    </p>
+                    <p style="margin: 20px 0 0 0; font-size: 20px; background: rgba(0,0,0,0.5); padding: 15px; border-radius: 8px;">
+                        🔥 Over 2,000 people shopping RIGHT NOW! 🔥
+                    </p>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/pionde" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #000; padding: 25px 60px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 26px; display: inline-block; box-shadow: 0 15px 40px rgba(255,215,0,0.6); text-transform: uppercase; letter-spacing: 3px; border: 5px solid #000;">
+                        🖤 SHOP BLACK FRIDAY NOW 🖤
+                    </a>
+                    <p style="margin: 20px 0; font-size: 20px; color: #ff0000; font-weight: bold;">
+                        ⏰ Sale ends in 48 hours - DON'T MISS OUT!
+                    </p>
+                </div>
+                
+                <!-- Social Proof -->
+                <div style="background: #000; padding: 30px; border-radius: 12px; margin: 30px 0; text-align: center; color: white; border: 3px solid #ffd700;">
+                    <p style="color: #ffd700; margin: 10px 0; font-size: 22px; font-weight: bold;">
+                        "I saved $380 on Black Friday! INSANE DEALS!" 🤯
+                    </p>
+                    <p style="color: #fff; margin: 10px 0; font-size: 16px;">
+                        - David L., 5 minutes ago
+                    </p>
+                    <p style="color: #ffd700; margin: 20px 0; font-size: 20px; font-weight: bold;">
+                        ⭐⭐⭐⭐⭐ Join 3,847 Happy Black Friday Shoppers!
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #000; padding: 30px; text-align: center; color: white; border-top: 5px solid #ffd700;">
+                <p style="margin: 5px 0; color: #ffd700; font-weight: bold; font-size: 22px;">🖤 PIONDE BLACK FRIDAY 🖤</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/pionde" style="color: #ffd700; text-decoration: none;">Shop Now</a>
+                </p>
+                <p style="margin: 15px 0; font-size: 18px; color: #ffd700; font-weight: bold;">
+                    Use code <strong>BLACKFRIDAY60</strong> - 48 hours only!
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
+    "pionde_valentines": {
+        "name": "Pionde Valentine's Day Special",
+        "category": "pionde_holidays",
+        "subject": "💕 Valentine's Day Sale! 40% OFF + Free Love Notes! 💝",
+        "content": """
+        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #ffe0e0;">
+        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
+            
+            <!-- Valentine Header -->
+            <div style="background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); padding: 50px 30px; text-align: center; color: white;">
+                <div style="font-size: 60px; margin-bottom: 20px;">💕</div>
+                <h1 style="margin: 0; font-size: 42px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">VALENTINE'S DAY SALE!</h1>
+                <p style="margin: 15px 0; font-size: 22px;">Spread the Love with Perfect Gifts! 💝</p>
+                <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; display: inline-block; margin-top: 20px;">
+                    <p style="margin: 0; font-size: 56px; font-weight: bold; letter-spacing: 3px;">40% OFF</p>
+                    <p style="margin: 10px 0 0 0; font-size: 18px;">+ FREE LOVE NOTES!</p>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div style="padding: 40px 30px; background: #fff;">
+                <h2 style="color: #ff6b9d; font-size: 28px; margin-bottom: 20px; text-align: center;">💖 Hey {name}! 💖</h2>
+                
+                <p style="font-size: 18px; margin-bottom: 25px; color: #333; text-align: center; line-height: 1.8;">
+                    Love is in the air! 💕<br>
+                    Find the <strong style="color: #ff6b9d;">PERFECT gift</strong> for your special someone!
+                </p>
+                
+                <!-- Valentine Offer -->
+                <div style="background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); padding: 40px; border-radius: 15px; margin: 30px 0; color: white; text-align: center; box-shadow: 0 10px 30px rgba(255,107,157,0.4);">
+                    <h3 style="margin-top: 0; font-size: 32px;">💝 VALENTINE'S SPECIAL 💝</h3>
+                    <div style="background: rgba(255,255,255,0.2); padding: 30px; border-radius: 12px; margin: 25px 0;">
+                        <h2 style="margin: 0; font-size: 60px; font-weight: bold;">40% OFF</h2>
+                        <p style="margin: 15px 0 10px 0; font-size: 22px; font-weight: bold;">USE CODE:</p>
+                        <div style="background: #fff; color: #ff6b9d; padding: 15px 30px; border-radius: 8px; display: inline-block; font-size: 28px; font-weight: bold; letter-spacing: 3px;">
+                            LOVE40
+                        </div>
+                        <p style="margin: 20px 0 0 0; font-size: 18px;">💌 PLUS: Free Personalized Love Notes!</p>
+                    </div>
+                </div>
+                
+                <!-- Perfect Gifts -->
+                <div style="background: #fff0f5; padding: 35px; border-radius: 12px; margin: 30px 0; border: 3px dashed #ff6b9d;">
+                    <h3 style="color: #ff6b9d; margin-top: 0; font-size: 26px; text-align: center;">💝 PERFECT VALENTINE'S GIFTS 💝</h3>
+                    <div style="display: grid; gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">💕</span>
+                            <div>
+                                <h4 style="color: #ff6b9d; margin: 0 0 5px 0; font-size: 20px;">Romantic Designs</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Express your love with unique prints!</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">💌</span>
+                            <div>
+                                <h4 style="color: #ff6b9d; margin: 0 0 5px 0; font-size: 20px;">Free Love Notes</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Add your personal message for free!</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">🎁</span>
+                            <div>
+                                <h4 style="color: #ff6b9d; margin: 0 0 5px 0; font-size: 20px;">Gift Wrapping</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Beautiful packaging included!</p>
+                            </div>
+                        </div>
+                        <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); display: flex; align-items: center;">
+                            <span style="font-size: 40px; margin-right: 20px;">🚚</span>
+                            <div>
+                                <h4 style="color: #ff6b9d; margin: 0 0 5px 0; font-size: 20px;">Express Delivery</h4>
+                                <p style="margin: 0; color: #555; font-size: 16px;">Arrives before Valentine's Day!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="https://www.etsy.com/shop/pionde" style="background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%); color: white; padding: 20px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 20px; display: inline-block; box-shadow: 0 10px 30px rgba(255,107,157,0.4); text-transform: uppercase; letter-spacing: 2px;">
+                        💕 SHOP VALENTINE'S GIFTS 💕
+                    </a>
+                </div>
+                
+                <!-- Urgency -->
+                <div style="background: linear-gradient(135deg, #e63946 0%, #a4161a 100%); padding: 30px; border-radius: 12px; margin: 30px 0; color: white; text-align: center;">
+                    <h3 style="margin-top: 0; font-size: 26px;">⏰ ORDER BY FEB 12 FOR VALENTINE'S DELIVERY! ⏰</h3>
+                    <p style="margin: 15px 0; font-size: 18px; line-height: 1.8;">
+                        Don't wait until the last minute! 💝<br>
+                        <strong style="font-size: 22px;">Make this Valentine's Day unforgettable!</strong>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div style="background: #2d3748; padding: 30px; text-align: center; color: white;">
+                <p style="margin: 5px 0; color: #ff6b9d; font-weight: bold; font-size: 18px;">💕 PIONDE - Happy Valentine's Day! 💕</p>
+                <p style="margin: 10px 0; opacity: 0.9;">📧 pionde@tahidem.com</p>
+                <p style="margin: 10px 0; opacity: 0.9;">
+                    🌐 <a href="https://www.etsy.com/shop/pionde" style="color: #ff6b9d; text-decoration: none;">Visit Our Shop</a>
+                </p>
+            </div>
+        </div>
+        </body></html>
+        """
+    },
+
+    # ============================================
+    # 🎯 BRAND HUNTER TEMPLATES
+    # ============================================
+    
     "brand_hunter_1": {
         "name": "Amazon Brand Hunter - General Recruitment",
         "category": "brand_hunter",
@@ -727,124 +918,10 @@ DEFAULT_TEMPLATES = {
         """
     },
 
-    "brand_hunter_2": {
-        "name": "Detailed Brand Hunter Position",
-        "category": "brand_hunter",
-        "subject": "Brand Hunter Position - TAHIDEM LLC - $10K+ Per Deal",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 700px; margin: 0 auto; background: #ffffff;">
-            
-            <!-- Header -->
-            <div style="background: linear-gradient(45deg, #ff6b6b, #ee5a24); padding: 40px 30px; text-align: center;
- color: white;">
-                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">🎯 BRAND HUNTER POSITION</h1>
-                <p style="margin: 10px 0 0  0; font-size: 16px; opacity: 0.9;">TAHIDEM LLC - Exclusive Opportunity</p>
-                <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">EIN: 35-2742119 | Sheridan, WY, USA</p>
-            </div>
-            
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-                My name is <strong>Onur Nakis</strong>, Owner of <strong>TAHIDEM LLC (EIN: 35-2742119)</strong>, based in Sheridan, WY, USA. We want to work with you for the <strong>Brand Hunter position</strong> within TAHIDEM LLC.
-                </p>
-                
-                <!-- Job Tasks -->
-                <div style="margin: 30px 0;">
-                    <h3 style="color: #2c3e50; font-size: 20px; margin-bottom: 20px;">📋 JOB DESCRIPTION:</h3>
-                    
-                    <!-- Task 1 -->
-                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #3742fa;">
-                        <h4 style="color: #3742fa; margin: 0 0 10px 0;">1. BRAND IDENTIFICATION:</h4>
-                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                            <li>Identify brands making $50K+ monthly sales on Amazon</li>
-                            <li>Sales volume and potential analysis</li>
-                            <li>Competition status evaluation</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Task 2 -->
-                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #2ed573;">
-                        <h4 style="color: #2ed573; margin: 0 0 10px 0;">2. COMMUNICATION ESTABLISHMENT:</h4>
-                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                            <li>Direct communication with brand owners/CEOs</li>
-                            <li>Preliminary presentation representing TAHIDEM LLC</li>
-                            <li>Explain distribution partnership opportunity</li>
-                            <li>Plan meeting appointments</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Task 3 -->
-                    <div style="background: #f1f2f6; padding: 20px; margin: 15px 0; border-radius: 8px; border-left: 4px solid #ff6348;">
-                        <h4 style="color: #ff6348; margin: 0 0 10px 0;">3. PROCESS MANAGEMENT:</h4>
-                        <ul style="margin: 10px 0; padding-left: 20px; color: #555;">
-                            <li>Bridge between brand and TAHIDEM LLC</li>
-                            <li>Preliminary negotiation of agreement terms</li>
-                            <li>Collection of required documents</li>
-                            <li>Follow-up of signing process</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Target Brands -->
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 18px;">🎯 TARGET BRANDS:</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Consumer Electronics</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Home & Kitchen</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Health & Personal Care</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Sports & Outdoors</span>
-                        <span style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; font-size: 14px;">Baby Products</span>
-                    </div>
-                </div>
-                
-                <!-- Payment Details -->
-                <div style="background: #2ed573; padding: 25px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">💰 PAYMENT DETAILS</h3>
-                    <div style="text-align: center; margin: 20px 0;">
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>Base Payment:</strong> $1,000 per deal</p>
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>$100K+ monthly sales:</strong> +$1,000 bonus</p>
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>$200K+ monthly sales:</strong> +$1,500 - $3,000 bonus</p>
-                        <p style="margin: 8px 0; font-size: 16px;"><strong>$500K+ monthly sales:</strong> +$3,500 - $7,500 bonus</p>
-                    </div>
-                    <p style="text-align: center; margin: 15px 0 0 0; font-size: 14px; opacity: 0.9;">Payment processing during agreement signing</p>
-                </div>
-                
-                <!-- Working Conditions -->
-                <div style="border: 2px solid #3742fa; padding: 20px; border-radius: 10px; margin: 30px 0;">
-                    <h3 style="color: #3742fa; margin-top: 0;">⚙️ WORKING CONDITIONS:</h3>
-                    <ul style="margin: 15px 0; padding-left: 20px; color: #555;">
-                        <li style="margin-bottom: 8px;">• Completely remote work</li>
-                        <li style="margin-bottom: 8px;">• Flexible working hours</li>
-                        <li style="margin-bottom: 8px;">• Weekly progress report</li>
-                        <li style="margin-bottom: 8px;">• Monthly minimum 5 brand target</li>
-                    </ul>
-                </div>
-                
-                <p style="font-size: 16px; margin: 30px 0; text-align: center; color: #2c3e50;">
-                    If interested, could you share your CV and Amazon experience?
-                </p>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="mailto:team@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Send Your CV</a>
-                </div>
-            </div>
-            
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 25px; text-align: center; color: white;">
-                <p style="margin: 5px 0; color: #ff6b6b; font-weight: bold;">TAHIDEM LLC (EIN: 35-2742119)</p>
-                <p style="margin: 5px 0; opacity: 0.8;">30 N Gould St Ste 24309, Sheridan, WY 82801, USA</p>
-                <p style="margin: 5px 0 0 0; opacity: 0.8;">team@tahidem.com | https://tahidem.com/</p>
-            </div>
-        </div>
-        </body></html>
-        """
-    },
+    # ============================================
+    # 🤝 BRAND PARTNERSHIP TEMPLATES
+    # ============================================
     
-    # 🤝 BRAND PARTNERSHIP TEMPLATES (Marka Ortaklıkları)
     "brand_partnership_2": {
         "name": "Exclusive Distribution Agreement",
         "category": "brand_partnership", 
@@ -880,34 +957,6 @@ DEFAULT_TEMPLATES = {
                     </div>
                 </div>
                 
-                <!-- Our Primary Partnership Goal -->
-                <div style="background: #2c3e50; border-left: 5px solid #ff6b6b; padding: 25px; margin: 30px 0; color: white;">
-                    <h3 style="color: #ff6b6b; margin-top: 0; font-size: 20px;">🎯 Our Primary Partnership Goal</h3>
-                    <p style="color: #fff; margin: 15px 0; font-size: 16px;">
-                        <strong>Become your exclusive authorized distributor</strong> for ASINs you authorize us to sell, taking complete ownership of listing optimization, sales growth, and inventory management while maintaining continuous brand communication.
-                    </p>
-                </div>
-                
-                <!-- Partnership Request -->
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; margin: 30px 0; color: white;">
-                    <h3 style="margin-top: 0; font-size: 20px; text-align: center;">🎯 PARTNERSHIP REQUEST</h3>
-                    
-                    <div style="display: grid; gap: 15px; margin: 25px 0;">
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                            <h4 style="margin: 0 0 10px 0; font-size: 16px;">🏪 Wholesale Account Approval</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">To purchase your products directly at wholesale prices with significant investment commitment</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                            <h4 style="margin: 0 0 10px 0; font-size: 16px;">📋 Letter of Authorization (LOA)</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Confirming that TAHIDEM LLC is an authorized reseller of your brand on Amazon</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
-                            <h4 style="margin: 0 0 10px 0; font-size: 16px;">🔐 Brand Exclusivity</h4>
-                            <p style="margin: 0; font-size: 14px; opacity: 0.9;">Exclusive rights to sell your brand's products on Amazon with written consent requirement</p>
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- CTA Button -->
                 <div style="text-align: center; margin: 40px 0;">
                     <a href="mailto:business@tahidem.com" style="background: #ff6b6b; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Discuss Exclusive Distribution Partnership</a>
@@ -925,7 +974,10 @@ DEFAULT_TEMPLATES = {
         """
     },
     
-    # 🏢 SUPPLIER OUTREACH TEMPLATES (Tedarikçi İletişimi)
+    # ============================================
+    # 🏢 SUPPLIER OUTREACH TEMPLATES
+    # ============================================
+    
     "supplier_outreach_4": {
         "name": "Wholesale Distribution Partnership",
         "category": "supplier_outreach",
@@ -966,7 +1018,10 @@ DEFAULT_TEMPLATES = {
         """
     },
 
-    # 🛍️ ETSY CUSTOMER TEMPLATES (Etsy Müşteri Şablonları)
+    # ============================================
+    # 🛍️ ETSY CUSTOMER TEMPLATES
+    # ============================================
+    
     "etsy_customer_1": {
         "name": "SoulMineCraft Weekend Special Offer",
         "category": "etsy_customer",
@@ -1007,48 +1062,6 @@ DEFAULT_TEMPLATES = {
         </div>
         </body></html>
         """
-    },
-
-    "etsy_customer_2": {
-        "name": "SoulMineCraft Memory Collection - Alternative Offer",
-        "category": "etsy_customer",
-        "subject": "✨ Turn Your Precious Moments Into Art - Exclusive SoulMineCraft Collection",
-        "content": """
-        <html><body style="font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
-        <div style="max-width: 650px; margin: 0 auto; background: #ffffff;">
-            
-            <!-- Header -->
-            <div style="background: linear-gradient(135deg, #a8e6cf 0%, #88d8c0 100%); padding: 40px 30px; text-align: center; color: white; position: relative;">
-                <div style="position: absolute; top: 15px; right: 20px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 12px;">EXCLUSIVE COLLECTION</div>
-                <h1 style="margin: 0; font-size: 28px; font-weight: bold;">✨ SoulMineCraft</h1>
-                <p style="margin: 10px 0 0 0; font-size: 18px; opacity: 0.9;">Where Memories Become Art</p>
-            </div>
-            
-            <!-- Main Content -->
-            <div style="padding: 40px 30px;">
-                <h2 style="color: #2c3e50; font-size: 22px; margin-bottom: 20px;">Dear {name},</h2>
-                
-                <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
-                    Every moment tells a story. Every memory deserves to be treasured.
-                </p>
-                
-                <!-- CTA Button -->
-                <div style="text-align: center; margin: 40px 0;">
-                    <a href="https://www.etsy.com/shop/SoulMineCraft" style="background: #88d8c0; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; display: inline-block;">Create Your Memory</a>
-                </div>
-            </div>
-            
-            <!-- Footer -->
-            <div style="background: #2c3e50; padding: 30px; text-align: center; color: white;">
-                <p style="margin: 5px 0; color: #88d8c0; font-weight: bold;">SoulMineCraft Team</p>
-                <p style="margin: 5px 0; opacity: 0.8;">📧 soulminecraft@tahidem.com</p>
-                <p style="margin: 10px 0 0 0; opacity: 0.8;">
-                    <a href="https://www.etsy.com/shop/SoulMineCraft" style="color: #88d8c0; text-decoration: none;">Visit Our Etsy Shop</a>
-                </p>
-            </div>
-        </div>
-        </body></html>
-        """
     }
 }
 
@@ -1073,8 +1086,7 @@ def check_password():
                 st.session_state["password_correct"] = True
                 st.session_state["user_role"] = "master"
                 del st.session_state["password"]
-            else:
-                st.session_state["password_correct"] = False
+            else st.session_state["password_correct"] = False
 
     if "password_correct" not in st.session_state:
         st.markdown("""
@@ -1187,7 +1199,7 @@ def main_app():
     col1, col2, col3 = st.columns([3, 1, 1])
     with col1:
         st.title("🚀 Tahidem Professional Email Automation")
-        st.markdown("**Advanced Email Campaign Management System - 14 Professional Templates (Including 3 Halloween Specials)**")
+        st.markdown("**Advanced Email Campaign Management System - 14 Professional Templates**")
     
     with col2:
         user_role = st.session_state.get("user_role", "admin")
@@ -1250,7 +1262,8 @@ def main_app():
         with col1:
             # Template kategorileri
             template_categories = {
-                "🎃 Pionde Halloween": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween'],
+                "🎨 Pionde POD Marketing": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_pod'],
+                "🎄 Pionde Special Days": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_holidays'],
                 "🎯 Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
                 "🤝 Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
                 "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
@@ -1269,7 +1282,14 @@ def main_app():
         with col3:
             # Uygun email hesapları
             template_category_type = DEFAULT_TEMPLATES[selected_template_key]['category']
-            suitable_accounts = [acc['email'] for acc in EMAIL_ACCOUNTS if acc['type'] == template_category_type]
+            
+            # Category mapping for email accounts
+            if template_category_type in ['pionde_pod', 'pionde_holidays']:
+                account_type = 'pionde_pod'
+            else:
+                account_type = template_category_type
+            
+            suitable_accounts = [acc['email'] for acc in EMAIL_ACCOUNTS if acc['type'] == account_type]
             
             delay_time = st.slider("Delay Between Emails (seconds)", 1, 15, 5)
         
@@ -1289,15 +1309,13 @@ def main_app():
                 remaining = 100 - st.session_state.email_stats['daily_counts'][acc]
                 st.write(f"📧 {acc}: {remaining}/100 remaining")
         
-        # CSV upload
-        st.markdown("### 📝 Manual Email Entry (Alternative to CSV)")
+        # CSV upload or Manual Entry
+        st.markdown("### 📝 Recipient Input Method")
         
-        manual_option = st.checkbox("📧 Use Manual Email Entry Instead of CSV")
+        input_method = st.radio("Choose input method:", ["📁 CSV Upload", "✍️ Manual Entry"], horizontal=True)
         
-        if manual_option:
-            st.info("💡 **Format:** email1@domain.com, email2@domain.com, email3@domain.com")
-            st.info("💡 **Names:** John Smith, Jane Doe, Mike Johnson (same order as emails)")
-            st.info("💡 **Companies:** TechCorp, StartupInc, BigCompany (same order as emails)")
+        if input_method == "✍️ Manual Entry":
+            st.info("💡 **Format:** Enter data separated by commas")
             
             col1, col2 = st.columns(2)
             
@@ -1369,10 +1387,10 @@ def main_app():
                     
                     for index, row in df.iterrows():
                         # Available account bul
-                        account = automation.get_available_account(template_category_type)
+                        account = automation.get_available_account(account_type)
                         
                         if not account:
-                            st.error(f"❌ No available accounts for {template_category_type} type!")
+                            st.error(f"❌ No available accounts for {account_type} type!")
                             break
                         
                         # Template hazırla
@@ -1484,10 +1502,10 @@ def main_app():
                             
                             for index, row in df.iterrows():
                                 # Available account bul
-                                account = automation.get_available_account(template_category_type)
+                                account = automation.get_available_account(account_type)
                                 
                                 if not account:
-                                    st.error(f"❌ No available accounts for {template_category_type} type!")
+                                    st.error(f"❌ No available accounts for {account_type} type!")
                                     break
                                 
                                 # Template hazırla
@@ -1573,7 +1591,8 @@ def main_app():
             
             # Template kategorileri
             template_categories = {
-                "🎃 Pionde Halloween": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween'],
+                "🎨 Pionde POD Marketing": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_pod'],
+                "🎄 Pionde Special Days": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_holidays'],
                 "🎯 Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
                 "🤝 Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
                 "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
@@ -1590,7 +1609,14 @@ def main_app():
             
             # Uygun hesaplar
             template_category_type = DEFAULT_TEMPLATES[single_template_key]['category']
-            suitable_accounts = [acc['email'] for acc in EMAIL_ACCOUNTS if acc['type'] == template_category_type]
+            
+            # Category mapping for email accounts
+            if template_category_type in ['pionde_pod', 'pionde_holidays']:
+                account_type = 'pionde_pod'
+            else:
+                account_type = template_category_type
+            
+            suitable_accounts = [acc['email'] for acc in EMAIL_ACCOUNTS if acc['type'] == account_type]
             
             sender_account = st.selectbox("Sender Account", suitable_accounts, key="single_sender")
         
@@ -1625,11 +1651,12 @@ def main_app():
     
     with tab3:
         st.header("📝 Template Manager")
-        st.markdown("Manage your 14 professional email templates across 5 categories (including 3 Halloween specials).")
+        st.markdown("Manage your 14 professional email templates across 6 categories.")
         
         # Template kategorileri
         template_categories = {
-            "🎃 Pionde Halloween": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween'],
+            "🎨 Pionde POD Marketing": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_pod'],
+            "🎄 Pionde Special Days": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_holidays'],
             "🎯 Brand Hunter": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter'],
             "🤝 Brand Partnership": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership'],
             "🏢 Supplier Outreach": [k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach'],
@@ -1830,24 +1857,27 @@ def main_app():
         st.subheader("📊 Template Statistics")
         
         template_categories = {
-            "Pionde Halloween": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_halloween']),
+            "Pionde POD": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_pod']),
+            "Pionde Holidays": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'pionde_holidays']),
             "Brand Hunter": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_hunter']),
             "Brand Partnership": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'brand_partnership']),
             "Supplier Outreach": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'supplier_outreach']),
             "Etsy Customer": len([k for k, v in DEFAULT_TEMPLATES.items() if v['category'] == 'etsy_customer'])
         }
         
-        col1, col2, col3, col4, col5 = st.columns(5)
+        col1, col2, col3, col4, col5, col6 = st.columns(6)
         
         with col1:
-            st.metric("🎃 Halloween", template_categories["Pionde Halloween"])
+            st.metric("🎨 POD", template_categories["Pionde POD"])
         with col2:
-            st.metric("🎯 Brand Hunter", template_categories["Brand Hunter"])
+            st.metric("🎄 Holidays", template_categories["Pionde Holidays"])
         with col3:
-            st.metric("🤝 Partnership", template_categories["Brand Partnership"])
+            st.metric("🎯 Hunter", template_categories["Brand Hunter"])
         with col4:
-            st.metric("🏢 Supplier", template_categories["Supplier Outreach"])
+            st.metric("🤝 Partner", template_categories["Brand Partnership"])
         with col5:
+            st.metric("🏢 Supplier", template_categories["Supplier Outreach"])
+        with col6:
             st.metric("🛍️ Etsy", template_categories["Etsy Customer"])
         
         st.info(f"**Total Templates:** {len(DEFAULT_TEMPLATES)} professional email templates")
@@ -1954,67 +1984,6 @@ def main():
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
-        .stDataFrame {
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .stSelectbox, .stTextInput, .stTextArea {
-            border-radius: 8px;
-        }
-        .stInfo {
-            background-color: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            border-radius: 8px;
-        }
-        .stSuccess {
-            background-color: #e8f5e9;
-            border-left: 4px solid #4caf50;
-            border-radius: 8px;
-        }
-        .stWarning {
-            background-color: #fff3e0;
-            border-left: 4px solid #ff9800;
-            border-radius: 8px;
-        }
-        .stError {
-            background-color: #ffebee;
-            border-left: 4px solid #f44336;
-            border-radius: 8px;
-        }
-        .sidebar .sidebar-content {
-            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        .sidebar .sidebar-content h1, 
-        .sidebar .sidebar-content h2, 
-        .sidebar .sidebar-content h3,
-        .sidebar .sidebar-content p {
-            color: white !important;
-        }
-        /* Animation for pulse effect */
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-        /* Card style */
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin: 10px 0;
-        }
-        /* Gradient text */
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-        }
     </style>
     """, unsafe_allow_html=True)
     
@@ -2025,5 +1994,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-            
