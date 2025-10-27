@@ -1086,7 +1086,8 @@ def check_password():
                 st.session_state["password_correct"] = True
                 st.session_state["user_role"] = "master"
                 del st.session_state["password"]
-            else st.session_state["password_correct"] = False
+            else:
+                st.session_state["password_correct"] = False
 
     if "password_correct" not in st.session_state:
         st.markdown("""
